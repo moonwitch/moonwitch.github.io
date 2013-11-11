@@ -7,6 +7,7 @@ moonwitch.github.io
 - Add DNS prefetch for all items
 ```html
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
 ```
 - Add [sitemap.xml](http://www.sitemaps.org/protocol.php)
@@ -24,6 +25,7 @@ moonwitch.github.io
     font-family: 'Noto Sans', sans-serif;
     text-shadow: 4px 4px 4px #aaa;
 ```
+
 #### Setup
 - color scheme:
 -- Rusty purplish red (darkest tone) #5C4B51
