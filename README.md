@@ -32,9 +32,10 @@ moonwitch.github.io
 ```
 
 #### Setup
+
 - color scheme:
--- Rusty purplish red (darkest tone) #5C4B51
--- Greengrey #F3B562
--- old paper #F2EBBF
--- darker paper #F3B562
--- reddish #F06060
+    - Rusty purplish red (darkest tone) #5C4B51
+    - Greengrey #F3B562
+    - old paper #F2EBBF
+    - darker paper #F3B562
+    - reddish #F06060
