@@ -1,6 +1,7 @@
 
 body {
-  font: 16px/1.5, 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
   background: black;
   color: #ececec;
   padding: 0;
