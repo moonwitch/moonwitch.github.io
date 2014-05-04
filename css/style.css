@@ -2,8 +2,8 @@
 body {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
-  background: black;
-  color: #ececec;
+  background: dimgrey;
+  color: #fff;
   padding: 0;
   margin: 0;
 }
@@ -13,12 +13,11 @@ ul {
   padding: 0;
 }
 a {
-  color: #ccc;
-  text-decoration: none;
+  color: #fff;
 }
 
 a:hover {
-  color: #ececec;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -27,10 +26,12 @@ a:hover {
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.4);
 }
+
 header {
   padding: 0 10px;
   overflow: hidden;
 }
+
 h1 {
   margin: 0;
 }
@@ -38,10 +39,12 @@ h1 {
 nav ul, ul.entries {
   list-style-type: none;
 }
+
 nav li a {
   float: left;
   margin: 5px;
 }
+
 .content {
   padding: 10px;
 }
@@ -50,7 +53,7 @@ ul.entries li {
   position: relative;
   margin: 20px auto;
   padding: 20px;
-  background: #ececec;
+  background: #fff;
   width: 600px;
 }
 
@@ -64,11 +67,12 @@ ul.entries li h3 {
   left: 17px;
   font-size: 2em;
 }
+
 ul.entries a {
-  color: #ececec;
+  color: dimgrey;
 }
 ul.entries a:hover {
-  color: #fff;
+  color: dimgrey;
 }
 
 footer {
