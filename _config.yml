@@ -5,6 +5,7 @@ layouts:     ./_layouts
 include:     ['.htaccess']
 exclude:     []
 keep_files:  ['.git','.svn']
+markdown:    kramdown
 
 future:      true
 show_drafts: nil
