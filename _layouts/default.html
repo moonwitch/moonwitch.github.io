@@ -10,25 +10,13 @@
 
   <div id="main">
 
-    <header>
-      <h1> Where poetry meets code... </h1>
-    <header>
+    {% include header.html %}
 
-    <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/sitemap.xml">Sitemap</a></li>
-      </ul>
-    </nav>
+    {% include nav.html %}
 
     {{ content }}
 
-    <footer>
-      <p>&copy; Kelly Crabbé 2014 | All Rights Reserved. </p>
-    </footer>
+    {% include footer.html %}
 
   </div>
 </body>
