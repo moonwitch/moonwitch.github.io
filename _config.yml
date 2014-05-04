@@ -15,6 +15,6 @@ relative_permalinks: true
 
 permalink:     date
 paginate_path: 'page:num'
-paginate:      nil
+paginate:      5
 
 excerpt_separator: "\n\n"
