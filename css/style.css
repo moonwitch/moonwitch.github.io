@@ -1,3 +1,8 @@
+/* Because IE is a bitch */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 
 body {
   font-family: 'Oswald', sans-serif;
@@ -29,7 +34,8 @@ a:hover {
 
 header {
   padding: 0 10px;
-  overflow: hidden;
+/*  overflow: hidden; */
+  background: url("/img/congruent_outline.png") repeat-x fixed;
 }
 
 h1 {
