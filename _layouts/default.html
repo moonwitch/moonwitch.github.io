@@ -3,21 +3,29 @@
 <head>
   <meta charset=utf-8 />
   <title> {% if page.title %} {{ page.title }} | {% endif %} Kelly Crabbé </title>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://other-net.com/feed.xml" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:300" />
   <link rel="stylesheet" href="/css/style.css" />
+  <script type="text/javascript">
+    document.createElement('header');
+    document.createElement('footer');
+    document.createElement('section');
+    document.createElement('aside');
+    document.createElement('nav');
+    document.createElement('article');
+</script>
 </head>
 <body>
+  {% include header.html %}
 
   <div id="main">
-
-    {% include header.html %}
-
     {% include nav.html %}
-
     {{ content }}
-
-    {% include footer.html %}
-
+    {% if page.comments %}
+      {% include discus.html %}
+    {% endif %}
   </div>
+
+  {% include footer.html %}
 </body>
 </html>
