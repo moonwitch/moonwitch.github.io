@@ -1,3 +1,7 @@
+name: Kelly Crabbé
+description: Some random description should be given.
+url: http://other-net.com
+
 source:      .
 destination: ./_site
 plugins:     ./_plugins
