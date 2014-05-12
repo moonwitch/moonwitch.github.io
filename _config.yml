@@ -2,19 +2,20 @@ name: Kelly Crabbé
 description: Some random description should be given.
 url: http://other-net.com
 
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-include:     ['.htaccess']
-exclude:     []
-keep_files:  ['.git','.svn']
-markdown:    kramdown
+source:       .
+destination:  ./_site
+plugins:      ./_plugins
+layouts:      ./_layouts
+include:      ['.htaccess']
+exclude:      []
+keep_files:   ['.git','.svn']
+markdown:     kramdown
+pygments:     true
 
-future:      true
-show_drafts: nil
-limit_posts: 0
-highlighter: pygments
+future:       true
+show_drafts:  nil
+limit_posts:  0
+highlighter:  pygments
 
 relative_permalinks: true
 
