@@ -16,3 +16,5 @@ def foo
   puts 'foo'
 end
 {% endhighlight %}
+
+{% gist 5555251 result.md %}

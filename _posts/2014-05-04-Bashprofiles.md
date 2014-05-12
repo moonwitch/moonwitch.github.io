@@ -1,6 +1,7 @@
 ---
 layout: projects_entry
 title: Bash Profile
+comments: true
 sitemap:
   lastmod: 2014-05-04
   priority: 0.5
