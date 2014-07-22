@@ -1,0 +1,10 @@
+---
+layout: default
+image: optional
+title: title
+comments: true
+sitemap:
+  lastmod: date
+  priority: 0.5
+  changefreq: true
+---

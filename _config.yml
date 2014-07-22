@@ -7,10 +7,10 @@ destination:  ./_site
 plugins:      ./_plugins
 layouts:      ./_layouts
 include:      ['.htaccess']
-exclude:      []
+exclude:      ['Rakefile']
 keep_files:   ['.git','.svn']
 markdown:     kramdown
-pygments:     true
+rouge:     true
 
 future:       true
 show_drafts:  nil
