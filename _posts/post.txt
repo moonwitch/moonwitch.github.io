@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: post
 image: optional
-title: title
+title: 
 comments: true
 sitemap:
-  lastmod: date
+  lastmod: 
   priority: 0.5
   changefreq: true
 ---
