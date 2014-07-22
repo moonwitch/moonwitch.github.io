@@ -10,7 +10,7 @@ include:      ['.htaccess']
 exclude:      ['Rakefile']
 keep_files:   ['.git','.svn']
 markdown:     kramdown
-rouge:     true
+rouge:        true
 
 future:       true
 show_drafts:  nil
@@ -24,16 +24,3 @@ paginate_path: 'page:num'
 paginate:      5
 
 excerpt_separator: "\n\n"
-
-post:
-template: post.txt
-extension: md
-
-page:
-template: page.txt
-extension: md
-
-editor: nano
-
-git:
-branch: master
