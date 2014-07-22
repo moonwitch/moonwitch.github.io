@@ -24,3 +24,16 @@ paginate_path: 'page:num'
 paginate:      5
 
 excerpt_separator: "\n\n"
+
+post:
+template: post.txt
+extension: md
+
+page:
+template: page.txt
+extension: md
+
+editor: nano
+
+git:
+branch: master
