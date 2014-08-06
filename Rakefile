@@ -25,10 +25,10 @@ end
 desc "Preview locally with --watch"
 task :preview => :clean do
   sh "jekyll serve -w"
-  sh "open http://localhost:4000"
+  #sh "open http://localhost:4000"
 end
 
-# rake post[title,cat,date]
+# rake post [title,cat,date]
 desc "Create a post in _posts"
 task :post, [:title, :category, :dates] do |t, args|
   #if no title entered go nuts
@@ -75,7 +75,7 @@ task :post, [:title, :category, :dates] do |t, args|
 
   puts "Post created under \"#{post_dir}#{filename}\""
 
-  sh "subl \"#{post_dir}#{filename}\""
+  sh "vi \"#{post_dir}#{filename}\""
 end
 
 # rake build
