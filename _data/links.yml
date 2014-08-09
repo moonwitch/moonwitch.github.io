@@ -10,5 +10,5 @@
 - url: /about
   title: About
 
-- url: sitemap.xml
+- url: /sitemap.xml
   title: Sitemap
