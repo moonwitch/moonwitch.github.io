@@ -1,23 +1,38 @@
 ---
-layout: default
+layout: page
 title: Projects
 ---
 
-<section class="content">
-  <h2>Projects</h2>
+<section class="archive">
+{% for post in site.categories.projects %}
+  {% unless post.next %}
 
-  <p>While not at work, I try to keep myself occupied, below you'll find various projects I am working on or have worked on.</p>
+  {% unless forloop.first %}</div></div>{% endunless %}
+
+    <div class="bundle row gutters fadeInDown animated">
+      <h2 class="post-year col span_2">{{ post.date | date: '%Y' }}</h2>
+      <div class="posts-by-year col span_10">
+
+  {% else %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    {% if year != nyear %}
+
+      {% unless forloop.first %}</div></div>{% endunless %}
+
+      <div class="bundle row gutters fadeInDown animated">
+        <h2 class="post-year col span_2">{{ post.date | date: '%Y' }}</h2>
+        <div class="posts-by-year col span_10">
+    {% endif %}
+  {% endunless %}
+
+    <article class="row gutters">
+      <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}" class="col span_8">{{ post.title }}</a>
+      <div class="post-date col span_4">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B" }}</time>
+      </div>
+    </article>
+
+  {% if forloop.last %}</div></div>{% endif %}
+{% endfor %}
 </section>
-
-<ul class="entries">
-  {% for post in site.posts %}
-
-  <li>
-    <a href="{{ post.url }}">
-      <img src="{{ post.image }}" />
-      <h3>{{ post.title }}</h3>
-    </a>
-  </li>
-
-  {% endfor %}
-</ul>
