@@ -1,5 +1,5 @@
 ---
-layout: projects_entry
+layout: post
 title: Setting up Vi on a Mac
 comments: true
 category: projects

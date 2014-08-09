@@ -1,5 +1,5 @@
 ---
-layout: projects_entry
+layout: post
 title: Project Ubuntu - Part 1
 comments: true
 category: projects
@@ -15,4 +15,4 @@ def foo
 end
 {% endhighlight %}
 
-{% gist 5555251 result.md %}
+{% gist 11100990 %}

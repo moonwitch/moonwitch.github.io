@@ -1,5 +1,5 @@
 ---
-layout: projects_entry
+layout: post
 title: Bash Profile
 category: projects
 comments: true
@@ -11,12 +11,11 @@ Know that if you ever ssh into a machine - a linux/unix/bsd server without GUI, 
 Now, just because of that "No GUI" attitude, I've always struggled with Git (and thus Github and Bitbucket) in a GUI setting. I have no clue why, but for some reason every single commit went wrong. It drove me mad, so CLI it was.
 
 {% highlight bash %}
-git init
-git clone url-to-repo
-git add name-for-remote url-to-ssh-repo
-git add files-that-where-editted
-git commit -m "commit message"
-git push
+$ git init
+$ git remote add origin https://github.com/user/repo.git
+$ git add files-that-where-editted
+$ git commit -m "commit message"
+$ git push
 {% endhighlight %}
 
 Anyhow, here's my bash_profile
