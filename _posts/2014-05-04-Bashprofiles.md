@@ -1,11 +1,8 @@
 ---
 layout: projects_entry
 title: Bash Profile
+category: projects
 comments: true
-sitemap:
-  lastmod: 2014-05-04
-  priority: 0.5
-  changefreq: monthly
 ---
 Basically, yes - I am one of those people. With one of those people, I mean I am a CLI worker. While I often use GUIs, I feel quite at home in a text-only environment. In fact, this entire site minus the graphics is written with [Vi](http://www.wikipedia.com/vi). I do use [Sublime Text Editor](http://sublimetext.com), because it's handy. Because [Nano](http://en.wikipedia.org/wiki/Nano_(text_editor)) uses mouse input as well, it might be handier to use.
 
