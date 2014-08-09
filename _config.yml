@@ -1,30 +1,58 @@
 name: Kelly Crabbé
 description: Some random description should be given.
 url: http://other-net.com
-baseurl:
+baseurl: '' # does not include hostname
 
+# Location of things
 source:       .
 destination:  ./_site
-plugins:      ./_plugins
 layouts:      ./_layouts
+data_source:  ./_data
+
+# Handling of
 include:      ['.htaccess']
 keep_files:   ['.git','.svn']
-markdown:     kramdown
-rouge:        true
+exclude:      ['mainsite.*','CNAME']
+markdown_ext: 'markdown,mkd,md'
+encoding:     'utf-8'
 
+# Conversions
+rouge:        true
+markdown:     kramdown
+highlighter:  pygments
+excerpt_separator: "\n\n"
+
+# Filtering Content
 future:       true
 show_drafts:  nil
 limit_posts:  0
-highlighter:  pygments
 
+# Backwards Compat
 relative_permalinks: true
 
+# Output
 permalink:     date
 paginate_path: 'page:num'
 paginate:      5
 
-excerpt_separator: "\n\n"
+# Markdown Processors
+kramdown:
+  auto_ids:      true
+  footnote_nr:   1
+  entity_output: as_char
+  toc_levels:    1..6
+  smart_quotes:  lsquo,rsquo,ldquo,rdquo
+  use_coderay:   false
 
+  coderay:
+    coderay_wrap:              div
+    coderay_line_numbers:      inline
+    coderay_line_number_start: 1
+    coderay_tab_width:         4
+    coderay_bold_every:        10
+    coderay_css:               style
+
+# CSS Preprocessors
 sass:
   sass_dir: public/css
   style: :compressed
