@@ -6,14 +6,17 @@ sitemap:
   priority: 1
   changefreq: monthly
 ---
+### About the site ###
+
 This site was created as little project to test Jekyll, but I semi-fell in love with it. It's relaxing to tinker with it. 
 
 In the course of the trial and error, I was suddenly struck with the possible loss of employment - so this evolved into a blog to keep track of what I do, what my capabilities are and hopefully lead to a dream job. 
 
 Should anyone wonder; my dream job allows me to work from home for a day or two a week; since I do my best and most productive work when I have soft music (eg. Norah Jones or Valerie June) playing and no other "disturbances". I plan on keeping a blog section and an article (Projects) section. In both you should find enough information about me personally and professionally to get to know me a little better. 
 
-Contact information:
-- (LinkedIn)[http://linkedin.com/kaymoonwitch]
-- (GitHub)[http://github.com/moonwitch]
-- (Twitter)[http://twitter.com/kaymoonwitch]
+### Contact information ###
+
+- [LinkedIn](http://linkedin.com/kaymoonwitch)
+- [GitHub](http://github.com/moonwitch)
+- [Twitter](http://twitter.com/kaymoonwitch)
 
