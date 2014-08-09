@@ -25,7 +25,7 @@ end
 desc "Preview locally with --watch"
 task :preview => :clean do
   sh "jekyll serve -w"
-  #sh "open http://localhost:4000"
+  sh "open http://localhost:4000"
 end
 
 # rake post [title,cat,date]
@@ -34,8 +34,8 @@ task :post, [:title, :category, :dates] do |t, args|
   #if no title entered go nuts
   if args.title == nil then
     puts "Error! title is empty"
-    puts "Usage: create_post[title,category,date]"
-    puts "DATE and CATEGORY are optional"
+    puts "Usage: Rake post[title,category,date]"
+    puts "DATE is optional"
     puts "DATE is in the form: YYYY-MM-DD; use nil or empty for today's date"
     exit 1
   end
@@ -44,7 +44,7 @@ task :post, [:title, :category, :dates] do |t, args|
   if (args.category != nil and args.category != "") then
     category = args.category
   else
-    category = "random"
+    category = "blog"
   end
 
   #Check for date existence otherwise use today
@@ -53,7 +53,6 @@ task :post, [:title, :category, :dates] do |t, args|
   post_title = args.title
   yaml_cat = "category: #{category}\n"
   post_dir = "_posts/"
-  last_mod = Time.new.strftime("%Y-%m-%d %H:%M:%S %Z")
 
   filename = post_date[0..9] +"-"+ slugify( post_title ) +".md"
 
@@ -66,10 +65,6 @@ task :post, [:title, :category, :dates] do |t, args|
     f.puts "date: #{post_date}"
     f.puts yaml_cat
     f.puts "comments: true"
-    f.puts "sitemap:"
-    f.puts "  lastmod: #{last_mod}"
-    f.puts "  priority: 0.5"
-    f.puts "  changefreq: true"
     f.puts "---"
   end
 
