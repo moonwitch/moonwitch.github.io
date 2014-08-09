@@ -1,0 +1,14 @@
+- url: /
+  title: Home
+
+- url: /projects
+  title: Projects
+
+- url: /blog
+  title: Blog
+
+- url: /about
+  title: About
+
+- url: sitemap.xml
+  title: Sitemap

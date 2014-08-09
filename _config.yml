@@ -1,6 +1,7 @@
 name: Kelly Crabbé
 description: Some random description should be given.
 url: http://other-net.com
+baseurl:
 
 source:       .
 destination:  ./_site
@@ -23,3 +24,7 @@ paginate_path: 'page:num'
 paginate:      5
 
 excerpt_separator: "\n\n"
+
+sass:
+  sass_dir: public/css
+  style: :compressed
