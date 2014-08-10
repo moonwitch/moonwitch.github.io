@@ -1,6 +1,7 @@
 ---
 ---
 @import 'syntax';
+@import 'gist';
 
 $site-background-color: #f5f5f5;
 $contrast-color: #333;
@@ -33,7 +34,6 @@ blockquote,
 table,
 img,
 hr,
-.fluid-width-video-wrapper,
 .highlight {
   margin-bottom: 20px;
 }
@@ -77,12 +77,13 @@ p code {
   white-space: nowrap;
 }
 
+// Causes issues with Gists
 table {
   border-collapse: collapse;
-  border: 1px solid $contrast-color;
+  // border: 1px solid $contrast-color;
 
   td, th {
-    border: 1px solid $contrast-color;
+    // border: 1px solid $contrast-color;
     padding: 5px 10px;
   }
 
@@ -128,10 +129,8 @@ footer {
 /*----------------------------------------------------------------------------*/
 
 .highlight {
-  padding: 30px;
+  padding: 10px;
   border-radius: 6px;
-  background-color: #272822;
-  color: #f8f8f2;
   line-height: 1;
 
   code {
