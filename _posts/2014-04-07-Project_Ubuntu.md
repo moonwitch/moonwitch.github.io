@@ -15,4 +15,8 @@ def foo
 end
 {% endhighlight %}
 
-{% gist 11100990 %}
+{% gist 11100990 ubuntu-precise-borrow.seed %}
+
+And to get all the files on boot from the USB or CD ROM:
+
+{% gist 11100990 txt.cfg %}

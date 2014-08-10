@@ -20,4 +20,4 @@ $ git push
 
 Anyhow, here's my bash_profile
 
-{% gist 4645364 %}
+{% gist 4645364 .bash_profile %}
