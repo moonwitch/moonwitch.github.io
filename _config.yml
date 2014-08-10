@@ -41,6 +41,10 @@ gems:
 - jekyll-redirect-from
 - jekyll-sitemap
 
+# Markdown Processors
+kramdown:
+  input: GFM
+
 # CSS Preprocessors
 sass:
   sass_dir: public/css
