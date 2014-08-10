@@ -7,6 +7,7 @@ sitemap:
   changefreq: monthly
 ---
 ### About the site ###
+-------------------
 
 This site was created as little project to test Jekyll, but I semi-fell in love with it. It's relaxing to tinker with it.
 
