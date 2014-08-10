@@ -17,7 +17,6 @@ markdown_ext: 'markdown,mkd,md'
 encoding:     'utf-8'
 
 # Conversions
-rouge:        true
 markdown:     kramdown
 highlighter:  pygments
 excerpt_separator: "\n\n"
@@ -35,22 +34,12 @@ permalink:     date
 paginate_path: 'page:num'
 paginate:      5
 
-# Markdown Processors
-kramdown:
-  auto_ids:      true
-  footnote_nr:   1
-  entity_output: as_char
-  toc_levels:    1..6
-  smart_quotes:  lsquo,rsquo,ldquo,rdquo
-  use_coderay:   false
-
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
+# GH Plugins
+gems:
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
 
 # CSS Preprocessors
 sass:
