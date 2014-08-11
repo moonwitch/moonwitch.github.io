@@ -48,4 +48,4 @@ kramdown:
 # CSS Preprocessors
 sass:
   sass_dir: public/css
-  style: :compressed
+  style: nested
