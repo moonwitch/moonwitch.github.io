@@ -10,27 +10,22 @@ $imagesSprite: '/public/images/sprites.png';
 height:$spriteGrid;
 width:$spriteGrid;
 background:url($imagesSprite) $xval $yval no-repeat;
+border-style: none;
 }
 
 ul.navlist_social{display: block; list-style: none;}
 
-li {
-  .facebook{ @include spriter(0px,0px); }
-  .twitter{ @include spriter(-$spriteGrid, 0px); }
-  .coderwall{ @include spriter(-$spriteGrid*2, 0px); }
-  //.instagram{ @include spriter(0px, -$spriteGrid) }
-  .skype{ @include spriter(-$spriteGrid, -$spriteGrid); }
-  .github{ @include spriter(-$spriteGrid*2, -$spriteGrid); }
-  .linkedin{ @include spriter(0px, -$spriteGrid*2); }
-  .google{ @include spriter(-$spriteGrid, -$spriteGrid*2); }
-  // .tumblr{ @include spriter(-$spriteGrid*2, -$spriteGrid*2); }
+img {
+  &.facebook{ @include spriter(0px,0px); }
+  &.twitter{ @include spriter(-$spriteGrid, 0px); }
+  &.coderwall{ @include spriter(-$spriteGrid*2, 0px); }
+  &.instagram{ @include spriter(0px, -$spriteGrid) }
+  &.skype{ @include spriter(-$spriteGrid, -$spriteGrid); }
+  &.github{ @include spriter(-$spriteGrid*2, -$spriteGrid); }
+  &.linkedin{ @include spriter(0px, -$spriteGrid*2); }
+  &.google{ @include spriter(-$spriteGrid, -$spriteGrid*2); }
+  &.tumblr{ @include spriter(-$spriteGrid*2, -$spriteGrid*2); }
 }
-
-li .tumblr {
-  height: 50px;
-  width: 50px;
-  background: url("/public/images/sprites.png") -100px -100px no-repeat; }
-
 
 // li.rss{
 // height:$spriteGrid;
