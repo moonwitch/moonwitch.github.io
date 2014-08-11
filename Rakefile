@@ -73,8 +73,17 @@ task :post, [:title, :category, :dates] do |t, args|
   sh "vi \"#{post_dir}#{filename}\""
 end
 
-# rake build
-desc "Build the site"
-task :build do
-  execute("jekyll build")
+# Commit new POSTS
+desc "Commit new posts"
+task :commitposts do
+  puts "\n## Staging modified files"
+  status = system("git add _posts/*")
+  puts status ? "Success" : "Failed"
+  puts "\n## Committing a site build at #{Time.now.utc}"
+  message = "Build site at #{Time.now.utc}"
+  status = system("git commit -m \"#{message}\"")
+  puts status ? "Success" : "Failed"
+  puts "\n## Pushing commits to remote"
+  status = system("git push")
+  puts status ? "Success" : "Failed"
 end
