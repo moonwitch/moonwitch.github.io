@@ -1,55 +1,39 @@
 // Sprites CSS - Social Media
+// Let's now put SASS to work :P
 
-#twitter{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -10px -10px no-repeat;
+// Some vars
+$spriteGrid: 50px;
+$imagesSprite: '/public/images/sprites.png';
+
+// Mixins
+@mixin spriter($xval, $yval) {
+height:$spriteGrid;
+width:$spriteGrid;
+background:url($imagesSprite) $xval $yval no-repeat;
 }
 
-#tumblr{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -100px -10px no-repeat;
+ul.navlist_social{display: block; list-style: none;}
+
+li {
+  .facebook{ @include spriter(0px,0px); }
+  .twitter{ @include spriter(-$spriteGrid, 0px); }
+  .coderwall{ @include spriter(-$spriteGrid*2, 0px); }
+  //.instagram{ @include spriter(0px, -$spriteGrid) }
+  .skype{ @include spriter(-$spriteGrid, -$spriteGrid); }
+  .github{ @include spriter(-$spriteGrid*2, -$spriteGrid); }
+  .linkedin{ @include spriter(0px, -$spriteGrid*2); }
+  .google{ @include spriter(-$spriteGrid, -$spriteGrid*2); }
+  // .tumblr{ @include spriter(-$spriteGrid*2, -$spriteGrid*2); }
 }
 
-#rss{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -190px -10px no-repeat;
-}
+li .tumblr {
+  height: 50px;
+  width: 50px;
+  background: url("/public/images/sprites.png") -100px -100px no-repeat; }
 
-#linkedin{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -10px -100px no-repeat;
-}
 
-#instagram{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -100px -100px no-repeat;
-}
-
-#github{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -190px -100px no-repeat;
-}
-
-#google{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -10px -190px no-repeat;
-}
-
-#facebook{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -100px -190px no-repeat;
-}
-
-#coderwall{
-height:80px;
-width:80px;
-background:url(/public/images/sprites.png) -190px -190px no-repeat;
-}
+// li.rss{
+// height:$spriteGrid;
+// width:$spriteGrid;
+// background:url($imagesSprite) -190px -10px no-repeat;
+// }
