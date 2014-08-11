@@ -1,34 +1,40 @@
 // Sprites CSS - Social Media
 // Let's now put SASS to work :P
 
-// Some vars
+// Some variables to set up the grid properly and use later on
 $spriteGrid: 50px;
-$imagesSprite: '/public/images/sprites.png';
+$imagesSprite: '/public/images/sprites2.png';
+
+// List of all media icons included.
+$social-list:(facebook,twitter,coderwall,instagram,skype,github,linkedin,google,tumblr,rss);
 
 // Mixins
-@mixin spriter($xval, $yval) {
-height:$spriteGrid;
-width:$spriteGrid;
-background:url($imagesSprite) $xval $yval no-repeat;
-border-style: none;
+// Take the offset (position of the icon on the sprite image)
+// Do -1 because lists start at 1 in Sass, but the coordinates start at 0
+// set the background to calculate the position based on offset.
+@mixin create-sprite($offset) {
+  $offset: $offset - 1;
+  & {
+    height: $spriteGrid;
+    width: $spriteGrid;
+    background: url($imagesSprite) $spriteGrid*-$offset top;
+  }
 }
 
-ul.navlist_social{display: block; list-style: none;}
-
-img {
-  &.facebook{ @include spriter(0px,0px); }
-  &.twitter{ @include spriter(-$spriteGrid, 0px); }
-  &.coderwall{ @include spriter(-$spriteGrid*2, 0px); }
-  &.instagram{ @include spriter(0px, -$spriteGrid) }
-  &.skype{ @include spriter(-$spriteGrid, -$spriteGrid); }
-  &.github{ @include spriter(-$spriteGrid*2, -$spriteGrid); }
-  &.linkedin{ @include spriter(0px, -$spriteGrid*2); }
-  &.google{ @include spriter(-$spriteGrid, -$spriteGrid*2); }
-  &.tumblr{ @include spriter(-$spriteGrid*2, -$spriteGrid*2); }
+ul.navlist_social {
+  display: block;
+  list-style: none;
+  a {
+    text-indent: -999em;
+    float:left;
+    width: $spriteGrid;
+    height: $spriteGrid;
+  }
 }
 
-// li.rss{
-// height:$spriteGrid;
-// width:$spriteGrid;
-// background:url($imagesSprite) -190px -10px no-repeat;
-// }
+@for $i from 1 through length($social-list) {
+  $social-icon: nth($social-list, $i);
+  a.#{$social-icon} {
+    @include create-sprite($i);
+  }
+}
