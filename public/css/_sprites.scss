@@ -3,10 +3,10 @@
 
 // Some variables to set up the grid properly and use later on
 $spriteGrid: 50px;
-$imagesSprite: '/public/images/sprites.png';
+$imagesSprite: '/public/images/sprites2.png';
 
 // List of all media icons included.
-$social-list:(facebook,twitter,coderwall,instagram,skype,github,linkedin,google,tumblr,rss);
+$social-list:(email,facebook,github,google,linkedin,messenger,rss,skype,twitter);
 
 // Mixins
 // Take the offset (position of the icon on the sprite image)
@@ -29,6 +29,7 @@ ul.navlist_social {
     float:left;
     width: $spriteGrid;
     height: $spriteGrid;
+    margin-right: 5px;
   }
 }
 
