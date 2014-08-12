@@ -18,7 +18,9 @@ Should anyone wonder; my dream job allows me to work from home for a day or two 
 
 ### Credits ###
 
-The social media icons come from a nice little designer I found while idly browsing the net. I loved these instantly, however, they were all seperate icons, so I've converted them into one sprite, of course leaving out those that I don't use ;)
-[Somacro Icons by Vervex](http://vervex.deviantart.com/art/Somacro-45-300DPI-Social-Media-Icons-267955425)
+<!-- The social media icons come from a nice little designer I found while idly browsing the net. I loved these instantly, however, they were all seperate icons, so I've converted them into one sprite, of course leaving out those that I don't use ;)
+[Somacro Icons by Vervex](http://vervex.deviantart.com/art/Somacro-45-300DPI-Social-Media-Icons-267955425) -->
+
+The icons I use on the [Contact Page]({{baseurl}}/contact/) are actually no icons; they are all a part of [FontAwesome](http://fontawesome.io/), which - as the name suggests - are indeed awesome. It may not be the cleanest of solutions (since I use ```<i></i>```), but it gets the job done without adding more images.
 
 
