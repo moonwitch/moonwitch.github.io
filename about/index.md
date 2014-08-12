@@ -18,7 +18,7 @@ Should anyone wonder; my dream job allows me to work from home for a day or two 
 
 ### Credits ###
 
-The social media icons come from a nice little designer I found while idly browsing the net. I did edit the sprite to not include the icons I don't need. But I loved his icons instantly. I did add CoderWall as well.
-[Dawid Dapszus over on Dribble](https://dribbble.com/shots/1209419-20-Social-Media-Icons-Freebie)
+The social media icons come from a nice little designer I found while idly browsing the net. I loved these instantly, however, they were all seperate icons, so I've converted them into one sprite, of course leaving out those that I don't use ;)
+[Somacro Icons by Vervex](http://vervex.deviantart.com/art/Somacro-45-300DPI-Social-Media-Icons-267955425)
 
 
