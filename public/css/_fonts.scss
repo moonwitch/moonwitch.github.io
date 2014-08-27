@@ -8,8 +8,11 @@ ul.navlist_social {
   display: block;
   list-style: none;
   a {
-    float:left;
+    float: left;
     margin-right: 5px;
   }
-  &.smallertext{font-size: 12px;}
+  &.smallertext {
+    font-size: 12px;
+    display: none;
+  }
 }
