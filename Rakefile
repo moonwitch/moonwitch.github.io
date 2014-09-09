@@ -25,7 +25,7 @@ end
 desc "Preview locally with --watch"
 task :preview => :clean do
   sh "jekyll serve -w"
-  sh "open http://localhost:4000"
+  sh "chrome http://localhost:4000"
 end
 
 # rake post [title,cat,date]
