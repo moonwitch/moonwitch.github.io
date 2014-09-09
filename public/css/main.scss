@@ -23,7 +23,7 @@ $avocado-accent-color: #568203;
 body {
   background-color: $site-background-color;
   border-top: 5px solid $contrast-color;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $contrast-color;
   font-weight: 400;
   line-height: 1.5;
@@ -194,6 +194,7 @@ footer {
 .archive,
 .single {
   margin-bottom: 100px;
+  & a{text-transform: capitalize;}
 }
 
 .single {
