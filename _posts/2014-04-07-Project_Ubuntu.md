@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project Ubuntu - Part 1
+title: project ubuntu - part 1
 comments: true
 category: projects
 ---
@@ -9,14 +9,12 @@ Or that's how I'd like to say it went, but in fact it was more a question of my 
 
 My boss' boss' boss (yep that high) decided to install Ubuntu on our laptops, seeing as XP support was ending.
 
-{% highlight ruby linenos %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
+Now, bear in mind; this isn't an easy task and I had never partaken anything like it before. A lot of research later; I realized that what I was asked to do wasn't as straight forward as I'd hoped.
+See the requirements seemed simple enough:
 
-{% gist 11100990 ubuntu-precise-borrow.seed %}
+- Have one DVD for all types of laptops
+- Install our VMware View Client and Cisco AnyConnect Mobile client; both correctly configured straight away
+- Install an antivirus
+- Have this run automatically - the entire install
 
-And to get all the files on boot from the USB or CD ROM:
-
-{% gist 11100990 txt.cfg %}
+All of that combined made for an interesting find - or rather search.

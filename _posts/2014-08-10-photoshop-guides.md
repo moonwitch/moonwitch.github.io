@@ -1,7 +1,7 @@
 ---
 layout: post
 image: /public/assets/img/guideme.png
-title: photoshop guides
+title: Photoshop Guides
 date: 2014-08-10
 category: projects
 comments: true
