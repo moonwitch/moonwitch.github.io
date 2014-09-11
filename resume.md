@@ -60,3 +60,26 @@ GitHub        | http://github.com/moonwitch
 * Migration Windows Server 2003 to Windows Server 2008
 * Deployment of Ubuntu on company laptops (solo project)
 * Inclusion of new Active Directory forest (in progress)
+
+### Experience
+* 2010 - current : [Amlin](http://www.amlin.com)
+    * 2010-2012 : Service Desk Officer
+    * 2012 - current : Jr. System Administrator
+* 2008 - 2010 : [Panda Antivirus](http://www.pandasecurity.com/)
+Worked as 1st and 2nd line technical engineer for our Belgian, Dutch and French clients. Tasks included:
+    * Removal of infections
+    * Assistance in installing/uninstalling/configuring
+    * Troubleshoot installations/uninstallations/setups
+    * Create scripts for assistance/removal
+    * Create technical documentation as well as client manuals
+* 2007 - 2008 : [Dommel](http://dommel.be)
+Worked as 1st and 2nd line technical support officer
+    * Troubleshoot ADSL, VoIP, hosting, domain name issues
+    * Create documentation for clients and co-workers
+    * Administer domain name services (reseller)
+* 2005 - 2007 : ComputingHost, voluntary administrator on forums, no longer exists.
+    * Ensure smooth operation of forum (Invision Power Board)
+    * Ensure provided content was en par and not plagiarized
+    * Assign hosting packages based on provided content
+    * Resolving disputes
+    * Contributed tutorials on Photoshop, Illustrator, PHP, Linux
