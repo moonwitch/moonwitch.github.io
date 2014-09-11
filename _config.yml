@@ -12,7 +12,7 @@ data_source:  ./_data
 # Handling of
 include:      ['.htaccess']
 keep_files:   ['.git','.svn']
-exclude:      ['mainsite.*','CNAME']
+exclude:      ['mainsite.*','CNAME','Rakefile']
 markdown_ext: 'markdown,mkd,md'
 encoding:     'utf-8'
 
