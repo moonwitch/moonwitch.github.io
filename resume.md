@@ -77,7 +77,7 @@ Worked as 1st and 2nd line technical support officer
     * Troubleshoot ADSL, VoIP, hosting, domain name issues
     * Create documentation for clients and co-workers
     * Administer domain name services (reseller)
-* 2005 - 2007 : ComputingHost, voluntary administrator on forums, no longer exists.
+* 2005 - 2007 : [ComputingHost](http://www.computinghost.com/), voluntary administrator on forums
     * Ensure smooth operation of forum (Invision Power Board)
     * Ensure provided content was en par and not plagiarized
     * Assign hosting packages based on provided content
