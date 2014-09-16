@@ -7,7 +7,6 @@ Personalia    |
 Name          | Kelly Crabbé
 Date of Birth | July 31, 1983
 Place of Birth  | Leuven
-Address       | Bosduifweg 6,B-3370 Boutersem, Belgium
 Mobile        | +32 479 69 55 60
 Email         | Kelly.Crabbe@gmail.com
 LinkedIn      | http://be.linkedin.com/kelly.crabbe
