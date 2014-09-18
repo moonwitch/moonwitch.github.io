@@ -9,17 +9,20 @@ Date of Birth | July 31, 1983
 Place of Birth  | Leuven
 Mobile        | +32 479 69 55 60
 Email         | Kelly.Crabbe@gmail.com
-LinkedIn      | http://be.linkedin.com/kelly.crabbe
-GitHub        | http://github.com/moonwitch
+LinkedIn      | (http://be.linkedin.com/kelly.crabbe)[http://be.linkedin.com/kelly.crabbe]
+GitHub        | (http://github.com/moonwitch)[http://github.com/moonwitch]
 
-### Skills
+### Personal Skills
+* Good teamplayer, very passionate about IT
+
+### IT Skills
 * Operating systems
-    * Windows XP to 8 (Usage and administration)
-    * Windows Server 2003 to 2012 (Use and Administration)
+    * Windows XP to 8 (Use and administration)
+    * Windows Server 2003 to 2012 (Use and administration)
     * Mac OS (Desktop - Advanced use and administration)
-    * Linux and Unix (Distribution doesn't matter much, I prefer Debian based or Red Hat based)
+    * Linux and Unix (Distribution doesn't matter much, but I prefer Debian based or Red Hat based.)
     * Android
-    * Cisco iOS - managed switch - basic use
+    * Cisco iOS - managed switch - basic use and understanding
 
 * Specific Software packages (Unless otherwise noted, skills include use and administration.)
     * Blackberry Exchange
@@ -28,24 +31,24 @@ GitHub        | http://github.com/moonwitch
     * DFS/DNS/DHCP
     * SharePoint
     * VMware vSphere/Fusion
-    * Adobe Photoshop, Illustrator, InDesign, Fireworks : Can use all three on basic level
-    * Pixelmator, GIMP, InkScape : proper use
     * Cisco Unified Communications Manager
     * Version Control : Git and Mercurial
     * Ticketing systems : TOPdesk and SalesForce
 
 * Scripting/Programming
-    * Web : HTML/CSS/SCSS : Currently doing a refresher
+    * HTML/CSS/SCSS : Currently doing a refresher
     * Lua
     * PowerShell
     * Bash
     * Batch
     * Ruby (on Rails)
-    * PHP : basics
+    * PHP : basics (Including CodeIgniter and CakePHP)
     * AppleScript
 
 * Other notable skills
     * Proficient in using Markdown, LaTeX to generate documentation
+    *Adobe Photoshop, Illustrator, InDesign, Fireworks : Can use all three on basic level
+    * Pixelmator, GIMP, InkScape : proper use
 
 ### Languages
 * Dutch : Native speaker
@@ -57,13 +60,22 @@ GitHub        | http://github.com/moonwitch
 * Major migration Insurance Platform @ Amlin
 * Migration Windows XP to Windows 7 (400+ users)
 * Migration Windows Server 2003 to Windows Server 2008
-* Deployment of Ubuntu on company laptops (solo project)
-* Inclusion of new Active Directory forest (in progress)
+* Deployment of Ubuntu on company laptops; this involved customizing the ISO and creating an automated install for 6 types on 2 keyboard layouts in one ISO.
+* Inclusion of new company branches into current infrastructure (in progress)
 
 ### Experience
 * 2010 - current : [Amlin](http://www.amlin.com)
     * 2010-2012 : Service Desk Officer
+        * Writing tech. documentation and user guides
+        * Training peers
+        * Troubleshooting and resolving 80%+ of incoming incidents
     * 2012 - current : Jr. System Administrator
+        * Daily administration
+            * Backups (Backup Exec 2012)
+            * ActiveDirectory administration
+            * DFS Administration
+            * Management of fileservers (Disk Usage, Performance)
+        * Advanced incident management 
 * 2008 - 2010 : [Panda Antivirus](http://www.pandasecurity.com/)
 Worked as 1st and 2nd line technical engineer for our Belgian, Dutch and French clients. Tasks included:
     * Removal of infections
