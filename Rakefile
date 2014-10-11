@@ -33,7 +33,7 @@ desc "Create a post in _posts"
 task :post, [:title, :category, :dates] do |t, args|
   #if no title entered go nuts
   if args.title == nil then
-    puts "Error! title is empty"
+    puts "Error! Title is empty"
     puts "Usage: Rake post[title,category,date]"
     puts "DATE is optional"
     puts "DATE is in the form: YYYY-MM-DD; use nil or empty for today's date"
@@ -54,7 +54,8 @@ task :post, [:title, :category, :dates] do |t, args|
   yaml_cat = "category: #{category}\n"
   post_dir = "_posts/"
 
-  filename = post_date[0..9] +"-"+ slugify( post_title ) +".md"
+  # filename = post_date[0..9] + "-" + slugify( post_title ) + ".md"
+  filename = post_date[0..9] + "-" + post_title.downcase.gsub( /[^a-zA-Z0-9_\.]/, '-') + ".md"
 
   #lets create the file
   File.open(post_dir + filename, "w") do |f|
