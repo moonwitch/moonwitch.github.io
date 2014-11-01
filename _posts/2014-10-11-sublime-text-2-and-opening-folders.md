@@ -1,7 +1,7 @@
 ---
 layout: post
 image: optional
-title: Sublime Text 2 and opening folders
+title: Sublime Text 3 and opening folders
 date: 2014-10-11
 category: blog
 tag: quicktip
@@ -20,7 +20,7 @@ One of my petpeeves with an otherwise amazing editor is the fact that I can not 
     Pass input : "as arguments"
 
     ```bash
-    /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl -n "$@"
+    /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n "$@"
     ```
 
     Like so:
@@ -33,7 +33,7 @@ This is fairly simple actually; most of already have a symlink to use sublime fr
 
 Open Terminal and run this command
 {% highlight bash %}
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /bin/subl
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /bin/subl
 {% endhighlight %}
 
 You will now be able to open files and folders from the command line.
