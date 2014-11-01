@@ -13,11 +13,11 @@ ul.navlist_social {
   list-style: none;
   a {
     float: left;
-    margin-right: 5px;
-    padding: 2px;
+    margin-right: .3em;
+    padding: .2em;
   }
   &.smallertext {
-    font-size: 12px;
+    font-size: .75em;
     display: none;
   }
 }
