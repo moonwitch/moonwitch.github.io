@@ -8,9 +8,9 @@ Name          | Kelly Crabbé
 Date of Birth | July 31, 1983
 Place of Birth  | Leuven
 Mobile        | +32 479 69 55 60
-Email         | Kelly.Crabbe@gmail.com
-LinkedIn      | (http://be.linkedin.com/kelly.crabbe)[http://be.linkedin.com/kelly.crabbe]
-GitHub        | (http://github.com/moonwitch)[http://github.com/moonwitch]
+Email         | [Kelly.Crabbe@gmail.com](mailto:kelly.crabbe@gmail.com)
+LinkedIn      | [http://be.linkedin.com/kelly.crabbe](http://be.linkedin.com/kelly.crabbe)
+GitHub        | [http://github.com/moonwitch](http://github.com/moonwitch)
 
 ### Personal Skills
 * Good teamplayer, very passionate about IT
