@@ -27,7 +27,7 @@ show_drafts:  nil
 limit_posts:  0
 
 # Output
-permalink:     date
+permalink: pretty
 paginate_path: 'page:num'
 paginate:      5
 
