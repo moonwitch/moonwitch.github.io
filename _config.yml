@@ -26,9 +26,6 @@ future:       true
 show_drafts:  nil
 limit_posts:  0
 
-# Backwards Compat
-relative_permalinks: true
-
 # Output
 permalink:     date
 paginate_path: 'page:num'
