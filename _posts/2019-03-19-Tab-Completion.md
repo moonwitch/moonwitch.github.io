@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title: tab completion
+comments: true
+category: projects
 ---
 I've spent quite some time in OSX Terminal, WSL (Linux Sybsystem for Windows), PowerShell, Linux terminal itself. One of my key requirements is the ability to use auto-complete on tab for eg file and foldernames. (Autocomplete is when you hit tab to automatically complete the file or folder name you are typing.)
 
@@ -9,6 +12,6 @@ To get case insensitive autocomplete we need to make a change to the ~/.inputrc 
 
 This command will append the case insensitive setting to your ~/.inputrc file.
 
-````
-    echo "set completion-ignore-case On" >> ~/.inputrc
+````bash
+echo "set completion-ignore-case On" >> ~/.inputrc
 ````
