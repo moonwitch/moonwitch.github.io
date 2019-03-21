@@ -4,7 +4,7 @@ image: optional
 title: Sublime Text 3 and opening folders
 date: 2014-10-11
 category: blog
-tag: quicktip
+tags: quicktip
 comments: true
 ---
 
