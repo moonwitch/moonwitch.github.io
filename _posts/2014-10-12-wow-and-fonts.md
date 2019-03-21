@@ -5,7 +5,7 @@ title: WoW and fonts
 date: 2014-10-12
 category: blog
 comments: true
-tag: wow, games
+tags: [wow, games]
 ---
 After about 4hrs of dry-coding some of my addons; tweaking my UI (and yes, Jurian, I blame you.) I suddenly found myself gobsmacked. A lot of names weren't properly being displayed. They looked cut off and in the chat I lost whatever they'd say. 
 
