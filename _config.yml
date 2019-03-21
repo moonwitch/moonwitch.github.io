@@ -37,6 +37,7 @@ gems:
 - jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
+- jekyll-feed
 
 # Markdown Processors
 kramdown:
