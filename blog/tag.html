@@ -5,14 +5,18 @@ title: Tag
 
 {% comment %}
 =======================
-The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place.
+The following part extracts all the tags from your posts and sort tags, 
+so that you do not need to manually collect your tags to a place.
 =======================
 {% endcomment %}
+
 {% assign rawtags = "" %}
+
 {% for post in site.posts %}
 	{% assign ttags = post.tags | join:'|' | append:'|' %}
 	{% assign rawtags = rawtags | append:ttags %}
 {% endfor %}
+
 {% assign rawtags = rawtags | split:'|' | sort %}
 
 {% comment %}
@@ -20,7 +24,9 @@ The following part extracts all the tags from your posts and sort tags, so that 
 The following part removes dulpicated tags and invalid tags like blank tag.
 =======================
 {% endcomment %}
+
 {% assign tags = "" %}
+
 {% for tag in rawtags %}
 	{% if tag != "" %}
 		{% if tags == "" %}
