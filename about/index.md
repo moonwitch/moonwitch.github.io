@@ -14,7 +14,7 @@ In the course of the trial and error, I was suddenly struck with the possible lo
 
 Should anyone wonder; my dream job allows me to work from home for a day or two a week; since I do my best and most productive work when I have soft music (eg. Norah Jones or Valerie June) playing and no other "disturbances". I plan on keeping a blog section and an article (Projects) section. In both you should find enough information about me personally and professionally to get to know me a little better.
 
-If you're looking for more about me profesionally; I gladly refer you to my [resume]({{baseurl}}/resume.html)
+If you're looking for more about me profesionally; I gladly refer you to my [resume]({{baseurl}}/resume/)
 
 ----------------
 

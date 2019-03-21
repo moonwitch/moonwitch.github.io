@@ -12,7 +12,7 @@ data_dir:  ./_data
 # Handling of
 include:      ['.htaccess']
 keep_files:   ['.git','.svn']
-exclude:      ['mainsite.*','CNAME','Rakefile']
+exclude:      ['mainsite.*','CNAME','Rakefile','Gemfile*']
 markdown_ext: 'markdown,mkd,md'
 encoding:     'utf-8'
 
@@ -28,17 +28,13 @@ limit_posts:  0
 
 # Output
 permalink: pretty
-paginate_path: 'page:num'
-paginate:      5
 
 # GH Plugins
 plugins:
 - jekyll-mentions
 - jemoji
-- jekyll-redirect-from
 - jekyll-sitemap
 - jekyll-feed
-- jekyll-paginate
 - jekyll-gist
 
 # Markdown Processors
