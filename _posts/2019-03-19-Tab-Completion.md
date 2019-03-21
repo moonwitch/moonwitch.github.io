@@ -3,7 +3,7 @@ layout: post
 title: AutoComplete
 comments: true
 category: blog
-tag: [terminal,commandline,osx]
+tag: cli osx terminal
 ---
 I've spent quite some time in OSX Terminal, WSL (Linux Sybsystem for Windows), PowerShell, Linux terminal itself. One of my key requirements is the ability to use auto-complete on tab for eg file and foldernames. (Autocomplete is when you hit tab to automatically complete the file or folder name you are typing.)
 
