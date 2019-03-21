@@ -6,8 +6,8 @@ baseurl: '' # does not include hostname
 # Location of things
 source:       .
 destination:  ./_site
-layouts:      ./_layouts
-data_source:  ./_data
+layouts_dir:      ./_layouts
+data_dir:  ./_data
 
 # Handling of
 include:      ['.htaccess']
@@ -32,12 +32,14 @@ paginate_path: 'page:num'
 paginate:      5
 
 # GH Plugins
-gems:
+plugins:
 - jekyll-mentions
 - jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
 - jekyll-feed
+- jekyll-paginate
+- jekyll-gist
 
 # Markdown Processors
 kramdown:

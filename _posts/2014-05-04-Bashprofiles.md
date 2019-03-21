@@ -3,7 +3,7 @@ layout: post
 title: Bash Profile
 category: projects
 comments: true
-tags:[cmd,linux,cli,bash]
+tags: [cmd,linux,cli,bash]
 ---
 Basically, yes - I am one of those people. With one of those people, I mean I am a CLI worker. While I often use GUIs, I feel quite at home in a text-only environment. In fact, this entire site minus the graphics is written with [Vi](http://www.wikipedia.com/vi). I do use [Sublime Text Editor](http://sublimetext.com), because it's handy. Because [Nano](http://en.wikipedia.org/wiki/Nano_(text_editor)) uses mouse input as well, it might be handier to use.
 
@@ -21,4 +21,4 @@ $ git push
 
 Anyhow, here's my bash_profile
 
-{% gist 4645364 .bash_profile %}
+{% gist 10641553 install.sh %}
