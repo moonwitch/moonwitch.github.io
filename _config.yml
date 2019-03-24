@@ -31,11 +31,11 @@ permalink: pretty
 
 # GH Plugins
 plugins:
-- jekyll-mentions
 - jemoji
 - jekyll-sitemap
 - jekyll-feed
 - jekyll-gist
+- jekyll-github-metadata
 
 # Markdown Processors
 kramdown:
