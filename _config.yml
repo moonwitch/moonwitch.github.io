@@ -26,14 +26,7 @@ sass:
   sass_dir:         _sass
   style:            compressed
 
-plugins:
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-avatar
-  - jemoji
-  - jekyll-mentions
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
 
 # Set Prose.io Config
 prose:
