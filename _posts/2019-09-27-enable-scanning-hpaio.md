@@ -1,5 +1,9 @@
 ---
-published: false
+layout: post
+title: Printing and Scanning under Manjaro
+comments: true
+category: blog
+tags: [linux,scanning]
 ---
 ## Printing and Scanning under Manjaro
 
