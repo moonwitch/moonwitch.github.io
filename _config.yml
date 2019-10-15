@@ -1,5 +1,5 @@
-# Site settings
-#  {{ site.myvariable }}.
+# Welcome to Jekyll!
+lang: en-US
 title:              Kelly C.
 tagline:            Where everything comes together...
 email:              kelly.crabbe@gmail.com
@@ -7,26 +7,71 @@ description: >- # this means to ignore newlines until "baseurl:"
   My own little nook on the interwebz where I discuss a multitude of topics in my own life.
 baseurl: "" # the subpath of your site, e.g. /blog
 url:                "http://kellyc.eu"
-locale:             en_US
-reading_time:       true
-words_per_minute:   200
 
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
+author:
+  name:
+  twitter:
+  picture:
+twitter_username:
+github_username:
+logo: # path of site logo, e.g. "/assets/images/logo.png"
+search: # true, false (default)
+search_full_content: false # true, false (default)
+search_provider: # lunr (default), algolia
+algolia:
+  application_id: # YOUR_APPLICATION_ID
+  index_name: # YOUR_INDEX_NAME
+  search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
+  powered_by: # true (default), false
 
-remote_theme: "mmistakes/jekyll-theme-basically-basic"
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-basically-basic
+plugins: # previsously gems
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: /page:num/
+
+# Exclude from processing.
+exclude:
+  - .asset-cache
+  - .bundle
+  - .codeclimate.yml
+  - .editorconfig
+  - .gitattributes
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .scss-lint.yml
+  - CHANGELOG
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - node_modules
+  - Rakefile
+  - README
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - /docs # ignore Basically Basic sample site
+  - /example # ignore Basically Basic dev site
+
+# Front Matter Defaults
+defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      read_time: true
 
 # Set Prose.io Config
 prose:
@@ -43,7 +88,7 @@ prose:
         element: "multiselect"
         label: "Choose Layout"
         value: "post"
-        options: 
+        options:
           - name: "default"
             value: "default"
           - name: "page"
@@ -75,9 +120,3 @@ prose:
 
 # Set Excerpt Seperator
 excerpt_separator: <!--more-->
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

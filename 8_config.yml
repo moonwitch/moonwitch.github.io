@@ -1,0 +1,83 @@
+# Site settings
+#  {{ site.myvariable }}.
+title:              Kelly C.
+tagline:            Where everything comes together...
+email:              kelly.crabbe@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  My own little nook on the interwebz where I discuss a multitude of topics in my own life.
+baseurl: "" # the subpath of your site, e.g. /blog
+url:                "http://kellyc.eu"
+locale:             en_US
+reading_time:       true
+words_per_minute:   200
+
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
+
+# Set Prose.io Config
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://kellyc.eu'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+  _posts:
+    - name: "layout"
+      field:
+        element: "multiselect"
+        label: "Choose Layout"
+        value: "post"
+        options:
+          - name: "default"
+            value: "default"
+          - name: "page"
+            value: "page"
+          - name: "blog post"
+            value: "post"
+    - name: "category"
+      field:
+        element: "hidden"
+        value: "blog"
+    - name: "tags"
+      field:
+        element: "multiselect"
+        label: "Add tags"
+        placeholder: "Add tags"
+        alterable: true
+    - name: "title"
+      field:
+        element: "text"
+        label: "Post title"
+        placeholder: "Title"
+        alterable: true
+    - name: "image"
+      field:
+        element: "text"
+        label: "Add Image to Post"
+        placeholder: "Image path (relative to /assets/post-images/)"
+        alterable: true
+
+# Set Excerpt Seperator
+excerpt_separator: <!--more-->
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

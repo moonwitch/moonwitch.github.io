@@ -1,35 +1,15 @@
-###Jekyll###
-Gemfile.lock
-_site/
-.sass-cache
-
-###SublimeText###
-
-# SublimeText project files
-/*.sublime-project
+*.gem
+*.sublime-project
 *.sublime-workspace
-sftp-config*.json
-
-
-###OSX###
-
+.bundle
 .DS_Store
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-
-###Windows###
-
-# Windows image file caches
-Thumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+_asset_bundler_cache
+_site
+codekit-config.json
+example/_site
+Gemfile.lock
+node_modules
+npm-debug.log*

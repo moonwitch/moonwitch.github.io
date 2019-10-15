@@ -2,18 +2,17 @@
 layout: default
 ---
 
-<article class="single row gutters">
-  <time class="published" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
-  <h2>{{ page.title }}</h2>
+{% include page-intro.html %}
 
-  {{ content }}
-</article>
-
-{% comment %}
-=======================
-The purpose of this snippet is to list all the tags you have in your site.
-=======================
-{% endcomment %}
-{% for tag in tags %}
-	<a href="#{{ tag | slugify }}"> {{ tag }} </a>
-{% endfor %}
+<main id="main" class="page-content" aria-label="Content">
+  <div class="inner">
+    <article class="entry-wrap">
+      <div class="entry-content">
+        {{ content }}
+      </div>
+      {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+      {% endif %}
+    </article>
+  </div>
+</main>

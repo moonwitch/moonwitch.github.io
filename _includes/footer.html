@@ -1,3 +1,11 @@
-<footer>
-   <p>&copy; Kelly Crabbé 2019 | All Rights Reserved. </p>
+<footer id="footer" class="site-footer">
+  <div class="inner">
+    <div class="copyright">
+      {% if site.copyright %}
+        {{ site.copyright | markdownify }}
+      {% else %}
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
+      {% endif %}
+    </div>
+  </div>
 </footer>

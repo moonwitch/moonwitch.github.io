@@ -2,8 +2,14 @@
 layout: default
 ---
 
-<article class="single row gutters">
-  <h2>{{ page.title }}</h2>
+{% include page-intro.html %}
 
-  {{ content }}
-</article>
+<main id="main" class="page-content" aria-label="Content">
+  <div class="inner">
+    <article class="entry-wrap">
+      <div class="entry-content">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</main>
