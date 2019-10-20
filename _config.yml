@@ -70,25 +70,49 @@ prose:
     - /_layouts
     - /_includes
   metadata:
-    etadata:
     _posts:
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: "true"
       - name: "layout"
         field:
           element: "hidden"
-          value: "blog"
-      - name: "tags"
+          label: "Layout"
+          value: "post"
+      - name: "title"
         field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
-          options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
-      - name: "image"
+          label: "Title"
+          element: "text"
+          value: "An Awesome Headline!"
+      - name: "headline"
         field:
           element: "text"
-          label: "Add Image to Post"
-          placeholder: "Image path (relative to /assets/post-images/)"
-          alterable: true
+          label: "beadline"
+          placeholder: "Enter Post Headline"
+      - name: "tags"
+        field:
+          element: "text"
+          label: "Tags"
+          placeholder: "Enter tags, separated by comma's"
+      - name: "imagefeature"
+        field:
+          element: "text"
+          label: "Featured Image"
+          placeholder: "somefile.jpg"
+      - name: "mathjax"
+        field:
+          element: "checkbox"
+          label: "MathJax"
+          value: false
+      - name: "featured"
+        field:
+          element: "checkbox"
+          label: "Featured?"
+          value: false
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Comments"
+          value: false
