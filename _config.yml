@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl:            ""
-url:                "http://kellyc.eu"
+url:                "https://kellyc.eu"
 reading_time:       true
 words_per_minute:   200
 email:              kelly.crabbe@gmail.com
