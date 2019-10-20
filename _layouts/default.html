@@ -1,33 +1,17 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <script type="text/javascript">
-    document.createElement('header');
-    document.createElement('footer');
-    document.createElement('section');
-    document.createElement('aside');
-    document.createElement('nav');
-    document.createElement('article');
-</script>
-{% include header.html %}
-</head>
-
-<body>
-  <div class="container azul">
-      <header class="top row gutters{% if page.title == "Home" %} fadeInLeft animated{% endif %}">
-        <div class="col span_2 center">
-          <a href="{{ site.url }}" id="logo" title="{{ site.data.other.name }}"
-             style="background-image: url({{site.baseurl}}/assets/images/header.png);"></a>
-        </div>
-        {% include nav.html %}
-      </header>
-    {{ content }}
-  {% if page.comments %}
-    {% include discus.html %}
-  {% endif %}
-
-  {% include footer.html %}
-  <!-- scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-</body>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include navbar.html %}
+    <div class="content">
+      {{ content }}
+    </div>
+    {% include footer.html %}
+  </body>
 </html>
