@@ -1,20 +1,49 @@
-# Site settings
-#  {{ site.myvariable }}.
-title:              Kelly C.
-tagline:            Where everything comes together...
-email:              kelly.crabbe@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  My own little nook on the interwebz where I discuss a multitude of topics in my own life.
-baseurl: "" # the subpath of your site, e.g. /blog
+# SITE CONFIGURATION
+baseurl:            ""
 url:                "http://kellyc.eu"
-locale:             en_US
 reading_time:       true
 words_per_minute:   200
+email:              kelly.crabbe@gmail.com
 
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
+# THEME-SPECIFIC CONFIGURATION
+title:              Kelly C.
+description:        "My own little nook on the interwebz where I discuss a multitude of topics in my own life."
+avatar:             assets/img/triangle.png
+favicon:            assets/favicon.ico
+
+# Header and footer text
+header_text: "Life as it is"
+header_feature_image: assets/img/pexels/triangular.jpeg
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a> as base.
+
+# Blog
+excerpt: truncate
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
+
+# Features
+katex: false # Math Markup
+google_analytics: UA-150465502-1
+disqus_shortname: moonwitch
+layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
+footer_icons:                                           # In _data/social.yml
+share_buttons:                                          # In _data/social.yml
+authors:                                                # In _data/authors.yml
+language:                                               # In _data/language.yml
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# PORTFOLIO
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
+
+# BUILD SETTINGS
+markdown: kramdown
 kramdown:
   auto_ids:         true
   footnote_nr:      1
@@ -22,62 +51,11 @@ kramdown:
   toc_levels:       1..6
   enable_coderay:   false
 mathjax:            true
+highlighter: rouge
 sass:
-  sass_dir:         _sass
-  style:            compressed
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
+          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
 
-remote_theme: "mmistakes/jekyll-theme-basically-basic"
-
-# Set Prose.io Config
-prose:
-  rooturl: '_posts'
-  siteurl: 'http://kellyc.eu'
-  ignore:
-    - index.md
-    - _config.yml
-    - /_layouts
-    - /_includes
-  _posts:
-    - name: "layout"
-      field:
-        element: "multiselect"
-        label: "Choose Layout"
-        value: "post"
-        options: 
-          - name: "default"
-            value: "default"
-          - name: "page"
-            value: "page"
-          - name: "blog post"
-            value: "post"
-    - name: "category"
-      field:
-        element: "hidden"
-        value: "blog"
-    - name: "tags"
-      field:
-        element: "multiselect"
-        label: "Add tags"
-        placeholder: "Add tags"
-        alterable: true
-    - name: "title"
-      field:
-        element: "text"
-        label: "Post title"
-        placeholder: "Title"
-        alterable: true
-    - name: "image"
-      field:
-        element: "text"
-        label: "Add Image to Post"
-        placeholder: "Image path (relative to /assets/post-images/)"
-        alterable: true
-
-# Set Excerpt Seperator
-excerpt_separator: <!--more-->
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
