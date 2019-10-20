@@ -59,3 +59,36 @@ plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
           "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
 
+# PROSE SETTINGS
+prose:
+  rooturl: '_posts'
+  siteurl: "https://kellyc.eu"
+  media: /assets/img/posts
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    etadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
+      - name: "image"
+        field:
+          element: "text"
+          label: "Add Image to Post"
+          placeholder: "Image path (relative to /assets/post-images/)"
+          alterable: true
