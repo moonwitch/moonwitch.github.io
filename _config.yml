@@ -86,11 +86,6 @@ prose:
           label: "Title"
           element: "text"
           value: "An Awesome Headline!"
-      - name: "headline"
-        field:
-          element: "text"
-          label: "beadline"
-          placeholder: "Enter Post Headline"
       - name: "tags"
         field:
           element: "text"
@@ -101,11 +96,6 @@ prose:
           element: "text"
           label: "Featured Image"
           placeholder: "somefile.jpg"
-      - name: "mathjax"
-        field:
-          element: "checkbox"
-          label: "MathJax"
-          value: false
       - name: "featured"
         field:
           element: "checkbox"
@@ -116,3 +106,17 @@ prose:
           element: "checkbox"
           label: "Comments"
           value: false
+      - name: "category"
+        field:
+          element: "select"
+          label: "Select Category"
+          placeholder: "Choose Category"
+          options:
+            - name: "Gallery"
+              value: "gallery"
+            - name: "Blog"
+              value: "blog"
+            - name: "Portfolio"
+              value: "portfolio"
+            - name: "QuickTips"
+              value: "quicktips"
