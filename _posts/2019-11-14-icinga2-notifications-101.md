@@ -4,7 +4,7 @@ published: true
 featured: true
 comments: true
 title: 'Icinga2 Notifications: 101'
-tags: 'icinga,devops,work'
+tags: [icinga,work,devops]
 category: quicktips
 imagefeature: ''
 ---
