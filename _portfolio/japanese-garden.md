@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Japanese Garden in Hasselt
-img: "assets/img/portfolio/japanese-garden-hasselt.jpg"
+img: "assets/img/portfolio/Optimized-Japanese-Garden-Hasselt.jpg"
 date: Nov 2019
 tags: [35mm]
 ---
