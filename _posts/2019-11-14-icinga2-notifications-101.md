@@ -22,62 +22,64 @@ imagefeature: ''
 
 ### Making sure mail works
 
-1. Use 'ssmtp' as mailer.
-	1. Install ssmtp 
+1. Install ssmtp 
 
-  ```
-  yum install ssmtp
-  ```
+```bash
+yum install ssmtp
+```
 
 2. Disable postfix and stop the service 
 
-  ```
-  systemctl disable postfix
-  systemctl stop postfix
-  ```
+```bash
+systemctl disable postfix
+systemctl stop postfix
+```
 
 3. Configure your 'finger' information. 
 
-  ```
-  chfn -f name-you-want-as-displayname loginname
-  ```
+```bash
+chfn -f name-you-want-as-displayname loginname
+```
 
 4. Configure ssmtp
 
-  ```
-  #
-  # /etc/ssmtp.conf -- a config file for sSMTP sendmail.
-  #
-  # Recipient for all mail to userids < 100
-  root=postmaster
+```bash
+#
+# /etc/ssmtp.conf -- a config file for sSMTP sendmail.
+#
+# Recipient for all mail to userids < 100
+root=postmaster
 
-  # The place where the mail goes.
-  mailhub=smtp.example.com
+# The place where the mail goes.
+mailhub=smtp.example.com
 
-  # Where will the mail seem to come from? This would be the part after the @
-  RewriteDomain=example.com
+# Where will the mail seem to come from? This would be the part after the @
+RewriteDomain=example.com
 
-  # Set this to never rewrite the "From:" line (unless not given) and to
-  # use that address in the "from line" of the envelope.
-  FromLineOverride=YES
-  ```
+# Set this to never rewrite the "From:" line (unless not given) and to
+# use that address in the "from line" of the envelope.
+FromLineOverride=YES
+```
 
 5. Start and enable service
 
-  ```
-  systemctl enable ssmtp
-  systemctl start ssmtp
-  ```
+```bash
+systemctl enable ssmtp
+systemctl start ssmtp
+```
+
 6. Test this
-	```
-    echo "Hello, this is a test" | mail -s "Test" someone@example.com
-    ```
+
+```bash
+echo "Hello, this is a test" | mail -s "Test" someone@example.com
+```
+
 ### Configure icinga2 user (and usergroups)
 
 By default, icinga2 comes with a UserGroup called 'icingaadmins'.
 Any user of this group will receive email notifications if the icinga2 host itself has issues. 
 
-__ Please note that an icinga2 user is not necessarily an icingaweb2 login user. This is a whole different topic.__
+_Please note that an icinga2 user is not necessarily an icingaweb2 login user. This is a whole different topic._
 
 A simple user looks like this:
 
