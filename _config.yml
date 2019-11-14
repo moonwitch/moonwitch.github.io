@@ -23,9 +23,9 @@ post_navigation: true
 color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
 # Features
-katex: false # Math Markup
-google_analytics: UA-150465502-1
-disqus_shortname: moonwitch
+katex: false                                            # Math Markup
+google_analytics: UA-150465502-1                        # Google Analytics
+disqus_shortname: moonwitch                             # Disqus
 layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
 footer_icons:                                           # In _data/social.yml
 share_buttons:                                          # In _data/social.yml
@@ -45,16 +45,23 @@ collections:
 # BUILD SETTINGS
 markdown: kramdown
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
-highlighter: rouge
+  auto_ids:           true
+  footnote_nr:        1
+  entity_output:      as_char
+  toc_levels:         1..6
+  enable_coderay:     false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: bash
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+mathjax:              true
+highlighter:          rouge
 sass:
-  sass_dir: _sass
-  style: :compressed
+  sass_dir:           _sass
+  style:              :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
           "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
