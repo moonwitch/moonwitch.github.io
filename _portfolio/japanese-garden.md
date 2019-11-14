@@ -2,8 +2,9 @@
 layout: post
 title: Japanese Garden in Hasselt
 img: "assets/img/portfolio/Optimized-Japanese-Garden-Hasselt.jpg"
-date: Nov 2019
-tags: [35mm]
+feature-img: "assets/img/portfolio/Optimized-Japanese-Garden-Hasselt.jpg"
+date: 2019-11-03
+tags: [35mm,prime]
 ---
 
 ![image]({{ page.img | relative_url }})
