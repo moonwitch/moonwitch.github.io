@@ -2,8 +2,9 @@
 layout: post
 title: Hero Lens
 img: "assets/img/portfolio/hero-lens.jpg"
-date: July 2019
-tags: [lens]
+feature-img: "assets/img/portfolio/hero-lens.jpg"
+date: 2019-07-20
+tags: [lens,kitlens]
 ---
 
 ![image]({{ page.img | relative_url }})
