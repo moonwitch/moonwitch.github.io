@@ -8,7 +8,7 @@ email:              kelly.crabbe@gmail.com
 # THEME-SPECIFIC CONFIGURATION
 title:              Kelly C.
 description:        "My own little nook on the interwebz where I discuss a multitude of topics in my own life."
-avatar:             assets/img/triangle.png
+avatar:             https://avatars2.githubusercontent.com/u/15063?s=460&v=4
 favicon:            assets/favicon.ico
 
 # Header and footer text
@@ -36,7 +36,7 @@ language:                                               # In _data/language.yml
 paginate: 5
 paginate_path: "blog/page:num"
 
-# PORTFOLIO
+# GALLERY
 collections:
   portfolio:
     output: true
