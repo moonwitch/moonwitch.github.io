@@ -56,7 +56,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
 mathjax:              true
 highlighter:          rouge
 sass:
