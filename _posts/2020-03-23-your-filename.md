@@ -3,12 +3,10 @@ layout: post
 published: false
 featured: true
 comments: true
-title: ''
+title: Rundeck Quicktips
 tags: 'rundeck, devops'
 category: quicktips
 ---
-## Rundeck: QuickTips
-
 At work, I've been using [Rundeck](https://www.rundeck.com/open-source) for a few projects; or rather one of my colleagues introduced Rundeck to us and as new kid on the team, I was suggested to work with it. My assignment was fairly simple; though without prior knowledge on Rundeck, it was a learning curve. 
 
 ### The assignment
