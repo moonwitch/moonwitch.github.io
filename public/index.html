@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kelly Crabbé</title>
+    <meta name="description" content="I am solution oriented, and love to sink my teeth in challenging IT problems. SIhe will try my best to find a solution, even if it requires out of the box thinking." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Kelly Crabbé</h1>
+          <h2>DevOps</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:kelly.crabbe@gmail.com">kelly.crabbe@gmail.com</a>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              +32 479 69 55 60
+            </div>
+            <div>
+              <h4>Website</h4>
+              <a href="http://kellyc.eu">kellyc.eu</a>
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>I am solution oriented, and love to sink my teeth in challenging IT problems. SIhe will try my best to find a solution, even if it requires out of the box thinking.</p>
+          </article>
+        </section>
+        <section id="profiles">
+          <h3>Profiles</h3>
+          <div class="grid-list">
+              <div>
+                  <h4>Instagram</h4>
+                    <a href="http://instagram.com/kaymoonwitch">kaymoonwitch</a>
+              </div>
+              <div>
+                  <h4>Github</h4>
+                    <a href="https://github.com/moonwitch">moonwitch</a>
+              </div>
+              <div>
+                  <h4>LinkedIn</h4>
+                    <a href="http://be.linkedin.com/kelly.crabbe">kelly.crabbe</a>
+              </div>
+          </div>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>MS Amlin</h4>
+                  <span>
+                    <time datetime="2012">Jan 2012</time> –
+                    <time datetime="2019">Jan 2019</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>System Administrator</strong>
+                    <a href="http://msamlin.com">msamlin.com</a>
+                </div>
+              </header>
+                <p>MS Amlin is a leading global (re)insurer, part of the global top-10 insurance group MS&amp;AD, with three main legal entities’ operating in the Lloyd’s, UK, Continental European and Bermudian markets. With a 300-year record and c.1,800 people in more than 20 locations worldwide, we deliver a quality service for businesses facing the most complex and demanding risks. Our role places us at the forefront of the Property &amp; Casualty, Marine and Reinsurance markets.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Day to day administration of vSphere, VDI and Windows Server estate</li>
+                    <li>Training Service Desk</li>
+                    <li>Automating various tasks (Powershell) namely creation of AD accounts, fileshares, mailboxes, automation of daily checks, audit reports</li>
+                    <li>Day to day administration of Active Directory, Cisco Call manager, DFS, Exchange 2010 - 2013, ...</li>
+                    <li>Migrating French office with Hyper-V, no dfs and AD time drift into vSphere environment</li>
+                    <li>Documented existing environments and configurations for handover to outsourcing partner</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>MS Amlin</h4>
+                  <span>
+                    <time datetime="2010-12-01">Dec 2010</time> –
+                    <time datetime="2012">Jan 2012</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Service Desk Officer</strong>
+                    <a href="http://msamlin.com">msamlin.com</a>
+                </div>
+              </header>
+                <p>MS Amlin is a leading global (re)insurer, part of the global top-10 insurance group MS&amp;AD, with three main legal entities’ operating in the Lloyd’s, UK, Continental European and Bermudian markets. With a 300-year record and c.1,800 people in more than 20 locations worldwide, we deliver a quality service for businesses facing the most complex and demanding risks. Our role places us at the forefront of the Property &amp; Casualty, Marine and Reinsurance markets.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Writing technical documentation and user guides</li>
+                    <li>Training peers</li>
+                    <li>Troubleshooting and resolving 80%+ of incoming incidents</li>
+                    <li>Assisting the System Administration team as on-site hands</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Panda Antivirus</h4>
+                  <span>
+                    <time datetime="2008">Jan 2008</time> –
+                    <time datetime="2010">Jan 2010</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>1st and 2nd line technical support of consumer software</strong>
+                    <a href="http://pandasecurity.com">pandasecurity.com</a>
+                </div>
+              </header>
+                <p>Panda Security specializes in the development of endpoint security products and is part of the WatchGuard portfolio of IT security solutions. Initially focused on the development of antivirus software, the company has since expanded its line of business to advanced cyber-security services with technology for preventing cyber-crime.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Removal of infections</li>
+                    <li>Assistance in installing/uninstalling/configuring</li>
+                    <li>Troubleshoot installations/uninstallations/setups</li>
+                    <li>Create scripts for assistance/removal</li>
+                    <li>Create technical documentation as well as client manuals</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Schedom nv/sa</h4>
+                  <span>
+                    <time datetime="2007">Jan 2007</time> –
+                    <time datetime="2008">Jan 2008</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>1st and 2nd line technical support</strong>
+                    <a href="http://dommel.be">dommel.be</a>
+                </div>
+              </header>
+                <p>Dommel was a DSL internet provider, which also offered VoIP and domain registration services.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Troubleshoot ADSL, VoIP, hosting, domain name issues</li>
+                    <li>Create documentation for clients and co-workers</li>
+                    <li>Administer domain name services (reseller)</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="volunteer">
+        <h3>Volunteer</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>ComputingHost</h4>
+                  <span>
+                    <time datetime="2005-02-01">Feb 2005</time> –
+                    <time datetime="2007-09-01">Sep 2007</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Forum Administrator</strong>
+                    <a href="http://www.computinghost.com/">www.computinghost.com</a>
+                </div>
+              </header>
+                <p>Forum administrator on Invision Power Board based forum of 10k+ members.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Ensured no plagiarized content was posted, as posts counted as currency for site hosting</li>
+                    <li>Assigned hosting packages based on provided content</li>
+                    <li>Created content; mainly tutorials on Photoshop, Illustrator, PHP and Linux</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Miss Direction</h4>
+                  <span>
+                    <time datetime="2016-08-24">Aug 2016</time> –
+                    <time datetime="2016-08-24">Aug 2016</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Team lead, Designer</strong>
+                      at <strong>Smoogle</strong>
+                  </span>
+                    <a href="missdirection.example.com">missdirection.example.com</a>
+                </div>
+              </header>
+                <p>A mapping engine that misguides you</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Won award at AIHacks 2016</li>
+                    <li>Built by all women team of newbie programmers</li>
+                    <li>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Web Development</h4>
+                <ul class="tag-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Compression</h4>
+                <ul class="tag-list">
+                    <li>Mpeg</li>
+                    <li>MP4</li>
+                    <li>GIF</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Dutch</h4>
+              Native Speaker
+            </div>
+            <div>
+                <h4>English</h4>
+              Excellent
+            </div>
+            <div>
+                <h4>French</h4>
+              Good
+            </div>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Wildlife</h4>
+                <ul class="tag-list">
+                    <li>Ferrets</li>
+                    <li>Unicorns</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="references">
+        <h3>References</h3>
+        <div class="stack">
+              <blockquote>
+                <p>It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.</p>
+                  <p>
+                    <cite>Erlich Bachman</cite>
+                  </p>
+              </blockquote>
+        </div>
+      </section>
+  </body>
+</html>
