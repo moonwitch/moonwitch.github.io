@@ -1,13 +1,13 @@
 DefaultContentLanguage = "en"
-author = "Steve Francia"
-baseURL = "https://gohugo.io/"
-copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
+author = "Kelly Crabbé"
+baseURL = ""
+copyright = "Copyright © 2021 - Kelly Crabbé"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 languageCode = "en"
 paginate = 3
 theme = "github.com/jonathanjanssens/hugo-casper3"
-title = "Hugo Themes"
+title = "Kelly and Coffee"
 [[menu.main]]
 identifier = "about"
 name = "About"
@@ -31,7 +31,7 @@ weight = 40
 [params]
 description = "Just a demo site for the Casper3 theme ported to Hugo"
 facebook = "https://facebook.com"
-github = "https://github.com/jonathanjanssens"
+github = "https://github.com/moonwitch"
 logo = "/images/ghost-transparent.png"
 mainSections = ["post"]
 twitter = "https://twitter.com"
