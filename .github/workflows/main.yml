@@ -22,6 +22,8 @@ jobs:
           # extended: true
 
       - name: Build
+        env:
+          HUGO_SERVICES_INSTAGRAM_ACCESSTOKEN: ${{ secrets.HUGO_SERVICES_INSTAGRAM_ACCESSTOKEN }}
         run: hugo --minify
 
       - name: Deploy

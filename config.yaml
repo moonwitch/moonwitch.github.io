@@ -1,0 +1,77 @@
+baseURL: ''
+title: Kelly and Coffee
+author: Kelly Crabbé
+languageCode: en
+theme: github.com/jonathanjanssens/hugo-casper3
+copyright: Copyright © 2021 - Kelly Crabbé
+paginate: 3
+
+MetaDataFormat: yaml
+enableInlineShortcodes: true
+footnoteReturnLinkContents: ^
+
+# Theme i18n support
+DefaultContentLanguage: en
+
+# Main menu
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: image-credit
+      name: Image Credit
+      url: /image-credit/
+      weight: 20
+    - identifier: github-repo-theme
+      name: Get Theme on Github
+      url: 'https://github.com/jonathanjanssens/hugo-casper3'
+      weight: 30
+    - identifier: author
+      name: Author Homepage
+      url: 'https://jonathanjanssens.com'
+      weight: 40
+
+# Theme Params
+params:
+  logo: /images/ghost-transparent.png
+  mainSections:
+    - post
+    - article
+  description: All things that occupy my head.
+  facebook: 'https://facebook.com'
+  github: 'https://github.com/moonwitch'
+  twitter: 'https://twitter.com/kaymoonwitch'
+
+# Privac settings
+privacy:
+  instagram:
+    disabled: true
+    simple: false
+  twitter:
+    disabled: true
+    enableDNT: true
+    simple: false
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: false
+    disable: false
+    respectDoNotTrack: false
+    useSessionStorage: false
+
+# Various social mediaz
+services:
+  instagram:
+    disableInlineCSS: true
+    accessToken: 649875739348256|7837372f54b985ad7251ec78a2539ab7
+  twitter:
+    disableInlineCSS: true
+taxonomies:
+  category: categories
+  series: series
+  tag: tags

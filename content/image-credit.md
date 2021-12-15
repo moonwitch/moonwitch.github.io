@@ -1,10 +1,10 @@
-+++
-title = "Image Credit"
-description = "Giving credit to the images used in the demo"
-summary = "Thank you to the authors of these images used in this theme demo"
-date = "2019-11-03"
-author = "Jonathan Janssens"
-+++
+---
+author: Jonathan Janssens
+date: "2019-11-03"
+description: Giving credit to the images used in the demo
+summary: Thank you to the authors of these images used in this theme demo
+title: Image Credit
+---
 
 All images are from [Unsplash](https://unsplash.com).
 

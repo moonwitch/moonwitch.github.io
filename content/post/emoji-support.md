@@ -1,13 +1,12 @@
-+++
-author = "Hugo Authors"
-title = "Emoji Support"
-date = "2019-03-05"
-description = "Guide to emoji usage in Hugo"
-tags = [
-    "emoji",
-]
-feature_image = "/images/francesco-ungaro-GX81x7KTfIw-unsplash.jpg"
-+++
+---
+author: Hugo Authors
+date: "2019-03-05"
+description: Guide to emoji usage in Hugo
+feature_image: /images/francesco-ungaro-GX81x7KTfIw-unsplash.jpg
+tags:
+- emoji
+title: Emoji Support
+---
 
 Emoji can be enabled in a Hugo project in a number of ways. 
 <!--more-->
