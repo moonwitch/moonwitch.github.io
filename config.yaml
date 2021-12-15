@@ -13,6 +13,11 @@ footnoteReturnLinkContents: ^
 # Theme i18n support
 DefaultContentLanguage: en
 
+# Disable errors
+ignoreErrors: 
+  error-missing-instagram-accesstoken
+  error-remote-getjson
+
 # Main menu
 menu:
   main:
@@ -68,7 +73,6 @@ privacy:
 services:
   instagram:
     disableInlineCSS: true
-    accessToken: 649875739348256|7837372f54b985ad7251ec78a2539ab7
   twitter:
     disableInlineCSS: true
 taxonomies:
