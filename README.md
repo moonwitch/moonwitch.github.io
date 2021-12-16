@@ -1,49 +1,27 @@
-# Casper 3 Hugo Starter for Forestry
+## Directory Structure Explained 
 
-[Hugo port of the Casper 3 theme](https://github.com/jonathanjanssens/hugo-casper3) originally by Ghost.
+The following is a high-level overview of each of the directories with links to each of their respective sections within the Hugo docs.
 
-<a href="https://app.forestry.io/quick-start?repo=forestryio/casper3-hugo-starter&engine=hugo&version=0.81.0"><img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" />
-</a>
+### archetypes
 
-## Prerequisites
+You can create new content files in Hugo using the hugo new command. By default, Hugo will create new content files with at least date, title (inferred from the file name), and draft = true. This saves time and promotes consistency for sites using multiple content types. You can create your own archetypes with custom preconfigured front matter fields as well.
+### content
 
-- Hugo > 0.65.0
+All content for your website will live inside this directory. Each top-level folder in Hugo is considered a content section. For example, if your site has three main sections—blog, articles, and tutorials—you will have three directories at content/blog, content/articles, and content/tutorials. Hugo uses sections to assign default content types.
 
-## Content Management
+### data
 
-![Forestry user interface](static/images/hugo-casper3-forestry.jpg)
+This directory is used to store configuration files that can be used by Hugo when generating your website. You can write these files in YAML, JSON, or TOML format. In addition to the files you add to this folder, you can also create data templates that pull from dynamic content.
 
-This project has been pre-configured to work with [Forestry](https://forestry.io), just [import the repository](https://app.forestry.io/quick-start?repo=forestryio/casper3-hugo-starter&engine=hugo&version=0.81.0) ✨.
+### layouts
 
-Any changes you make will be commited back to the repository.
+Stores templates in the form of .html files that specify how views of your content will be rendered into a static website. Templates include list pages, your homepage, taxonomy templates, partials, single page templates, and more.
 
-## Customization
+### static
 
-You can customize the theme through the [params in the `config.toml` file](https://github.com/forestryio/casper3-hugo-starter/blob/master/config.toml#L13-L19). Those values are accessible from within Forestry.
+Stores all the static content: images, CSS, JavaScript, etc. When Hugo builds your site, all assets inside your static directory are copied over as-is. A good example of using the static folder is for verifying site ownership on Google Search Console, where you want Hugo to copy over a complete HTML file without modifying its content.
+From Hugo 0.31 you can have multiple static directories.
 
-## Deployment and hosting with Netlify
+### resources
 
-Import your site in [Netlify](https://netlify.com)
-
-1. Create a new site in Netlify and import your repository.
-2. Set the build command to: `hugo --gc --minify`
-3. Set the publish directory to: `public`
-4. Make sure to set `HUGO_VERSION` to 0.65.0 or above (tested with latest version)
-3. Set the publish directory to: `public`
-
-That's it, now your site gets deployed automatically on `git push` or when saving documents from Forestry.
-
-## Development
-
-```bash
-# clone the repository
-git clone git@github.com:forestryio/casper3-hugo-starter.git
-
-# cd in the project directory
-cd casper3-hugo-starter
-
-# Start local dev server
-hugo server
-```
-
-For more information, see [official Hugo documentation](https://gohugo.io/getting-started/).
+Caches some files to speed up generation. Can be also used by template authors to distribute built SASS files, so you don’t have to have the preprocessor installed. Note: resources directory is not created by default.

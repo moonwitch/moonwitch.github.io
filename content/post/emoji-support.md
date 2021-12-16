@@ -1,5 +1,5 @@
 ---
-author: Hugo Authors
+author: "Kelly Crabbé"
 date: "2019-03-05"
 description: Guide to emoji usage in Hugo
 feature_image: /images/francesco-ungaro-GX81x7KTfIw-unsplash.jpg

@@ -2,9 +2,10 @@ baseURL: ''
 title: Kelly and Coffee
 author: Kelly Crabbé
 languageCode: en
-theme: github.com/jonathanjanssens/hugo-casper3
+theme: hugo-theme-basic
 copyright: Copyright © 2021 - Kelly Crabbé
 paginate: 3
+enableEmoji: true 
 
 MetaDataFormat: yaml
 enableInlineShortcodes: true
@@ -13,69 +14,42 @@ footnoteReturnLinkContents: ^
 # Theme i18n support
 DefaultContentLanguage: en
 
-# Disable errors
 ignoreErrors: 
-  error-missing-instagram-accesstoken
-  error-remote-getjson
-
-# Main menu
-menu:
-  main:
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 10
-    - identifier: image-credit
-      name: Image Credit
-      url: /image-credit/
-      weight: 20
-    - identifier: github-repo-theme
-      name: Get Theme on Github
-      url: 'https://github.com/jonathanjanssens/hugo-casper3'
-      weight: 30
-    - identifier: author
-      name: Author Homepage
-      url: 'https://jonathanjanssens.com'
-      weight: 40
+  - error-missing-instagram-accesstoken
 
 # Theme Params
 params:
-  logo: /images/ghost-transparent.png
+  titleEmoji: ":tada:"
+  logo:
+    logoImage: /images/kelly-and-coffee.png
   mainSections:
     - post
     - article
   description: All things that occupy my head.
-  facebook: 'https://facebook.com'
-  github: 'https://github.com/moonwitch'
-  twitter: 'https://twitter.com/kaymoonwitch'
+  menu:
+    - name: blog
+      url: post/
+    - name: post series
+      url: series/
+    - name: about
+      url: about/
+      
+Permalinks:
+  post: 'post/:slug'
 
-# Privac settings
-privacy:
-  instagram:
-    disabled: true
-    simple: false
-  twitter:
-    disabled: true
-    enableDNT: true
-    simple: false
-  youtube:
-    disabled: false
-    privacyEnhanced: true
-  disqus:
-    disable: false
-  googleAnalytics:
-    anonymizeIP: false
-    disable: false
-    respectDoNotTrack: false
-    useSessionStorage: false
 
-# Various social mediaz
-services:
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
 taxonomies:
+  author: authors
   category: categories
   series: series
   tag: tags
+
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+    respectDoNotTrack: true
+    useSessionStorage: true
+  twitter:
+    enableDNT: true
+  youtube:
+    privacyEnhanced: true
