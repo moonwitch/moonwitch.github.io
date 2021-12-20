@@ -5,11 +5,9 @@
 <body>
     {{ partial "nav.html" . }}
     {{ partial "header.html" . }}
-    <div class="container">
-        <main id="main">
-            {{ block "main" . }}{{ end }}
-        </main>
-    </div>
+    <main class="main">
+        {{ block "main" . }}{{ end }}
+    </main>
     {{ partial "script.html" . }}
 </body>
 
