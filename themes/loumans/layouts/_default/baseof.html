@@ -1,20 +1,13 @@
-<html>
-{{ partial "head" . }}
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}" class="has-navbar-fixed-top">
+{{ partial "head.html" . }}
 
-<body class="has-navbar-fixed-top">
-  <nav class="navbar is-fixed-top has-shadow">
-    <div class="container">
-      <a href="/" class="navbar-item">JAMbos</a>
-      <div class="navbar-menu navbar-end">
-        {{ range where .Site.RegularPages "Type" "page" }}
-        <a href="{{ .Permalink }}" class="navbar-item">{{ .Title }}</a>
-        {{ end }}
-      </div>
-    </div>
-  </nav>
-  <div class="container">
-    {{ block "content" . }}{{ end }}
-  </div>
+<body>
+  {{ partial "header.html" . }}
+
+  {{ block "main" . }}{{ end }}
+
+  {{ partial "footer.html" . }}
 </body>
 
 </html>

@@ -14,8 +14,23 @@ enableGitInfo: true
 # Because I may type accents
 removePathAccents: true
 
-# Menu 
-# sectionPagesMenu: "main"
+# Menu
+sectionPagesMenu: "main"
 
 # Theme
-# theme: loumans
+theme: loumans
+
+# Taxonomies;grouping
+# Must include default tags and categories
+taxonomies:
+  category: categories
+  tag: tags
+  mood: moods
+
+sitemap:
+  changefreq: "monthly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
+permalinks:
+  blog: "/:title/"
