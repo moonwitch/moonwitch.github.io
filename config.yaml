@@ -1,3 +1,21 @@
-baseURL: http://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: /
+languageCode: nl-be
+defaultContentLanguage: nl
+title: Kelly and Coffee
+subtitle: Want Kelly en koffie zijn nagenoeg één geheel.
+
+enableEmoji: true
+copyright: Kelly Crabbé
+#googleAnalytics: ID
+
+# Change 'Lastmod' to latest git commit
+enableGitInfo: true
+
+# Because I may type accents
+removePathAccents: true
+
+# Menu 
+# sectionPagesMenu: "main"
+
+# Theme
+# theme: loumans
