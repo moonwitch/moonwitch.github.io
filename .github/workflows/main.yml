@@ -1,26 +1,28 @@
-name: CI
-on: push
+name: github pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+  pull_request:
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup hugo
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
-
-      - name: Install Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12"
+          hugo-version: 'latest'
+          extended: true
 
       - name: Build
-        run: |
-          npm install
-          npm run build
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
