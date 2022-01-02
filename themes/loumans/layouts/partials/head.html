@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css" />
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/406767c203.js" crossorigin="anonymous"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Cherry+Swash&display=swap" rel="stylesheet">
 
-  {{ $style := resources.Get "scss/main.scss" }} 
+  {{ $style := resources.Get "scss/main.scss" }}
   {{ $components := resources.Match "scss/components" }}
   {{ range $components }}
-    {{ $style = slice $style . | resources.Concat .Name }}
-  {{ end }}
+  {{ $style = slice $style . | resources.Concat .Name }}
+    {{ end }}
   {{ $style = slice $style | resources.Concat "all.css" | toCSS | minify | fingerprint }}
-
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <title>{{ .Site.Title }}</title>
