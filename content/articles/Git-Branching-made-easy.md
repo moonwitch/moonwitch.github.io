@@ -1,8 +1,6 @@
 ---
 date: 2021-12-29
 title: Git Branching made easy
-tags: ["git","opensource","shell"]
-category: blog
 ---
 ### Intro
 
