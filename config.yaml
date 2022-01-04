@@ -3,19 +3,29 @@ languageCode: nl-be
 defaultContentLanguage: nl
 title: Kelly and Coffee
 subtitle: Want Kelly en koffie zijn nagenoeg één geheel.
-
 enableEmoji: true
-copyright: Kelly Crabbé
-#googleAnalytics: ID
+copyright: All content on this blog is the creation of [Kelly Crabbé]({{ .baseURL }}) unless stated otherwise. I'm licensing it under a Creative Commons Attribution-NonCommercial 3.0 Unported License. Have fun.
+googleAnalytics: G-WYTPMHCV3B
 
-# Change 'Lastmod' to latest git commit
-enableGitInfo: true
-
-# Because I may type accents
-removePathAccents: true
+enableGitInfo: true # Change 'Lastmod' to latest git commit
+removePathAccents: true # Because I may type accents
 
 # Menu
-sectionPagesMenu: "main"
+# sectionPagesMenu: "main"
+menu:
+  main:
+    - name: "Blog"
+      url: "/"
+      weight: 1
+    - name: "About"
+      url: "/about"
+      weight: 2
+    - name: "Tags"
+      url: "/tags"
+      weight: 4
+    - name: Resume
+      url: /resume
+      weight: 5
 
 # Theme
 theme: loumans
@@ -25,7 +35,6 @@ theme: loumans
 taxonomies:
   category: categories
   tag: tags
-  mood: moods
 
 sitemap:
   changefreq: "monthly"
@@ -54,3 +63,39 @@ comments:
     reactions_enabled: 1
     label: comment
     theme: light
+
+params:
+  paginate: 10
+  # Social accounts. Link to these accounts are displayed in the header and
+  # footer
+  twitter: kaymoonwitch
+  facebook: kaymoonwitch
+  instagram: kaymoonwitch
+  github: moonwitch
+  fivehundredpx: kellycrabbe
+  linkedin: kellycrabbe
+  logo: "/path/to/logo"
+  favicon: "/path/to/favicon"
+  subtitle: Want Kelly en koffie zijn nagenoeg één geheel.
+
+related:
+  # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
+  threshold: 80
+
+  # To get stable "See also" sections we, by default, exclude newer related pages.
+  includeNewer: false
+
+  # Will lower case keywords in both queries and in the indexes.
+  toLower: false
+
+  indices:
+    - name: "keywords"
+      weight: 150
+    - name: "author"
+      toLower: true
+      weight: 30
+    - name: "tags"
+      weight: 100
+    - name: "date"
+      weight: 10
+      pattern: "2017"

@@ -17,11 +17,10 @@ GitHub        | [http://github.com/moonwitch](http://github.com/moonwitch)
 
 ### IT Skills
 * Operating systems
-    * Windows XP to 8 (Use and administration)
-    * Windows Server 2003 to 2012 (Use and administration)
+    * Windows XP to 11 (Use and administration)
+    * Windows Server 2003 to 2019 (Use and administration)
     * Mac OS (Desktop - Advanced use and administration)
-    * Linux and Unix (Distribution doesn't matter much, but I prefer Debian based or Red Hat based.)
-    * Android
+    * Linux - preferred distros are Arch or Red Hat based, but I can wing Debian just as well. 
     * Cisco iOS - managed switch - basic use and understanding
 
 * Specific Software packages (Unless otherwise noted, skills include use and administration.)
@@ -47,8 +46,8 @@ GitHub        | [http://github.com/moonwitch](http://github.com/moonwitch)
 
 * Other notable skills
     * Proficient in using Markdown, LaTeX to generate documentation
-    * Adobe Photoshop, Illustrator, InDesign, Fireworks : Can use all three on basic level
-    * Pixelmator, GIMP, InkScape : proper use
+    * Adobe Photoshop, Illustrator, LightRoom : Decent with all three
+    * InkScape, DarkTable, Affinity Design and Affinity Photo
 
 ### Languages
 * Dutch : Native speaker

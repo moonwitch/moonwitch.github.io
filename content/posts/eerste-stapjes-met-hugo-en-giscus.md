@@ -2,7 +2,6 @@
 title: "Eerste stapjes met Hugo en Giscus"
 description: "Een nieuw jaar en een nieuwe site."
 date: 2022-01-01T17:53:13+01:00
-lastmod: 2022-01-01T17:53:13+01:00
 draft: true
 images: []
 ---

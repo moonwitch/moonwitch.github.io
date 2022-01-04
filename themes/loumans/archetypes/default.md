@@ -1,8 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description: ""
 date: {{ .Date }}
-lastmod: {{ .Date }}
+thumbnail: "path/thumbnail.jpg"
 draft: true
-images: []
+images: ["{{ .Name | urlize }}.jpg"]
+categories: [""]
+tags: [""]
 ---

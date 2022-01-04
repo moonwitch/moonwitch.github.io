@@ -1,0 +1,12 @@
+<!--
+If you want to include any custom html just after <footer>, put it in /layouts/partials/comment_custom.html
+Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/comment_custom.html doesn't exist.
+-->
+{{ if site.Params.comments.giscus }}
+<script src="https://giscus.app/client.js" data-repo="{{site.Params.comments.giscus.repo}}"
+  data-repo-id="{{site.Params.comments.giscus.repo_id}}" data-category="{{site.Params.comments.giscus.category}}"
+  data-category-id="{{site.Params.comments.giscus.category_id}}" data-mapping="{{site.Params.comments.giscus.mapping}}"
+  data-reactions-enabled="{{site.Params.comments.giscus.reactions_enabled}}"
+  data-theme="{{site.Params.comments.giscus.theme}}" crossorigin="anonymous" async></script>
+<noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
+{{ end }}

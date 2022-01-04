@@ -1,8 +1,30 @@
-<footer>
-  <section class="align-right">
-    <p>Built with <i class="fas fa-coffee"></i> and <i class="far fa-heart"></i> from Hugo</p>
+  </main>
+  {{ partial "menu.html" . }}
+  <footer class="l-footer">
+    {{ partial "link.html" . }}
 
-    <a href="https://www.vectorstock.com/royalty-free-vector/447all-coffee-icons-vector-12604972">all coffee icons vector
-      by zirconicusso</a>
-  </section>
-</footer>
+    <p class="p-copyright">
+      {{ with .Site.Copyright | markdownify | safeHTML }}
+        {{ . }}
+      {{ else }}
+        {{ if ($.Param "author") }}
+          {{ if ($.Param "authorwebsite") }}
+            <a href="{{ $.Param "authorwebsite" }}">{{ $.Param "author" }}</a>
+          {{ else }}
+            {{ $.Param "author" }}
+          {{ end }}
+        {{ end }}
+        &nbsp;&bull;&nbsp;
+        {{ .Site.LastChange.Format "2006" }}
+
+        {{ if .Site.Title }}
+          &nbsp;&bull;&nbsp;
+          <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+        {{ end }}
+      {{ end }}
+    </p>
+  </footer>
+
+  {{- partial "footer_custom.html" . }}
+</body>
+</html>
