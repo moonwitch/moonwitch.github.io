@@ -1,15 +1,15 @@
 ######################## default configuration ####################
-baseURL: https://kellyand.coffee
+baseURL: /
+title: Kelly and Coffee
 languageCode: en-US
 defaultContentLanguage: en
-title: Kelly and Coffee
 enableEmoji: true
 summaryLength: 10
 paginate: 6
 enableGitInfo: true # Change 'Lastmod' to latest git commit
 removePathAccents: true # Because I may type accents
-theme: loumans
-# theme: liva
+
+theme: hugo-theme-loumans
 
 #################### Navigation ####################
 # sectionPagesMenu: "main"
