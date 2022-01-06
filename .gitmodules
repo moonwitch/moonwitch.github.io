@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-loumans"]
+	path = themes/hugo-theme-loumans
+	url = https://github.com/moonwitch/hugo-theme-loumans
