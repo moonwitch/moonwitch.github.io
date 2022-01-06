@@ -1,50 +1,98 @@
-baseURL: /
-languageCode: nl-be
-defaultContentLanguage: nl
+######################## default configuration ####################
+baseURL: https://kellyand.coffee
+languageCode: en-US
+defaultContentLanguage: en
 title: Kelly and Coffee
-subtitle: Want Kelly en koffie zijn nagenoeg één geheel.
 enableEmoji: true
-copyright: All content on this blog is the creation of [Kelly Crabbé]({{ .baseURL }}) unless stated otherwise. I'm licensing it under a Creative Commons Attribution-NonCommercial 3.0 Unported License. Have fun.
-googleAnalytics: G-WYTPMHCV3B
-
+summaryLength: 10
+paginate: 6
 enableGitInfo: true # Change 'Lastmod' to latest git commit
 removePathAccents: true # Because I may type accents
+theme: loumans
+# theme: liva
 
-# Menu
+#################### Navigation ####################
 # sectionPagesMenu: "main"
 menu:
   main:
-    - name: "Blog"
-      url: "/"
+    - name: Posts
+      url: /posts
       weight: 1
-    - name: "About"
-      url: "/about"
+    - name: About
+      url: /about
       weight: 2
-    - name: "Tags"
-      url: "/tags"
+    - name: Tags
+      url: /tags
       weight: 4
     - name: Resume
       url: /resume
       weight: 5
 
-# Theme
-theme: loumans
-
-# Taxonomies;grouping
+#################### Taxonomies;grouping ####################
 # Must include default tags and categories
 taxonomies:
   category: categories
   tag: tags
 
-sitemap:
-  changefreq: "monthly"
-  filename: "sitemap.xml"
-  priority: 0.5
+#################### default parameters ################################
+params:
+  paginate: 6
+  plugins:
+    css:
+      - URL: plugins/bootstrap/bootstrap.min.css
+      - URL: plugins/slick/slick.css
+      - URL: plugins/themify-icons/themify-icons.css
+      - URL: plugins/venobox/venobox.css
+    js:
+      - URL: plugins/jQuery/jquery.min.js
+      - URL: plugins/bootstrap/bootstrap.min.js
+      - URL: plugins/slick/slick.min.js
+      - URL: plugins/venobox/venobox.min.js
+      - URL: plugins/search/fuse.min.js
+      - URL: plugins/search/mark.js
+      - URL: plugins/search/search.js
+  logo: images/coffee.jpg
+  home: Home
+  description: A personal blog in both English and Dutch.
+  author: Kelly Crabbé
+  googleAnalitycs: G-WYTPMHCV3B
+  mobile: +32479695560
+  email: kelly.crabbe+site@gmail.com
+  location: "Neerlinter,België"
+  copyright: >-
+    | copyright &copy; 2022 [Kelly Crabbé](https://kellyand.coffee)
+    All Rights Reserved |
+  preloader:
+    enable: true
+    preloader: ""
+  search:
+    enable: true
+  newsletter:
+    enable: false
+  cookies:
+    enable: true
+    expire_days: 2
+  social:
+    - title: facebook
+      icon: ti-facebook
+      link: "https://facebook.com/kaymoonwitch"
+    - title: twitter
+      icon: ti-twitter-alt
+      link: "https://twitter.com/kaymoonwitch"
+    - title: instagram
+      icon: ti-instagram
+      link: "https://https://instagram.com/kaymoonwitch"
+    - title: github
+      icon: ti-github
+      link: "https://github.com/moonwitch"
+    - title: linkedin
+      icon: ti-linkedin
+      link: "https://www.linkedin.com/in/kellycrabbe"
+    - title: 500px
+      icon: ti-500px
+      link: https://500px.com/p/kellycrabbe
 
-permalinks:
-  blog: "/:title/"
-
-# Comments
+#################### Comments ####################
 comments:
   provider: giscus
   commentable:
@@ -63,39 +111,3 @@ comments:
     reactions_enabled: 1
     label: comment
     theme: light
-
-params:
-  paginate: 10
-  # Social accounts. Link to these accounts are displayed in the header and
-  # footer
-  twitter: kaymoonwitch
-  facebook: kaymoonwitch
-  instagram: kaymoonwitch
-  github: moonwitch
-  fivehundredpx: kellycrabbe
-  linkedin: kellycrabbe
-  logo: "/path/to/logo"
-  favicon: "/path/to/favicon"
-  subtitle: Want Kelly en koffie zijn nagenoeg één geheel.
-
-related:
-  # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
-  threshold: 80
-
-  # To get stable "See also" sections we, by default, exclude newer related pages.
-  includeNewer: false
-
-  # Will lower case keywords in both queries and in the indexes.
-  toLower: false
-
-  indices:
-    - name: "keywords"
-      weight: 150
-    - name: "author"
-      toLower: true
-      weight: 30
-    - name: "tags"
-      weight: 100
-    - name: "date"
-      weight: 10
-      pattern: "2017"

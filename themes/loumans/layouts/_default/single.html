@@ -1,28 +1,29 @@
 {{ partial "header.html" . }}
+
 {{ $baseurl := .Site.BaseURL | sanitizeurl }}
 <article class="p-article">
   <header>
     <h1>{{ .Title }}</h1>
     {{ if eq (.Type | singularize) "post" }}
-    <div>
-        <div class="c-meta">
-        {{ if not (.Param "hideDate") }}
-           {{ partial "timestamp.html" . }}
-        {{ end }}
-        {{ if not (.Param "hideWordCount") }}
-        {{ if not (.Param "hideDate") }} | {{ end }}
-           {{ partial "word_count.html" . }}
-        {{ end }}
-        {{ if not (.Param "hideReadingTime") }}
-        {{ if not (and (.Param "hideDate") (.Param "hideWordCount")) }} | {{ end }}
-           {{ partial "reading_time.html" . }}
-        {{ end }}
+      <div>
+          <div class="c-meta">
+          {{ if not (.Param "hideDate") }}
+            {{ partial "timestamp.html" . }}
+          {{ end }}
+          {{ if not (.Param "hideWordCount") }}
+          {{ if not (.Param "hideDate") }} | {{ end }}
+            {{ partial "word_count.html" . }}
+          {{ end }}
+          {{ if not (.Param "hideReadingTime") }}
+          {{ if not (and (.Param "hideDate") (.Param "hideWordCount")) }} | {{ end }}
+            {{ partial "reading_time.html" . }}
+          {{ end }}
+          </div>
         </div>
+        {{ range .Params.tags }}
+        <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+        {{ end }}
       </div>
-      {{ range .Params.tags }}
-      <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
-      {{ end }}
-    </div>
     {{ end }}
   </header>
   {{ with .Params.thumbnail }}
