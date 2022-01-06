@@ -51,7 +51,7 @@ params:
       - URL: plugins/search/fuse.min.js
       - URL: plugins/search/mark.js
       - URL: plugins/search/search.js
-  logo: images/coffee.jpg
+  logo: images/header2.png
   home: Home
   description: A personal blog in both English and Dutch.
   author: Kelly Crabbé
