@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Cherry+Swash&display=swap");
+@import "variables";
+// @import "colors";
+// @import "reset";
 
 .swiper-container {
   height: 150px;
@@ -93,7 +95,7 @@ hr {
   overflow: visible;
 }
 pre {
-  font-family: monospace, monospace;
+  font-family: $mono;
   font-size: 1em;
 }
 a {
@@ -116,7 +118,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: $mono;
   font-size: 1em;
 }
 dfn {
@@ -161,7 +163,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: $serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -257,8 +259,7 @@ html {
 body {
   color: #555;
   font-size: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, YakuHanJP,
-    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: $serif;
   line-height: 1.57;
 }
 h1,
@@ -268,10 +269,11 @@ h4,
 h5,
 h6 {
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  font-family: $serif;
 }
 h1 {
   font-size: 3.2rem;
+  font-family: $sans-serif;
 }
 h2 {
   font-size: 2.8rem;
@@ -357,27 +359,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-@font-face {
-  font-family: "OpenSans";
-  font-style: normal;
-  font-weight: 300;
-  src: local("OpenSans"),
-    url("/static/fonts/OpenSans-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "OpenSans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("OpenSans"),
-    url("/static/fonts/OpenSans-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "OpenSans";
-  font-style: normal;
-  font-weight: 600;
-  src: local("OpenSans"),
-    url("/static/fonts/OpenSans-Regular.ttf") format("truetype");
-}
 .l-header {
   display: block;
   padding: 20px 0;
@@ -398,7 +379,7 @@ img {
 }
 .c-title {
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  font-family: $sans-serif;
 }
 .c-links {
   display: flex;
@@ -563,7 +544,7 @@ img {
   color: #555;
   font-size: 1.4rem;
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  font-family: $serif;
 }
 .p-tag-title {
   display: inline-block;
@@ -764,7 +745,7 @@ img {
   background-color: #92c6f2;
   color: #fafafa;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: $serif;
 }
 .p-related__item a::before {
   content: "";
