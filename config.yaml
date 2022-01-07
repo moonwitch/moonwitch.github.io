@@ -91,23 +91,21 @@ params:
     - title: 500px
       icon: ti-500px
       link: https://500px.com/p/kellycrabbe
-
-#################### Comments ####################
-comments:
-  provider: giscus
-  commentable:
-    page: true
-    post: true
-    docs: false
-    project: false
-    publication: true
-    talk: false
-  giscus:
-    repo: moonwitch/the-coffee-site
-    repo_id: R_kgDOGiHVbw
-    category: Announcements
-    category_id: DIC_kwDOGiHVb84CAgCM
-    mapping: pathname
-    reactions_enabled: 1
-    label: comment
-    theme: light
+  comments:
+    provider: giscus
+    commentable:
+      page: true
+      post: true
+      docs: false
+      project: false
+      publication: true
+      talk: false
+    giscus:
+      repo: moonwitch/the-coffee-site
+      repo_id: R_kgDOGiHVbw
+      category: Announcements
+      category_id: DIC_kwDOGiHVb84CAgCM
+      mapping: pathname
+      reactions_enabled: 1
+      label: comment
+      theme: light
