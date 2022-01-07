@@ -56,18 +56,12 @@
   {{ $style := $sass | resources.ToCSS | fingerprint }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
 
-  <!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
-  <!-- Custom css files as define in config.toml -->
-  {{ range ($.Param "custom_css") -}}
-    <link rel="stylesheet" href="{{ . | absURL }}" />
-  {{- end }} -->
-  
   {{- with ($.Param "favicon") }}
     <link rel="icon" type="image/x-icon" href="{{ . | absURL }}" />
   {{- end -}} 
   
   {{ if eq .RelPermalink "/" }}
-    {{ with .OutputFormats.Get "RSS" -}}
+    {{ with .OutputFormats.Get "RSS" -}}sa
       <link
         href="{{ .Permalink }}"
         rel="alternate"

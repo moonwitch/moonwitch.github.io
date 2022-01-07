@@ -1,6 +1,7 @@
 ---
 date: 2021-12-29
 title: Git Branching made easy
+draft: false
 ---
 ### Intro
 

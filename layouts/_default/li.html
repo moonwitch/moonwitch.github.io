@@ -5,15 +5,15 @@
       {{ partial "timestamp.html" . }}
      
       {{ if not (.Param "hideModifiedDate") }}
-         | {{ partial "modified_date.html" . }}
+        {{ partial "modified_date.html" . }}
       {{ end }}
       
       {{ if not (.Param "hideWordCount") }}
-         | {{ partial "word_count.html" . }}
+        {{ partial "word_count.html" . }}
       {{ end }}
      
       {{ if not (.Param "hideReadingTime") }}
-         | {{ partial "reading_time.html" . }}
+        {{ partial "reading_time.html" . }}
       {{ end }}
     </p>
   </header>
