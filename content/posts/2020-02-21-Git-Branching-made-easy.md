@@ -1,8 +1,16 @@
 ---
-date: 2021-12-29
-title: Git Branching made easy
+title: Git Branching; the basics
+date: 2020-02-21
+comments: true
+tags:
+  - git
+  - opensource
+  - shell
+categories:
+  - articles
 draft: false
 ---
+
 ### Intro
 
 Git isn't as complex as it seems; once you get the hang of it. But it can be daunting, I admit to that. So let me explain the basics to you, so you too can jump in and use Git in a team.

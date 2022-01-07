@@ -4,6 +4,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1"
   />
+
   {{ with .Title | default .Site.Title }}
     <title>{{ . }}</title>
     <meta property="og:title" content="{{ . }}" />
@@ -21,8 +22,8 @@
   <meta property="og:url" content="{{ .Permalink }}" />
 
   {{ with .Params.thumbnail }}
-  <meta property="og:image" content="{{ . | absURL }}" />
-  <meta name="twitter:image" content="{{ . | absURL }}" />
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
   {{ end }}
 
   <meta name="twitter:card" content="summary" />
@@ -44,6 +45,7 @@
   <!-- Hugo Version Number -->
   {{ hugo.Generator -}}
 
+  <!-- Google Analytics -->
   {{ if not .Site.IsServer }}
     {{ if hasPrefix .Site.Params.GoogleAnalytics "G-"}}
       {{ template "_internal/google_analytics.html" . }}
@@ -52,14 +54,17 @@
     {{ end }}
   {{ end }}
 
+  <!-- Styles -->
   {{ $sass := resources.Get "scss/main.scss" }}
   {{ $style := $sass | resources.ToCSS | fingerprint }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
 
+  <!-- Favicon -->
   {{- with ($.Param "favicon") }}
     <link rel="icon" type="image/x-icon" href="{{ . | absURL }}" />
   {{- end -}} 
-  
+
+    <!-- Permalinkage -->
   {{ if eq .RelPermalink "/" }}
     {{ with .OutputFormats.Get "RSS" -}}sa
       <link
@@ -72,5 +77,8 @@
   {{ end }}
   
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/bundle.js"></script>
+  <!-- Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
   
 </head>
