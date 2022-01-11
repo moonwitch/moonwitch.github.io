@@ -1,23 +1,35 @@
-:root {
+/* :root {
   --body-font: "Bitter", serif;
   --title-font: "Cherry Swash", cursive;
 }
 
-@media screen and (prefers-color-scheme: light) body.light {
-  :root {
-    --text-color: rgb(45, 62, 81);
-    --background: rgb(255, 255, 255);
-    --accent-color: rgb(217, 176, 158);
-    --soft-color: rgb(241, 218, 196);
-  }
+body {
+  --text-color: rgb(45, 62, 81);
+  --background: rgb(255, 255, 255);
+  --accent-color: rgb(217, 176, 158);
+  --soft-color: rgb(241, 218, 196);
+}
+
+body.dark-theme {
+  --background: rgb(45, 62, 81);
+  --text-color: rgb(255, 255, 255);
+  --soft-color: rgb(217, 176, 158);
+  --accent-color: rgb(241, 218, 196);
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  :root {
+  body {
     --background: rgb(45, 62, 81);
     --text-color: rgb(255, 255, 255);
     --soft-color: rgb(217, 176, 158);
     --accent-color: rgb(241, 218, 196);
+  }
+
+  body.light-theme {
+    --text-color: rgb(45, 62, 81);
+    --background: rgb(255, 255, 255);
+    --accent-color: rgb(217, 176, 158);
+    --soft-color: rgb(241, 218, 196);
   }
 }
 

@@ -1,26 +1,24 @@
-// Select the button
 const btn = document.querySelector(".btn-toggle");
-// Select the theme preference from localStorage
-const currentTheme = localStorage.getItem("theme");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-// If the current theme in localStorage is "dark"...
+const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "dark") {
-  // ...then use the .dark-theme class
-  document.body.classList.add("dark-theme");
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
 }
 
-// Listen for a click on the button
 btn.addEventListener("click", function () {
-  // Toggle the .dark-theme class on each click
-  document.body.classList.toggle("dark-theme");
-
-  // Let's say the theme is equal to light
-  let theme = "light";
-  // If the body contains the .dark-theme class...
-  if (document.body.classList.contains("dark-theme")) {
-    // ...then let's make the theme dark
-    theme = "dark";
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
   }
-  // Then save the choice in localStorage
   localStorage.setItem("theme", theme);
 });
