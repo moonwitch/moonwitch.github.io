@@ -1,58 +1,45 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en" color-mode="light">
 
 <head>
   <meta charset="utf-8">
   <title>{{ .Site.Title }}</title>
-  <meta name="description" content="">
+  <meta name="description" content="{{ .Site.Description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Cherry+Swash&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/406767c203.js" crossorigin="anonymous"></script>
-
+  
+  <!-- Normalize -->
   <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
 
-  <link rel="stylesheet" href="https://unpkg.com/wingcss"/>
-  <!-- <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"> -->
-
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
-
+  <link rel="stylesheet" href="main.css" />`
 
 </head>
 
 <body>
   <header>
-  <nav class="nav">
-    <a href="#default" class="nav-logo"><i class="fas fa-mug-hot"></i> Kelly and Coffee</a>
-      <a class="nav-item" href="#home">Home</a>
-      <a class="nav-item" href="#contact">Contact</a>
-      <a class="nav-item" href="#about">About</a>
-  </nav>
-  <button>Content</button>
-  <button>Content</button>
-  </header>
+    <nav>
+      <a href="#default" class="logo"><i class="fas fa-mug-hot"></i> Kelly and Coffee</a>
+      <div class="header-right">
+        <a class="nav-item" href="#home">Home</a>
+        <a class="nav-item" href="#contact">Contact</a>
+        <a class="nav-item" href="#about">About</a>
+        <!-- Woot -->
+        <button class="btn-toggle">
+          Toggle Dark-Mode
+        </button>
+      </div>
+    </nav>
 
-  <!-- <header class="navbar">
-  <section class="navbar-section">
-    <a href="#" class="btn btn-link">Docs</a>
-    <a href="#" class="btn btn-link">Examples</a>
-  </section>
-  <section class="navbar-center">
-    <i class='fas fa-mug-hot'></i>
-  </section>
-  <section class="navbar-section">
-    <a href="#" class="btn btn-link">Twitter</a>
-    <a href="#" class="btn btn-link">GitHub</a>
-  </section>
-</header> -->
+    
+
+  </header>
 
   <main>
     <section>
