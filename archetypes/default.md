@@ -1,5 +1,5 @@
 ---
-title: "{{ replace (replace .Name "-" " ") (now.Format "2006 01 02 ") "" | title }}"
+title: {{ .TranslationBaseName | replaceRE "^([[:digit:]]+-){3}" "" | replaceRE "-" " " | title }}
 categories:
   - blog
 tags:
