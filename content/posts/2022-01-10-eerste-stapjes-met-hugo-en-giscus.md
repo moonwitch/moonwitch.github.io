@@ -7,6 +7,6 @@ tags:
 categories:
   - blog
 draft: false
-lang: nl
+language: nl
 ---
 Het is 2022, het is zover. Uiteindelijk is dat klotejaar 2021 voorbij.

@@ -1,5 +1,6 @@
 ---
 title: About
+language: en
 ---
 I am Kelly Crabbé, a 36 yo DevOps Engineer from Belgium. Boring, I know. I started out as a Service Desk Engineer and moved up the ranks as SysAdmin over at [MS Amlin](http://www.msamlin.com). Yep, that would be an insurance company. It gets more boring, I know. 
 But hey, I am a gamer at heart, though most of my adventures now stop at playing some Facebook game. My time goes into working, learning and mostly into my lovely family. 

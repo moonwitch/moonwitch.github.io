@@ -15,6 +15,10 @@
       {{ if not (.Param "hideReadingTime") }}
         {{ partial "reading_time.html" . }}
       {{ end }}
+      |
+      {{ if (.Param "language") }}
+        {{ partial "lang.html" . }}
+      {{ end }}
     </p>
   </header>
   <div class="c-article__summary">

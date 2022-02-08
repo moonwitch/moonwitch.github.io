@@ -13,7 +13,11 @@ LinkedIn      | [http://be.linkedin.com/kelly.crabbe](http://be.linkedin.com/kel
 GitHub        | [http://github.com/moonwitch](http://github.com/moonwitch)
 
 ### Personal Skills
-* Good teamplayer, very passionate about IT
+* Eager learner
+* Team player
+* Mother Hen of the team
+* Loves challenges
+* Out of the box thinker
 
 ### IT Skills
 * Operating systems
@@ -65,18 +69,19 @@ GitHub        | [http://github.com/moonwitch](http://github.com/moonwitch)
 * Inclusion of new company branches into current infrastructure
 
 ### Experience
-* 2010 - current : [Amlin](http://www.amlin.com)
+* 2010 - 2021 : [MS Amlin](http://www.msamlin.com)
     * 2010-2012 : Service Desk Officer
         * Writing tech. documentation and user guides
         * Training peers
         * Troubleshooting and resolving 80%+ of incoming incidents
-    * 2012 - current : Jr. System Administrator
+    * 2012 - 2018 : System Administrator
         * Daily administration
             * Backups (Backup Exec 2012)
             * ActiveDirectory administration
             * DFS Administration
             * Management of fileservers (Disk Usage, Performance)
         * Advanced incident management
+    * 2018 - 2021 : DevOps Engineer
 
 
 * 2008 - 2010 : [Panda Antivirus](http://www.pandasecurity.com/)

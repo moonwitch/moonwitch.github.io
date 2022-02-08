@@ -8,6 +8,7 @@ tags:
 categories: 
   - blog
 draft: false
+language: en
 ---
 I've recently changed employer; I swapped insurance for transport. I went from MS Amlin to Lineas; I now help drive a 'Freight Force'. Lineas is fairly scattered right now; but it offers me so much potential growth. A new job also means learning new things; a lot of new things. 
 
