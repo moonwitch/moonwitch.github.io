@@ -1,16 +1,18 @@
 ---
 title: Resume
+tags: 
+  - work
 ---
 
-Personalia    |
-------------- | -------------
-Name          | Kelly Crabbé
-Date of Birth | July 31, 1983
-Place of Birth  | Leuven
-Mobile        | +32 479 69 55 60
-Email         | [Kelly.Crabbe@gmail.com](mailto:kelly.crabbe@gmail.com)
-LinkedIn      | [http://be.linkedin.com/kelly.crabbe](http://be.linkedin.com/kelly.crabbe)
-GitHub        | [http://github.com/moonwitch](http://github.com/moonwitch)
+| Personalia     |
+| -------------- | -------------------------------------------------------------------------- |
+| Name           | Kelly Crabbé                                                               |
+| Date of Birth  | July 31, 1983                                                              |
+| Place of Birth | Leuven                                                                     |
+| Mobile         | +32 479 69 55 60                                                           |
+| Email          | [Kelly.Crabbe@gmail.com](mailto:kelly.crabbe@gmail.com)                    |
+| LinkedIn       | [http://be.linkedin.com/kelly.crabbe](http://be.linkedin.com/kelly.crabbe) |
+| GitHub         | [http://github.com/moonwitch](http://github.com/moonwitch)                 |
 
 ### Personal Skills
 * Eager learner
@@ -69,34 +71,54 @@ GitHub        | [http://github.com/moonwitch](http://github.com/moonwitch)
 * Inclusion of new company branches into current infrastructure
 
 ### Experience
-* 2010 - 2021 : [MS Amlin](http://www.msamlin.com)
-    * 2010-2012 : Service Desk Officer
-        * Writing tech. documentation and user guides
-        * Training peers
-        * Troubleshooting and resolving 80%+ of incoming incidents
-    * 2012 - 2018 : System Administrator
-        * Daily administration
-            * Backups (Backup Exec 2012)
-            * ActiveDirectory administration
-            * DFS Administration
-            * Management of fileservers (Disk Usage, Performance)
-        * Advanced incident management
-    * 2018 - 2021 : DevOps Engineer
+* May 2021- - present: Systems and Network Engineer, Lineas NV Brussels
+    - Implement Terraform, Ansible to automate provisioning and configuring
+    - Migrate from ITRP to Jira Service Desk
+    - Automated workflows and processes; ranging from deployments to user management.
+    - Maintained, improved and reshaped the service desk tooling
+    - Onboard Linux servers into the patch management process
+    - Update documentation across the various estates
+    - Transition team and company towards DevOps way of thinking and working
+
+* Apr 2018 — May 2021: DevOps Engineer [MS Amlin](https://msamlin.com)
+    - Use of Puppet, Foreman and Rundeck for automation
+    - Monitoring applications and estate with icinga and elastic stack
+    - Creation of interactive dashboards for monitoring in Grafana
+    - Automation of deployments and patching cycles via powershell for several applications
+    - Use of Jira as ticketing system, built working workflow between Jira, Confluence and Service Now
+
+* Apr 2017 - Apr 2018: Senior Technology Specialist, MS Amlin Brussels
+    - Discover SPOFs across various AD domains, report on those and work out a mitigation plan
+    - Document in-place procedures for hand off to outsourcing partner
+    - Train outsourcing partner in infrastructure estate
+
+* May 2013 — Apr 2017: System Administrator, MS Amlin Brussels
+    - Implemented, developed and tested automated OS patching of 100+ servers and 400+ desktops
+    - Responsible for day-to-day management of 3 Active Directory domains, including virtual and physical servers
+    - Responsible for complying with JSOX IT Security requirements; created and implemented automated verification methods
+    - Made recommendations regarding information technology infrastructure overhauls
+    - Maintained a flexible schedule and responded to after-hours and weekend emergencies
+    - Implemented corrective plans of action for network performance issues including availability, utilization, and latency
+
+* Dec 2010 — May 2013: Service Desk Technician, MS Amlin Brussels
+    - Created support documentation that empowered and enabled the user community to extend skills, leverage system features and find resolutions to questions without intervention from the support team
+    - Configured hardware, devices and software to set up work stations for employees
+    - Managed malware and other threats on consumer systems
+    - Specialized in translating technical terms in clear language to a-technical individuals to promote cooperation
+
+* Mar 2009 — Jul 2010: Technical Support Consumer Products - Panda Antivirus Mechelen
+    - Prepared a variety of different written communications, reports and documents to ensure smooth operations
+    - Manual removal of various threats on consumer machines
+    - Pre-sales contact for resellers
+
+* Oct 2008 — Feb 2009: Technical Service Officer, Schedom - Dommel Landen
+    - Succeeded in clearing a 7000+ ticket backlog
+    - Technical Support for ADSL1 and ADSL2+ with/without VoIP
+    - Create documentation for clients and co-workers
+    - Administer domain name services (reseller)
+    - Base support for webhosting (Linux and Windows) and domain names
 
 
-* 2008 - 2010 : [Panda Antivirus](http://www.pandasecurity.com/)
-Worked as 1st and 2nd line technical engineer for our Belgian, Dutch and French clients. Tasks included:
-    * Removal of infections
-    * Assistance in installing/uninstalling/configuring
-    * Troubleshoot installations/uninstallations/setups
-    * Create scripts for assistance/removal
-    * Create technical documentation as well as client manuals
-    * 
-* 2007 - 2008 : [Dommel](http://dommel.be)
-Worked as 1st and 2nd line technical support officer
-    * Troubleshoot ADSL, VoIP, hosting, domain name issues
-    * Create documentation for clients and co-workers
-    * Administer domain name services (reseller)
 * 2005 - 2007 : [ComputingHost](http://www.computinghost.com/), voluntary administrator on forums
     * Ensure smooth operation of forum (Invision Power Board)
     * Ensure provided content was en par and not plagiarized
