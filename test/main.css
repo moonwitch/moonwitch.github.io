@@ -1,5 +1,5 @@
 :root {
-  --body-font: "Bitter", serif;
+  --body-font: "Cutive", serif;
   --title-font: "Cherry Swash", cursive;
 
   --text-color: rgb(45, 62, 81);
@@ -14,22 +14,10 @@ body {
 
 .header {
   overflow: hidden;
-  /* background-color: #f1f1f1; */
   padding: 20px 10px;
 }
 
-.header a {
-  float: left;
-  color: var(--text-color);
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  border-radius: 4px;
-}
-
-.header a.logo {
+header a.logo {
   font-size: 3rem;
   font-weight: bold;
   font-family: var(--title-font);
@@ -38,8 +26,19 @@ body {
 }
 
 /* Change the background color on mouse-over */
-.header a:hover {
+header a:hover {
   background-color: var(--soft-color);
+}
+header a {
+  float: left;
+  display: block;
+  color: var(--text-color);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  border-radius: 4px;
 }
 
 /* Style the active/current link*/
