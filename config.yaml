@@ -101,11 +101,13 @@ params:
       publication: true
       talk: false
     giscus:
-      repo: moonwitch/the-coffee-site
+      repo: moonwitch/moonwitch.github.io
       repo_id: R_kgDOGiHVbw
       category: Announcements
       category_id: DIC_kwDOGiHVb84CAgCM
       mapping: pathname
+      input_position: top
+      metadata_enabled: 0
       reactions_enabled: 1
       label: comment
       theme: light
