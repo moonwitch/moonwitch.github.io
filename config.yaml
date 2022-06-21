@@ -55,9 +55,12 @@ params:
   home: Home
   description: A personal blog in both English and Dutch.
   author: Kelly Crabbé
+  avatar: true
+  bio: >-
+    I am a geeky happily married woman, who works as a junior DevOps after having a 15yr affaire with System Administration. I am the proud mom of a 2 yo English Cocker Spaniel and a wonderfull 21 yo plusdaughter; together with my wife we occupy a small space in this crazy world.
   googleAnalitycs: G-WYTPMHCV3B
   mobile: +32479695560
-  email: kelly.crabbe+site@gmail.com
+  email: kelly.crabbe@gmail.com
   location: "Neerlinter,België"
   copyright: >-
     | copyright &copy; 2022 [Kelly Crabbé](https://kellyand.coffee)
@@ -74,23 +77,19 @@ params:
     expire_days: 2
   social:
     - title: facebook
-      icon: ti-facebook
       link: "https://facebook.com/kaymoonwitch"
     - title: twitter
-      icon: ti-twitter-alt
       link: "https://twitter.com/kaymoonwitch"
     - title: instagram
-      icon: ti-instagram
       link: "https://https://instagram.com/kaymoonwitch"
     - title: github
-      icon: ti-github
       link: "https://github.com/moonwitch"
     - title: linkedin
-      icon: ti-linkedin
       link: "https://www.linkedin.com/in/kellycrabbe"
     - title: 500px
-      icon: ti-500px
       link: https://500px.com/p/kellycrabbe
+    - title: deviantart
+      link: https://www.deviantart.com/kay-moonwitch
   comments:
     provider: giscus
     commentable:
