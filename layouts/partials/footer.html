@@ -1,10 +1,10 @@
   </main>
   {{ partial "menu.html" . }}
 
-  <footer class="l-footer">
+  <footer>
     {{ partial "link.html" . }}
 
-    <p class="p-copyright">
+    <p>
       {{ with .Site.Copyright | markdownify | safeHTML }}
         {{ . }}
       {{ else }}

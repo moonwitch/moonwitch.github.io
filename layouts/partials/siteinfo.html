@@ -1,14 +1,14 @@
 {{ if or ( $.Param "avatar" ) ( $.Param "author" ) ( $.Param "bio" ) ( $.Param "contact" ) }}
-<aside class="p-author">
+<aside>
   {{ with ($.Param "avatar") }}
-  <div class="c-avatar p-author__avatar">
+  <div>
     <img alt="Author Avatar" src="https://www.gravatar.com/avatar/{{ md5 $.Site.Params.Email }}?s=100&d=identicon" />
   </div>
   {{ end }}
   {{ if or ( $.Param "author" ) ( $.Param "bio" ) ( $.Param "contact" ) }}
   <div class="p-author__body">
     {{ with ($.Param "author") }}
-    <p class="c-title p-author__name ">{{ . }}</p>
+    <p>{{ . }}</p>
     {{ end }}
     {{ with ($.Param "bio") }}
     <p>{{ . }}</p>

@@ -1,8 +1,8 @@
-<ul class="c-links">
+<ul>
   {{ range $.Site.Param "social" }}
-    <li class="c-links__item">
+    <li>
       <a href="{{ .link }}">
-        <i class="c-links__icon fa-brands fa-{{ .title }}" target="_blank"></i>
+        <i class="fa-brands fa-{{ .title }}" target="_blank"></i>
       </a>
     </li>
   {{ end }}

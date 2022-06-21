@@ -6,7 +6,7 @@
     <h1>{{ .Title }}</h1>
     {{ if eq (.Type | singularize) "post" }}
       <div>
-          <div class="c-meta">
+          <div>
           {{ if not (.Param "hideDate") }}
             {{ partial "timestamp.html" . }}
           {{ end }}
@@ -22,21 +22,21 @@
           </div>
         </div>
         {{ range .Params.tags }}
-        <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+        <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>
         {{ end }}
       </div>
     {{ end }}
   </header>
   {{ with .Params.thumbnail }}
-    <img src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
+    <img src="{{ . }}" alt="thumbnail">
   {{ end }}
-  <section id="js-article" class="p-article__body">
+  <section>
     {{ .Content }}
   </section>
   <footer>
     {{ if eq (.Type | singularize) "page" }}
     <div>
-	    <div class="c-last-update">
+	    <div>
 		    Last Update:
 		    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
 			    {{ .Date.Format "Jan 2, 2006" }}
@@ -47,14 +47,14 @@
     
     {{ partial "comment.html" . }}
     
-    <nav class="p-pagination c-pagination">
-      <div class="c-pagination__ctrl">
-        <div class="c-pagination__newer">
+    <nav>
+      <div>
+        <div>
           {{ if .NextInSection }}
           <a href="{{ .NextInSection.Permalink }}">Newer</a>
           {{ end }}
         </div>
-        <div class="c-pagination__older">
+        <div>
           {{ if .PrevInSection }}
           <a href="{{ .PrevInSection.Permalink }}">Older</a>
           {{ end }}
