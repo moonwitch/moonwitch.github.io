@@ -1,0 +1,87 @@
+prose:
+  rooturl: 'content'
+  siteurl: 'https://kellyand.coffee'
+  relativeLinks: 'https://kellyand.coffee/abs-links.jsonp'
+  media: 'static\images'
+  ignore:
+    - /archetypes
+    - /layouts
+    - /resources
+    - config.yml
+    - .prettierrc
+    - README.md
+  metadata:
+    - content/posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          placeholder: "Post's title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          placeholder: "Write yyyy-mm-dd"
+          value: CURRENT_DATETIME
+      - name: "lastmod"
+        field:
+          element: "text"
+          label: "Last Modified"
+          placeholder: "Write yyyy-mm-dd"
+          value: CURRENT_DATETIME
+      - name: "draft"
+        field:
+          element: "checkbox"
+          label: "Draft"
+          help: "Unpublish or publish"
+          value: false
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Comments"
+          help: "Enable Comments"
+          value: true
+      - name: "categories"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "language"
+        field:
+          element: "select"
+          label: "Language"
+          placeholder: "Choose Tags"
+          options:
+            - name: "EN"
+              value: "en"
+            - name: "NL"
+              value: "nl"
+    - content/photography:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          placeholder: "Post's title"
+      - name: "date"
+        field: 
+          element: "text"
+          label: "Date"
+          help: "Insert Date"
+          value: CURRENT_DATE
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "single"
+      - name: "categories"
+        field:
+          element: "hidden"
+          value: "photography"
+      - name: "tags"
+        field:
+          element: "select"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Nikon"
+              value: "nikon"
+            - name: "Oneplus"
+              value: "oneplus"
