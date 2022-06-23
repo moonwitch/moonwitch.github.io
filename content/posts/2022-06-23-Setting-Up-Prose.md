@@ -1,16 +1,17 @@
 ---
-title: "Setting up Prose for Hugo"
+title: Setting up Prose for Hugo
 categories:
   - blog
 tags:
   - blogging
   - hugo
   - howto
-date: 2022-06-23
-lastmod: 2022-06-23
-language: "en"
+date: 2022-06-23T00:00:00.000Z
+lastmod: 2022-06-23T00:00:00.000Z
+language: en
 comments: true
 draft: false
+published: true
 ---
 ## Setting up Prose.io for Hugo
 
