@@ -1,13 +1,27 @@
 ---
 title: About
-language: en
+resources:
+- name: Wedding
+  src: 'posts/wedding.jpg'
+- name: Lou-1
+  src: 'posts/Lou-1.jpg'
+- name: Lou-2
+  src: 'posts/Lou-2.jpg'
 ---
-I am Kelly Crabbé, an almost 40 yo DevOps Engineer from Belgium. Boring, I know. I started out as a Service Desk Engineer and moved up the ranks as SysAdmin. I loved using Powershell to automate the tasks I hated doing; the boring stuff. Think of reading through backup logs, creating Active Directory accounts or handling the user accounts and info of people who were leaving the company. I feel if a task is following a predefined flow, that flow can be automated. So, that is how I ended up in the more DevOps side of the work. I am still more Ops than Dev, but one day!
+Hello there!
 
-Anyhow, I am a gamer at heart, though most of my adventures now stop at playing some Facebook game. My time goes into working, learning and mostly into my lovely family. Since I completely lack the time to play World Of Warcraft, I do open up Diablo III, a little bit of FallOut and occasionally a little dabble into Civilization V or VI. 
+I am Kelly Crabbé, an almost 40 year old DevOps Engineer. Although I freely admit that I am merely a junior DevOps; I recently switched over from the System Administrator side, which has been my job for over 10 years. 
 
-I also happen to be a lesbian, although the label may not be suitable completely either. I am physically attracted to women, but it's the fluid personality that draws me in all the way. And oh god, yes I have been drawn in - completely with my entire body and soul. I regret not having realized all of this earlier in life. It would have saved me so much time; and would have meant we (My wife and I) would be further along our chosen path. 
+I had been working for [MS Amlin](https://msamlin.com) for the better part of my professional life until about a year and a half ago. Then I wanted to explored some other sceneries, and swapped my System Administrator gig for a DevOps Engineer gig at [Lineas NV](https://lineas.net). 
 
-So what does that make me? A gay DevOps chick? Ok, we can deal with that. I may be weird, but we all have our issues ;)
+On August 13th 2021; I got married to the love of my life, the mother of my plus daughter; Ziggy. She was named after Ziggy Stardust, for those who are wondering. We got married in the garden of her mother and stepfather. It was a wonderfully intimate ceremony amidst the corona rules.
 
-I also am into photography? Urban Exploration - which is exploring and photographing urban decay. 
+{{< figure src="../posts/wedding.jpg" alt="Wedding Kiss" width="600px" >}}
+
+In October 2020, we adopted our furry son, Lou. He's an English Cocker Spaniel with a few peculiarities. He had something resembling ADHD for dogs, as a pup he'd only sleep about 5 to 6hrs a day while puppies need at least 20 hours the few weeks. He just barely slept or rested up, which lead to a dog completely overstimulated, overexcited and very orally oriented (aka he even bit grooves into the metal part of my desk chair). So we worked very hard and very intensely with him, and now he still has some issues to work on, but he now sleeps like a baby. 
+
+We, as a family, have learned to read our dog, and we do arrange our days based on his needs. We pay attention to his window of tolerance and his stress bucket. Occasionally, we kind of misfire, but mostly we can manage his needs and we have a wonderful fur baby who colors every single day. 
+
+{{< figure src="../posts/lou-1.jpg" alt="Loupie" width="600px" >}}
+
+{{< figure src="../posts/lou-2.jpg" alt="Loupie" width="600px" >}}
