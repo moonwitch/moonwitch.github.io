@@ -9,7 +9,8 @@ paginate: 6
 enableGitInfo: true # Change 'Lastmod' to latest git commit
 removePathAccents: true # Because I may type accents
 
-theme: hugo-theme-ava
+# theme: hugo-theme-ava
+theme: hugo-theme-loumans
 
 #################### Navigation ####################
 # sectionPagesMenu: "main"
