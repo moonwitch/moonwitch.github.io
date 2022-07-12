@@ -36,7 +36,7 @@ menu:
 taxonomies:
   category: categories
   tag: tags
-  story: stories
+  series: series
 
 #################### default parameters ################################
 params:
