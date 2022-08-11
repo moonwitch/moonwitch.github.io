@@ -15,8 +15,7 @@ tags:
 | GitHub         | [http://github.com/moonwitch](http://github.com/moonwitch)                 |
 
 ### Personal Skills
-* Eager learner
-* Team player
+* Hands-on learner
 * Mother Hen of the team
 * Loves challenges
 * Out of the box thinker
@@ -25,7 +24,7 @@ tags:
 * Operating systems
     * Windows XP to 11 (Use and administration)
     * Windows Server 2003 to 2019 (Use and administration)
-    * Mac OS (Desktop - Advanced use and administration)
+    * Mac OS (Desktop - Advanced use)
     * Linux - preferred distros are Arch or Red Hat based, but I can wing Debian just as well. 
     * Cisco iOS - managed switch - basic use and understanding
 
@@ -34,10 +33,9 @@ tags:
     * Exchange Server 2003, 2010, Online
     * Active Directory (Func. Level from 2003 to current)
     * DFS/DNS/DHCP
-    * SharePoint
     * VMware vSphere and Horizon
     * Cisco Unified Communications Manager
-    * Version Control : Git and Mercurial
+    * Version Control : Git
     * Ticketing systems : TOPdesk, ServiceNow, Jira and automation with them
 
 * Scripting/Programming
@@ -45,10 +43,7 @@ tags:
     * Lua
     * PowerShell
     * Bash
-    * Batch
     * Ruby (on Rails)
-    * PHP : basics (Including CodeIgniter and CakePHP)
-    * AppleScript
 
 * Other notable skills
     * Proficient in using Markdown, LaTeX to generate documentation
@@ -71,9 +66,9 @@ tags:
 * Inclusion of new company branches into current infrastructure
 
 ### Experience
-* May 2021- - present: Systems and Network Engineer, Lineas NV Brussels
-    - Implement Terraform, Ansible to automate provisioning and configuring
-    - Migrate from ITRP to Jira Service Desk
+* May 2021 - present: Systems and Network Engineer, Lineas NV Brussels
+    - Implement Terraform, Ansible to automate provisioning and configuring 
+    - Migrate from ITRP to Jira Service Desk; with various sync options including automated user account creation.
     - Automated workflows and processes; ranging from deployments to user management.
     - Maintained, improved and reshaped the service desk tooling
     - Onboard Linux servers into the patch management process
