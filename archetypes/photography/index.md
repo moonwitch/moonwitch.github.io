@@ -5,9 +5,9 @@ date: "{{ now.Format "2006-01-02" }}"
 categories: 
   - photography
 tags:
-    - nikon
-    - oneplus
+  - nikon
+  - oneplus
 resources:
-    - src: 
-      name: ""
+  - src: 
+    name: ""
 ---
