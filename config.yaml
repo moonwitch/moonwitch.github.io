@@ -9,6 +9,7 @@ paginate: 6
 enableGitInfo: true # Change 'Lastmod' to latest git commit
 removePathAccents: true # Because I may type accents
 
+# theme: hugo-theme-ava
 # theme: hugo-theme-loumans
 
 #################### Navigation ####################
@@ -18,21 +19,25 @@ menu:
     - name: Posts
       url: /posts
       weight: 1
-    - name: About
-      url: /about
+    - name: Stories
+      url: /stories
       weight: 2
     - name: Tags
       url: /tags
-      weight: 4
+      weight: 8
+    - name: About
+      url: /about
+      weight: 9
     - name: Resume
       url: /resume
-      weight: 5
+      weight: 10
 
 #################### Taxonomies;grouping ####################
 # Must include default tags and categories
 taxonomies:
   category: categories
   tag: tags
+  series: series
 
 #################### default parameters ################################
 params:

@@ -1,0 +1,9 @@
+[submodule "themes/hugo-theme-ava"]
+	path = themes/hugo-theme-ava
+	url = https://github.com/jmau111/hugo-theme-ava.git
+[submodule ".themes"]
+	path = .themes
+	url = https://github.com/moonwitch/hugo-theme-loumans
+[submodule "themes/hugo-theme-loumans"]
+	path = themes/hugo-theme-loumans
+	url = https://github.com/moonwitch/hugo-theme-loumans
