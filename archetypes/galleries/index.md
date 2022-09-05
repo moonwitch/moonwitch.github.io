@@ -11,3 +11,5 @@ resources:
   - src: 
     name: ""
 ---
+
+![Featured](images/featured.jpg)

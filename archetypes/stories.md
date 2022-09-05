@@ -5,5 +5,5 @@ layout: stories
 categories: 
   - stories
 series:
-  - 
+  - "{{ replace .Name "-" " " | title }}"
 ---
