@@ -1,0 +1,66 @@
+backend:
+  name: github
+  repo: moonwitch/moonwitch.github.io
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: static/posts
+public_folder: /posts
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    # preview_path: {{slug}}
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string' 
+      - label: 'Publish Date'
+        name: 'date'
+        widget: 'datetime' 
+      - label: 'LastModified Date'
+        name: 'lastmod'
+        widget: 'date' 
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
+        default: ["blog"]
+      - label: 'Language'
+        name: 'language'
+        widget: "select"
+        options: ["en", "nl"]
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'string'
+      - label: 'Description'
+        name: 'description'
+        widget: 'string' 
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown' 
+  - name: 'galleries'
+    label: 'Galleries'
+    folder: 'content/galleries'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'stories'
+    label: 'Writings'
+    folder: 'content/Writings'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
