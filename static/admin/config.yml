@@ -53,8 +53,8 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'stories'
-    label: 'Writings'
-    folder: 'content/Writings'
+    label: 'Stories'
+    folder: 'content/Stories'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
@@ -64,3 +64,4 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Series?', name: 'series', widget: 'select', options: ["Yes", "No"]}
