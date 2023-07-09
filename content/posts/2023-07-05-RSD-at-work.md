@@ -13,7 +13,9 @@ comments: true
 draft: true
 ---
 
-Let's start with an open and honest admission; I didn't realize how bad my RSD was until I thought about writing this post. I can honestly say that my RSD screwed me over at my current job. Here's the story:
+Let's start with an open and honest admission; I didn't realize how bad my RSD was until I thought about writing this post. I can honestly say that my RSD screwed me over at my current job. 
+
+## Here's the story:
 
 Some months ago, my then boss informed the entire team our current roles would cease to exist and would migrate towards a more managing of managed services partners and would no longer be technical. As I am always very hesitant to change, this was a hard nut to swallow.
 I stated I still wanted some technical challenges, since I loved those in my current role. As it was then explainedto me, there wouldn't be technical options, it would be an administrative role mainly. I freaked out, but a possible solution offered to me was to move sideways, to the software team. I would be able to still do technical things, more CI/CD oriented. I was very hesitant, but I agreed to give it a try. I was afraid I would not be able to do the job, that I would not be able to learn the new technologies, that I would not be able to keep up with the rest of the team. I was afraid I would fail, I felt more fear for the other role.
@@ -33,3 +35,5 @@ Now here's what happened without my head.
 I freaked out because of a change, but I had to _roll_ with it. In going with the flow, I began to relax and recognized I might be a good fit given some time to do this new role, but because I am a people pleaser, I was unable to decline the software role. I just can't straight up say "No, thank you" because I will sense the expected 'Yes' and I will comply. This is not a conscious process, it happens all on its own and I generally don't see it until it is too late.
 
 The situation was aggrevated because I do better in English and non-physical meetings, at least that keeps the RSD more at bay. All my meetings with Boss 2 and HR were face to face and in Dutch; I just screwed myself over. And now I can only cry and run like hell. I am not able to face them anymore, I am not able to face the team anymore. I am not able to face myself anymore.
+
+Now I am still waiting for my official diagnoses ADHD, which in Belgium takes forever. But I have - due to this shit with my job - made an appointment with my GP, I just can't take it anymore.
