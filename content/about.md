@@ -10,7 +10,7 @@ resources:
 ---
 Hello there!
 
-I am Kelly Crabbé, an almost 40 year old DevOps Engineer. Although I freely admit that I am merely a junior DevOps; I recently switched over from the System Administrator side, which has been my job for over 10 years. Although you can't call it a hard switch; I am still a sysadmin - but I just see everything a little different. 
+I am Kelly Crabbé, a 41 year old DevOps Engineer. Although I freely admit that I am merely a junior DevOps; I recently switched over from the System Administrator side, which has been my job for over 10 years. Although you can't call it a hard switch; I am still a sysadmin - but I just see everything a little different. 
 
 For example; a computer system (server or not) can be written in code; same as an application deployment or a daily task you execute. Say I have to do the same check every single day; it's predictable, known - therefore I can automate it. I love doing things like that; discovering flows like that. I simply love it. 
 
