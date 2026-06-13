@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL: https://audhd.cloud/
+baseURL: https://kellyand.coffee/
 title: Kelly and Coffee
 locale: en-US
 defaultContentLanguage: en
@@ -15,18 +15,18 @@ removePathAccents: true # Because I may type accents
 # sectionPagesMenu: "main"
 menu:
   main:
-    - name: Posts
-      url: /posts
+    - name: Tech
+      url: /dev/
       weight: 1
-    - name: About
-      url: /about
+    - name: Advocacy
+      url: /audhd/
       weight: 2
-    - name: Tags
-      url: /tags
+    - name: Blog
+      url: /posts/
+      weight: 3
+    - name: About
+      url: /about/
       weight: 4
-    - name: Resume
-      url: /resume
-      weight: 5
 
 #################### Taxonomies;grouping ####################
 # Must include default tags and categories
@@ -43,9 +43,9 @@ params:
     Notes from a neurodivergent, queer DevOps engineer on tech, accessibility, and living as your whole self.
   subtitle: Neurodivergent · LGBTQIA+ · Tech advocate
   author: Kelly Crabbé
-  heroTitle: Building a kinder, more accessible corner of tech.
+  heroTitle: Automation by day. Advocacy out loud.
   heroLede: >-
-    I'm Kelly — a DevOps engineer, advocate, and writer. I share what I'm learning about living and working as a neurodivergent, queer person in technology, and how we can build things that include everyone.
+    I'm Kelly — a DevOps & automation engineer who also writes and speaks about being AuDHD and queer in tech. Two sides of the same person. Pick a door.
   avatar: true
   bio: >-
     I am a geeky, happily married, neurodivergent and queer woman who works in DevOps after a 15-year affair with system administration. I write about tech, accessibility, and showing up as my whole self — alongside my wife, our plus-daughter, and a very particular English Cocker Spaniel named Lou.
@@ -54,7 +54,7 @@ params:
   email: kelly.crabbe@gmail.com
   location: "Neerlinter,België"
   copyright: >-
-    | copyright &copy; 2022 [Kelly Crabbé](https://audhd.cloud)
+    | copyright &copy; 2022 [Kelly Crabbé](https://kellyand.coffee)
     All Rights Reserved |
   preloader:
     enable: true

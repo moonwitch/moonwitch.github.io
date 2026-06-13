@@ -227,6 +227,43 @@ img { max-width: 100%; height: auto; display: block; }
 .focus-card p { margin: 0; color: var(--text-muted); }
 
 /* =========================================================================
+   Two-flavor split (home) + landing pages (/dev, /audhd)
+   ========================================================================= */
+.flavors { max-width: $maxw; margin-inline: auto; padding: 3.5rem 1.25rem 1rem; }
+.flavors__grid {
+  display: grid; gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.flavor-card {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: $radius; padding: 1.8rem; box-shadow: var(--shadow);
+  border-top: 4px solid var(--border);
+}
+.flavor-card--dev { border-top-color: var(--coffee); }
+.flavor-card--audhd { border-top-color: var(--link); }
+.flavor-card__kicker {
+  margin: 0; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 0.78rem; color: var(--text-muted);
+}
+.flavor-card__title { margin: 0; font-size: 1.5rem; }
+.flavor-card__lede { margin: 0; color: var(--text-muted); }
+.flavor-card__list { margin: 0.2rem 0 1rem; padding-left: 1.1rem; color: var(--text-muted); }
+.flavor-card__list li { margin: 0.15rem 0; }
+.flavor-card .btn { align-self: flex-start; margin-top: auto; }
+
+.landing__head { max-width: $readw; margin-bottom: 1rem; }
+.landing__kicker {
+  margin: 0 0 0.5rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 0.82rem; color: var(--text-muted);
+}
+.landing__title { font-size: clamp(1.9rem, calc(1.3rem + 2.4vw), 3rem); margin: 0 0 0.8rem; }
+.landing__lede { font-size: 1.2rem; color: var(--text-muted); margin: 0 0 1.4rem; }
+.landing__cta { display: flex; gap: 0.7rem; flex-wrap: wrap; margin: 0 0 1rem; }
+.landing--dev .landing__title { border-left: 5px solid var(--coffee); padding-left: 0.7rem; }
+.landing--audhd .landing__title { border-left: 5px solid var(--link); padding-left: 0.7rem; }
+
+/* =========================================================================
    Post cards / grid
    ========================================================================= */
 .latest { max-width: $maxw; margin-inline: auto; padding: 1rem 1.25rem 4rem; }

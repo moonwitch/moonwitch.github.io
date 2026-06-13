@@ -1,0 +1,9 @@
+# Copy to terraform.tfvars (gitignored) OR export TF_VAR_cloudflare_api_token.
+# Prefer the env var so the token never lands on disk:
+#   export TF_VAR_cloudflare_api_token="your-scoped-token"
+
+cloudflare_api_token = "REPLACE_ME"
+
+# Defaults already match your setup; override only if something changes:
+# canonical_domain  = "kellyand.coffee"
+# github_pages_host = "moonwitch.github.io"
