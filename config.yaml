@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL: /
+baseURL: https://audhd.cloud/
 title: Kelly and Coffee
 locale: en-US
 defaultContentLanguage: en
@@ -54,7 +54,7 @@ params:
   email: kelly.crabbe@gmail.com
   location: "Neerlinter,België"
   copyright: >-
-    | copyright &copy; 2022 [Kelly Crabbé](https://kellyand.coffee)
+    | copyright &copy; 2022 [Kelly Crabbé](https://audhd.cloud)
     All Rights Reserved |
   preloader:
     enable: true
