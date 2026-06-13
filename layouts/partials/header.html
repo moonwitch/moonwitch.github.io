@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}" data-theme="dark" data-motion="off">
 {{ partial "head.html" . }}
 <body>
-  {{ partial "menu.html" . }}
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <a href="#main" class="skip-link p-screen-reader-text">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="{{ .Site.BaseURL }}" class="brand" aria-label="{{ .Site.Title }} — home">
+        <span class="brand__mark" aria-hidden="true">
+          <!-- Neurodiversity infinity loop -->
+          <svg viewBox="0 0 64 32" width="40" height="20" focusable="false" role="img">
+            <title>Infinity loop</title>
+            <defs>
+              <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#e63946" />
+                <stop offset="25%" stop-color="#f4a261" />
+                <stop offset="50%" stop-color="#2a9d8f" />
+                <stop offset="75%" stop-color="#457b9d" />
+                <stop offset="100%" stop-color="#9d4edd" />
+              </linearGradient>
+            </defs>
+            <path d="M16 16 C16 6, 30 6, 32 16 C34 26, 48 26, 48 16 C48 6, 34 6, 32 16 C30 26, 16 26, 16 16 Z"
+              fill="none" stroke="url(#brandGrad)" stroke-width="4" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand__text">{{ .Site.Title }}</span>
+      </a>
 
-  {{ partial "svgpack-sprite.html" . }}
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        {{ partial "menu.html" . }}
+      </nav>
 
-  <header class="l-header">
-    {{ if .IsPage }}
-      <p class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></p>
-    {{ else }}
-      <h1 class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></h1>
-    {{ end }}
-    
-    {{ with ($.Param "subtitle") }}
-      <p class="p-subtitle">
-        {{ . }}
-      </p>
-    {{ end }}
-
+      <div class="header-controls">
+        <button class="ctrl-btn" id="motion-toggle" type="button" aria-pressed="false"
+          title="Toggle animations">
+          <span class="ctrl-btn__icon" aria-hidden="true">✦</span>
+          <span class="visually-hidden">Toggle animations on or off</span>
+        </button>
+        <button class="ctrl-btn" id="theme-toggle" type="button" aria-pressed="false"
+          title="Toggle light or dark theme">
+          <span class="ctrl-btn__icon" aria-hidden="true">◐</span>
+          <span class="visually-hidden">Toggle light or dark theme</span>
+        </button>
+      </div>
+    </div>
   </header>
-  <main id="main" class="l-main">
+
+  <main id="main" class="l-main" role="main">

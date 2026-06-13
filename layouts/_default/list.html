@@ -1,25 +1,25 @@
 {{ partial "header.html" . }}
 
-<h2 class="c-title p-tag-title">{{ .Title }}</h2>
+<div class="page-wrap">
+  <header class="page-head">
+    <h1 class="page-head__title" data-reveal>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-head__desc" data-reveal>{{ . }}</p>{{ end }}
+  </header>
 
-{{ if isset .Site.Taxonomies "tags" }}
-  {{ $mytag := .Title }}
-
-  {{ range $index, $page := (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
-    {{ if ne $index 0 }}
+  {{ $pages := .Pages }}
+  {{ if isset .Site.Taxonomies "tags" }}
+    {{ if .Data.Pages }}{{ $pages = where .Data.Pages "Type" "posts" }}{{ end }}
   {{ end }}
-  
-  {{ .Render "li" }} {{ end }}
-{{ else }}
-  {{ range $index, $page := (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
-   {{ if ne $index 0 }}  
-  {{ end }}
-  {{ .Render "li" }} {{ end }}
-{{ end }}
+  {{ if not $pages }}{{ $pages = where .Site.RegularPages "Type" "posts" }}{{ end }}
 
-{{ partial "pagination.html" .Paginator }}
+  {{ $paginator := .Paginate $pages }}
+  <div class="card-grid">
+    {{ range $paginator.Pages }}
+      {{ .Render "li" }}
+    {{ end }}
+  </div>
 
-{{ partial "siteinfo.html" . }}
+  {{ partial "pagination.html" $paginator }}
+</div>
 
 {{ partial "footer.html" . }}
-

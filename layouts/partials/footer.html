@@ -1,29 +1,46 @@
   </main>
-  {{ partial "menu.html" . }}
 
-  <footer class="l-footer">
-    {{ partial "link.html" . }}
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__title">{{ .Site.Title }}</p>
+        {{ with .Site.Params.bio }}<p class="site-footer__bio">{{ . | truncate 160 }}</p>{{ end }}
+      </div>
 
-    <p class="p-copyright">
-      {{ with .Site.Copyright | markdownify | safeHTML }}
-        {{ . }}
-      {{ else }}
-        {{ if ($.Param "author") }}
-          {{ if ($.Param "authorwebsite") }}
-            <a href="{{ $.Param "authorwebsite" }}">{{ $.Param "author" }}</a>
-          {{ else }}
-            {{ $.Param "author" }}
-          {{ end }}
-        {{ end }}
-        &nbsp;&bull;&nbsp;
-        {{ .Site.LastChange.Format "2006" }}
-
-        {{ if .Site.Title }}
-          &nbsp;&bull;&nbsp;
-          <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
-        {{ end }}
+      {{ with .Site.Param "social" }}
+        <nav class="social" aria-label="Social links">
+          <ul class="social__list">
+            {{ range . }}
+              <li class="social__item">
+                <a class="social__link" href="{{ .link }}" rel="me noopener" target="_blank">
+                  <i class="fa-brands fa-{{ .title }}" aria-hidden="true"></i>
+                  <span class="visually-hidden">{{ .title }}</span>
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
       {{ end }}
-    </p>
+
+      <p class="site-footer__copyright">
+        {{ with .Site.Copyright | markdownify }}{{ . }}{{ else }}
+          &copy; {{ now.Format "2006" }} {{ .Site.Params.author }}
+        {{ end }}
+      </p>
+    </div>
   </footer>
+
+  <!-- Animation libraries: deferred, order preserved. Only used when motion is enabled. -->
+  <script defer src="{{ "js/vendor/gsap.min.js" | relURL }}"></script>
+  <script defer src="{{ "js/vendor/ScrollTrigger.min.js" | relURL }}"></script>
+  <script defer src="{{ "js/vendor/three.min.js" | relURL }}"></script>
+
+  {{ $app := resources.Get "js/app.js" }}
+  {{ $opts := dict "minify" hugo.IsProduction "target" "es2017" }}
+  {{ $app = $app | js.Build $opts | fingerprint }}
+  <script defer src="{{ $app.RelPermalink }}" integrity="{{ $app.Data.Integrity }}"></script>
+
+  <!-- Font Awesome (brand icons) -->
+  <script defer src="https://kit.fontawesome.com/406767c203.js" crossorigin="anonymous"></script>
 </body>
 </html>

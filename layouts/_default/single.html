@@ -1,66 +1,41 @@
 {{ partial "header.html" . }}
 
-{{ $baseurl := .Site.BaseURL | sanitizeurl }}
-<article class="p-article">
-  <header>
-    <h1>{{ .Title }}</h1>
+<article class="article page-wrap">
+  <header class="article__head">
+    <h1 class="article__title" data-reveal>{{ .Title }}</h1>
     {{ if eq (.Type | singularize) "post" }}
-      <div>
-          <div class="c-meta">
-          {{ if not (.Param "hideDate") }}
-            {{ partial "timestamp.html" . }}
-          {{ end }}
-
-          {{ if not (.Param "hideWordCount") }}
-            {{ if not (.Param "hideDate") }} {{ end }}
-              {{ partial "word_count.html" . }}
-            {{ end }}
-          {{ if not (.Param "hideReadingTime") }}
-          {{ if not (and (.Param "hideDate") (.Param "hideWordCount")) }} | {{ end }}
-            {{ partial "reading_time.html" . }}
-          {{ end }}
-          </div>
-        </div>
-        {{ range .Params.tags }}
-        <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+      <p class="article__meta" data-reveal>
+        {{ if not (.Param "hideDate") }}
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
         {{ end }}
-      </div>
+        {{ if not (.Param "hideWordCount") }}<span aria-hidden="true">·</span> {{ .WordCount }} words{{ end }}
+        {{ if not (.Param "hideReadingTime") }}<span aria-hidden="true">·</span> {{ .ReadingTime }} min read{{ end }}
+      </p>
+      {{ with .Params.tags }}
+        <ul class="tag-list" data-reveal>
+          {{ range . }}<li><a class="tag" href="{{ "tags" | relLangURL }}/{{ . | urlize }}">#{{ . }}</a></li>{{ end }}
+        </ul>
+      {{ end }}
     {{ end }}
   </header>
+
   {{ with .Params.thumbnail }}
-    <img src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
+    <img src="{{ . }}" alt="" class="article__thumbnail" />
   {{ end }}
-  <section id="js-article" class="p-article__body">
+
+  <div class="article__body prose">
     {{ .Content }}
-  </section>
-  <footer>
-    {{ if eq (.Type | singularize) "page" }}
-    <div>
-	    <div class="c-last-update">
-		    {{ partial "modified_date.html" . }}
-	    </div>
-    </div>
-    {{ else }}
-    
-    {{ partial "comment.html" . }}
-    
-    <nav class="p-pagination c-pagination">
-      <div class="c-pagination__ctrl">
-        <div class="c-pagination__newer">
-          {{ if .NextInSection }}
-          <a href="{{ .NextInSection.Permalink }}">Newer</a>
-          {{ end }}
-        </div>
-        <div class="c-pagination__older">
-          {{ if .PrevInSection }}
-          <a href="{{ .PrevInSection.Permalink }}">Older</a>
-          {{ end }}
-        </div>
-      </div>
-    </nav>
+  </div>
+
+  <footer class="article__footer">
+    {{ if eq (.Type | singularize) "post" }}
+      <nav class="post-pager" aria-label="More posts">
+        {{ with .NextInSection }}<a class="post-pager__link post-pager__link--next" href="{{ .Permalink }}"><span>Newer</span>{{ .Title }}</a>{{ end }}
+        {{ with .PrevInSection }}<a class="post-pager__link post-pager__link--prev" href="{{ .Permalink }}"><span>Older</span>{{ .Title }}</a>{{ end }}
+      </nav>
+      {{ partial "comment.html" . }}
     {{ end }}
-    {{ partial "related.html" . }}
-    {{ partial "siteinfo.html" . }}
   </footer>
 </article>
+
 {{ partial "footer.html" . }}

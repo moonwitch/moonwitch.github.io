@@ -1,81 +1,87 @@
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  {{ with .Title | default .Site.Title }}
-    <title>{{ . }}</title>
-    <meta property="og:title" content="{{ . }}" />
-    <meta name="twitter:title" content="{{ . }}" />
-  {{ end }}
-  
-  {{ with .Description | default ($.Param "subtitle") }}
+  {{ $isHome := .IsHome }}
+  {{ $title := .Title | default .Site.Title }}
+  {{ if $isHome }}{{ $title = .Site.Title }}{{ end }}
+  <title>{{ $title }}{{ if not $isHome }} · {{ .Site.Title }}{{ end }}</title>
+  <meta property="og:title" content="{{ $title }}" />
+  <meta name="twitter:title" content="{{ $title }}" />
+
+  {{ $desc := .Description | default ($.Param "subtitle") | default .Site.Params.description }}
+  {{ with $desc }}
     <meta name="description" content="{{ . }}" />
     <meta property="og:description" content="{{ . }}" />
     <meta name="twitter:description" content="{{ . | truncate 200 }}" />
   {{ end }}
-  
-  <meta name="author" content="{{ $.Param "author" }}"/>
+
+  <meta name="author" content="{{ $.Param "author" }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
+  <meta name="theme-color" content="#0e0c1d" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fbf7ef" media="(prefers-color-scheme: light)" />
+  <link rel="canonical" href="{{ .Permalink }}" />
 
   {{ with .Params.thumbnail }}
     <meta property="og:image" content="{{ . | absURL }}" />
     <meta name="twitter:image" content="{{ . | absURL }}" />
   {{ end }}
 
-  <meta name="twitter:card" content="summary" />
-
+  <meta name="twitter:card" content="summary_large_image" />
   {{ with ($.Param "twitter") }}
     <meta name="twitter:site" content="@{{ . }}" />
     <meta name="twitter:creator" content="@{{ . }}" />
   {{ end }}
-  
+
   {{ if .IsPage }}
     <meta property="og:type" content="article" />
-    {{ with ($.Param "facebook") }}
-      <meta property="og:article:author" content="https://facebook.com/{{ . }}" />
-    {{ end }}
   {{ else }}
     <meta property="og:type" content="website" />
   {{ end }}
 
-  <!-- Hugo Version Number -->
   {{ hugo.Generator -}}
 
-  <!-- Google Analytics -->
-  {{ if not .Site.IsServer }}
-    {{ if hasPrefix .Site.Params.GoogleAnalytics "G-"}}
+  <!-- Set theme + motion preference before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+
+        var motion = localStorage.getItem("motion");
+        var prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        // Default: honour the OS. If the user has reduced motion on, animation is off.
+        var motionOn = motion ? motion === "on" : !prefersReduce;
+        document.documentElement.setAttribute("data-motion", motionOn ? "on" : "off");
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.setAttribute("data-motion", "off");
+      }
+    })();
+  </script>
+
+  {{ if hugo.IsProduction }}
+    {{ if hasPrefix .Site.Params.GoogleAnalytics "G-" }}
       {{ template "_internal/google_analytics.html" . }}
-    {{ else }}
-      {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
   {{ end }}
 
   <!-- Styles -->
   {{ $sass := resources.Get "scss/main.scss" }}
-  {{ $style := $sass | resources.ToCSS | fingerprint }}
-  <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+  {{ $opts := dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) }}
+  {{ $style := $sass | resources.ToCSS $opts | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
 
-  <!-- Favicon -->
   {{- with ($.Param "favicon") }}
     <link rel="icon" type="image/x-icon" href="{{ . | absURL }}" />
-  {{- end -}} 
+  {{- end -}}
 
-    <!-- Permalinkage -->
   {{ if eq .RelPermalink "/" }}
     {{ with .OutputFormats.Get "RSS" -}}
-      <link
-        href="{{ .Permalink }}"
-        rel="alternate"
-        type="application/rss+xml"
-        title="{{ $.Site.Title }}"
-      />
+      <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end -}}
   {{ end }}
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/406767c203.js" crossorigin="anonymous"></script>
 </head>
