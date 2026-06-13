@@ -16,7 +16,10 @@
   --accent: #ffd166;        /* neurodiversity gold — focus + highlights */
   --accent-ink: #1a1430;    /* text on accent */
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  --coffee: #d8a47f;        /* warm latte — the "and Coffee" nod */
   --pride: linear-gradient(90deg, #e63946, #f4a261, #2a9d8f, #457b9d, #9d4edd);
+  /* Brighter pride stops so every word stays legible on the dark background. */
+  --hero-gradient: linear-gradient(90deg, #ff8fa3, #ffd166, #6ee7d2, #8ecae6, #d0b3ff);
   color-scheme: dark;
 }
 
@@ -33,6 +36,9 @@
   --accent: #b8860b;        /* darker gold for contrast on light */
   --accent-ink: #1c1633;    /* dark text on gold — AA on light theme */
   --shadow: 0 14px 40px rgba(40, 30, 80, 0.14);
+  --coffee: #8a4b2f;        /* deeper roast for contrast on cream */
+  /* Deeper, saturated stops that stay readable on the cream background. */
+  --hero-gradient: linear-gradient(90deg, #d62839, #c25e00, #1a7f6b, #2a6f97, #7b2fd4);
   color-scheme: light;
 }
 
@@ -175,12 +181,15 @@ img { max-width: 100%; height: auto; display: block; }
 .hero__title {
   font-size: clamp(2.1rem, calc(1.3rem + 3.6vw), 4rem);
   margin: 0 0 1.2rem;
-  background: var(--pride);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  background: var(--hero-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--text); /* fallback colour if clip is unsupported */
 }
-/* Keep a solid fallback so the headline is always legible if clip is unsupported. */
-@supports not (background-clip: text) {
-  .hero__title { color: var(--text); background: none; }
+/* If neither prefixed nor unprefixed clip is supported, show solid readable text. */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero__title { -webkit-text-fill-color: var(--text); background: none; }
 }
 .hero__lede { font-size: 1.15rem; color: var(--text-muted); margin: 0 auto 2rem; max-width: 40rem; }
 .hero__actions { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
@@ -311,7 +320,7 @@ img { max-width: 100%; height: auto; display: block; }
 .page-head__desc { color: var(--text-muted); margin: 0; }
 
 .notfound { text-align: center; }
-.notfound__code { font-size: clamp(4rem, 10vw, 8rem); margin: 0; background: var(--pride); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.notfound__code { font-size: clamp(4rem, 10vw, 8rem); margin: 0; background: var(--hero-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--text); }
 .notfound__msg { color: var(--text-muted); font-size: 1.2rem; margin: 0 0 1.5rem; }
 
 /* =========================================================================
@@ -319,18 +328,39 @@ img { max-width: 100%; height: auto; display: block; }
    ========================================================================= */
 .site-footer { border-top: 1px solid var(--border); background: var(--bg-elev); margin-top: 3rem; }
 .site-footer__inner { max-width: $maxw; margin-inline: auto; padding: 2.5rem 1.25rem; display: grid; gap: 1.2rem; }
-.site-footer__title { font-family: $font-display; font-size: 1.3rem; margin: 0; }
+.site-footer__title { font-family: $font-display; font-size: 1.3rem; margin: 0; display: inline-flex; align-items: center; gap: 0.5rem; }
+.site-footer__coffee { color: var(--coffee); display: inline-flex; }
 .site-footer__bio { color: var(--text-muted); margin: 0.4rem 0 0; max-width: 40rem; }
 .social__list { list-style: none; display: flex; gap: 0.5rem; padding: 0; margin: 0; flex-wrap: wrap; }
 .social__link {
   width: 2.6rem; height: 2.6rem; border-radius: 50%;
   border: 1px solid var(--border); background: var(--surface);
   display: inline-flex; align-items: center; justify-content: center;
-  color: var(--text); font-size: 1.1rem;
+  color: var(--text); transition: color 0.2s $ease, border-color 0.2s $ease, transform 0.2s $ease;
 }
-.social__link:hover { color: var(--link); border-color: var(--link); }
+.social__link:hover { color: var(--link); border-color: var(--link); transform: translateY(-2px); }
+.social__icon { width: 1.2rem; height: 1.2rem; display: block; }
 .site-footer__copyright { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
 .site-footer__copyright a { color: var(--link); }
+.site-footer__brewed { color: var(--text-muted); font-size: 0.82rem; margin: 0; opacity: 0.85; font-style: italic; }
+
+/* =========================================================================
+   Coffee cup (the "and Coffee" motif) — header brand + footer
+   ========================================================================= */
+.coffee-cup { display: block; }
+.coffee-cup__steam { opacity: 0.75; }
+.brand__coffee { color: var(--coffee); display: inline-flex; }
+.brand__coffee .coffee-cup { width: 22px; height: 22px; }
+@media (prefers-reduced-motion: no-preference) {
+  [data-motion="on"] .coffee-cup__steam {
+    animation: coffee-steam 3.2s ease-in-out infinite;
+    transform-origin: center;
+  }
+}
+@keyframes coffee-steam {
+  0%, 100% { opacity: 0.35; transform: translateY(0); }
+  50% { opacity: 0.85; transform: translateY(-1px); }
+}
 
 /* =========================================================================
    Author aside (siteinfo)

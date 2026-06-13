@@ -53,6 +53,25 @@
   /* ---------- three.js hero ---------- */
   var hero = { renderer: null, raf: null, running: false };
 
+  // A soft circular sprite so the particles render as round dots, not squares.
+  var _sprite = null;
+  function makeRoundSprite() {
+    if (_sprite) return _sprite;
+    var c = document.createElement("canvas");
+    c.width = c.height = 64;
+    var g = c.getContext("2d");
+    var grd = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+    grd.addColorStop(0, "rgba(255,255,255,1)");
+    grd.addColorStop(0.45, "rgba(255,255,255,0.85)");
+    grd.addColorStop(1, "rgba(255,255,255,0)");
+    g.fillStyle = grd;
+    g.beginPath();
+    g.arc(32, 32, 32, 0, Math.PI * 2);
+    g.fill();
+    _sprite = new THREE.CanvasTexture(c);
+    return _sprite;
+  }
+
   function startHero() {
     var canvas = document.getElementById("hero-canvas");
     if (!canvas || typeof THREE === "undefined" || hero.running) return;
@@ -90,8 +109,9 @@
     geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
     var mat = new THREE.PointsMaterial({
-      size: 0.16, vertexColors: true, transparent: true, opacity: 0.85,
-      depthWrite: false, blending: THREE.AdditiveBlending
+      size: 0.22, vertexColors: true, transparent: true, opacity: 0.9,
+      depthWrite: false, blending: THREE.AdditiveBlending,
+      map: makeRoundSprite(), alphaTest: 0.02
     });
     var points = new THREE.Points(geo, mat);
     scene.add(points);

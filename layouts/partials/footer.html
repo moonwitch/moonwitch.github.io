@@ -3,7 +3,10 @@
   <footer class="site-footer" role="contentinfo">
     <div class="site-footer__inner">
       <div class="site-footer__brand">
-        <p class="site-footer__title">{{ .Site.Title }}</p>
+        <p class="site-footer__title">
+          <span class="site-footer__coffee">{{ partial "coffee-cup.html" . }}</span>
+          {{ .Site.Title }}
+        </p>
         {{ with .Site.Params.bio }}<p class="site-footer__bio">{{ . | truncate 160 }}</p>{{ end }}
       </div>
 
@@ -13,7 +16,7 @@
             {{ range . }}
               <li class="social__item">
                 <a class="social__link" href="{{ .link }}" rel="me noopener" target="_blank">
-                  <i class="fa-brands fa-{{ .title }}" aria-hidden="true"></i>
+                  {{ partial "social-icon.html" .title }}
                   <span class="visually-hidden">{{ .title }}</span>
                 </a>
               </li>
@@ -27,6 +30,7 @@
           &copy; {{ now.Format "2006" }} {{ .Site.Params.author }}
         {{ end }}
       </p>
+      <p class="site-footer__brewed">Brewed with neurodivergent hyperfocus and an irresponsible amount of coffee.</p>
     </div>
   </footer>
 
@@ -39,8 +43,5 @@
   {{ $opts := dict "minify" hugo.IsProduction "target" "es2017" }}
   {{ $app = $app | js.Build $opts | fingerprint }}
   <script defer src="{{ $app.RelPermalink }}" integrity="{{ $app.Data.Integrity }}"></script>
-
-  <!-- Font Awesome (brand icons) -->
-  <script defer src="https://kit.fontawesome.com/406767c203.js" crossorigin="anonymous"></script>
 </body>
 </html>
