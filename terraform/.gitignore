@@ -6,6 +6,3 @@
 *.tfvars
 !*.tfvars.example
 crash.log
-
-# Rendered at runtime from backend.tf.example (keep the .example committed)
-backend.tf
