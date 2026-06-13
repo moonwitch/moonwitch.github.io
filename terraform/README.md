@@ -21,15 +21,33 @@ rules inside those zones — it does not register domains or move nameservers.
 2. In the GitHub repo: **Settings → Pages → Custom domain = `kellyand.coffee`**
    (the repo's `static/CNAME` already pins this on deploy).
 
-## Usage
+## Option A — run locally (simplest; recommended for occasional DNS changes)
+
+State lives in a local `terraform.tfstate` (gitignored). Nothing else to set up.
 
 ```sh
 cd terraform
-export TF_VAR_cloudflare_api_token="your-scoped-token"
+export TF_VAR_cloudflare_api_token="your-scoped-token"   # the CF_API value
+export TF_VAR_account_id="your-account-id"               # the CF_ACCOUNT value (optional today)
 terraform init
 terraform plan      # review
 terraform apply
 ```
+
+## Option B — GitHub Actions (`.github/workflows/terraform.yml`)
+
+Plan on PRs that touch `terraform/`, apply via the **Run workflow** button.
+CI needs **persistent remote state**, so it uses Terraform Cloud (free, no bucket):
+
+1. Repo **secrets**: `CF_API` and `CF_ACCOUNT` (✓ already done), plus `TF_API_TOKEN`
+   (a Terraform Cloud user/team token).
+2. Repo **variable**: `TF_CLOUD_ORG` = your HCP/Terraform Cloud org name.
+3. Create a workspace named `moonwitch-cloudflare` in that org (Execution mode: Local
+   or Remote both work; CLI-driven).
+
+The workflow renders `backend.tf.example` → `backend.tf` with your org at runtime,
+so local runs (Option A) stay on local state. Prefer not to use Terraform Cloud?
+Stick with Option A and ignore this workflow.
 
 ## Order of operations (important)
 

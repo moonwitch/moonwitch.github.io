@@ -1,0 +1,15 @@
+# Remote state for CI runs (so state persists between GitHub Actions runs).
+# Terraform Cloud / HCP free tier — no bucket or cloud creds to manage.
+#
+# This file is INERT by default (`.example`) so local runs use local state.
+# The terraform CI workflow renders it to `backend.tf` with your org name.
+# To use it locally too: copy to backend.tf, set the org, then `terraform login`.
+
+terraform {
+  cloud {
+    organization = "__TF_CLOUD_ORG__"
+    workspaces {
+      name = "moonwitch-cloudflare"
+    }
+  }
+}

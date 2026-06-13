@@ -6,7 +6,7 @@ flavor: audhd
 kicker: "Neurodivergent · LGBTQIA+ · in tech"
 cta:
   text: "Invite me to speak"
-  url: "mailto:kelly.crabbe@gmail.com?subject=Speaking%20invitation"
+  url: "mailto:kelly@kellyand.coffee?subject=Speaking%20invitation"
 cta2:
   text: "Read the blog"
   url: "/posts/"

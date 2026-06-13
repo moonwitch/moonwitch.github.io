@@ -9,6 +9,12 @@ variable "cloudflare_api_token" {
   EOT
 }
 
+variable "account_id" {
+  type        = string
+  default     = ""
+  description = "Cloudflare account ID (from the CF_ACCOUNT repo variable). Zones are looked up by name, so this is optional today; kept wired for account-scoped tokens and future zone creation."
+}
+
 variable "canonical_domain" {
   type        = string
   default     = "kellyand.coffee"

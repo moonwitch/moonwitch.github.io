@@ -6,7 +6,7 @@ flavor: dev
 kicker: "Automation · Cloud · DevOps"
 cta:
   text: "Book a chat"
-  url: "mailto:kelly.crabbe@gmail.com?subject=Kelly%20%26%20Coffee%20%E2%80%94%20let's%20talk"
+  url: "mailto:kelly@kellyand.coffee?subject=Kelly%20%26%20Coffee%20%E2%80%94%20let's%20talk"
 cta2:
   text: "GitHub"
   url: "https://github.com/moonwitch"
