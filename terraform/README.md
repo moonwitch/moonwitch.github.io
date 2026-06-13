@@ -54,5 +54,9 @@ outage:
 - The `192.0.2.1` placeholder on the redirect domains is an RFC 5737
   documentation address; it is never actually contacted because the redirect
   fires at Cloudflare's edge first.
-- Provider is pinned to the **v4** line. On provider **v5**, rename
-  `cloudflare_record` → `cloudflare_dns_record` and its `value` → `content`.
+- `allow_overwrite = true` lets Terraform **adopt** the DNS records you already
+  created by hand (apex A/AAAA, `www`) instead of erroring that they exist.
+- The redirect rulesets need the token's **Zone → Dynamic Redirect → Edit**
+  permission. Without it Cloudflare returns `Authentication error (10000)`.
+- Provider is pinned to the **v4** line and uses `content`. On provider **v5**,
+  rename `cloudflare_record` → `cloudflare_dns_record`.

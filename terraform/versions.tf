@@ -4,8 +4,8 @@ terraform {
   required_providers {
     cloudflare = {
       source = "cloudflare/cloudflare"
-      # Pinned to the v4 line. If you adopt provider v5, rename
-      # cloudflare_record -> cloudflare_dns_record and its `value` -> `content`.
+      # v4 line. Uses `content` (not the deprecated `value`). On provider v5,
+      # rename cloudflare_record -> cloudflare_dns_record.
       version = "~> 4.40"
     }
   }
