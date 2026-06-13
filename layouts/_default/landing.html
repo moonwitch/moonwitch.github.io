@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<section class="landing landing--{{ .Params.flavor | default "default" }}">
+  <div class="page-wrap">
+    <header class="landing__head">
+      {{ with .Params.kicker }}<p class="landing__kicker" data-reveal>{{ . }}</p>{{ end }}
+      <h1 class="landing__title" data-reveal>{{ .Title }}</h1>
+      {{ with .Description }}<p class="landing__lede" data-reveal>{{ . }}</p>{{ end }}
+      {{ with .Params.cta }}
+        <p class="landing__cta" data-reveal>
+          <a class="btn btn--primary" href="{{ .url }}">{{ .text }}</a>
+          {{ with $.Params.cta2 }}<a class="btn btn--ghost" href="{{ .url }}">{{ .text }}</a>{{ end }}
+        </p>
+      {{ end }}
+    </header>
+
+    <div class="landing__body prose" data-reveal>
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

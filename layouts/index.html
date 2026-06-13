@@ -1,57 +1,59 @@
 {{ partial "header.html" . }}
 
 <section class="hero" aria-labelledby="hero-heading">
-  <!-- Decorative animated backdrop. Hidden from assistive tech; static gradient fallback when motion is off. -->
   <div class="hero__canvas-wrap" aria-hidden="true">
     <canvas id="hero-canvas" class="hero__canvas"></canvas>
     <div class="hero__gradient"></div>
   </div>
 
   <div class="hero__content">
-    <p class="hero__eyebrow" data-reveal>Neurodivergent · LGBTQIA+ · Tech</p>
+    <p class="hero__eyebrow" data-reveal>Automation · Cloud · Neurodivergent advocacy</p>
     <h1 id="hero-heading" class="hero__title" data-reveal>
-      {{ with .Site.Params.heroTitle }}{{ . }}{{ else }}Building a kinder, more accessible corner of tech.{{ end }}
+      {{ with .Site.Params.heroTitle }}{{ . }}{{ else }}Kelly &amp; Coffee{{ end }}
     </h1>
     <p class="hero__lede" data-reveal>
-      {{ with .Site.Params.heroLede }}{{ . }}{{ else }}I'm {{ .Site.Params.author }} — a DevOps engineer, advocate, and writer. I share notes on living and working as a neurodivergent, queer person in technology, and what I'm learning about building things that include everyone.{{ end }}
+      {{ with .Site.Params.heroLede }}{{ . }}{{ else }}I'm Kelly — a DevOps &amp; automation engineer who also writes and speaks about being neurodivergent and queer in tech. Two sides of the same person. Pick a door.{{ end }}
     </p>
     <div class="hero__actions" data-reveal>
-      <a class="btn btn--primary" href="{{ "posts" | relURL }}">Read the blog</a>
-      <a class="btn btn--ghost" href="{{ "about" | relURL }}">About me</a>
+      <a class="btn btn--primary" href="{{ "dev/" | relURL }}">The tech →</a>
+      <a class="btn btn--ghost" href="{{ "audhd/" | relURL }}">The advocacy →</a>
     </div>
   </div>
 </section>
 
-<section class="focus" aria-labelledby="focus-heading">
-  <h2 id="focus-heading" class="section-title" data-reveal>What I write about</h2>
-  <ul class="focus__grid">
-    <li class="focus-card" data-reveal>
-      <span class="focus-card__icon" aria-hidden="true">∞</span>
-      <h3 class="focus-card__title">Neurodivergence</h3>
-      <p>Living with ADHD &amp; RSD, the window of tolerance, and tools that actually help — written honestly, without the toxic positivity.</p>
-    </li>
-    <li class="focus-card" data-reveal>
-      <span class="focus-card__icon" aria-hidden="true">🏳️‍🌈</span>
-      <h3 class="focus-card__title">Queer &amp; proud</h3>
-      <p>Showing up as my whole self at work and online, and why visibility and inclusive defaults matter.</p>
-    </li>
-    <li class="focus-card" data-reveal>
-      <span class="focus-card__icon" aria-hidden="true">⌘</span>
-      <h3 class="focus-card__title">Tech &amp; DevOps</h3>
-      <p>Automation, Linux tinkering, and the occasional rabbit hole — explained so they're approachable, not gatekept.</p>
-    </li>
-    <li class="focus-card" data-reveal>
-      <span class="focus-card__icon" aria-hidden="true">♿</span>
-      <h3 class="focus-card__title">Accessibility</h3>
-      <p>Accessible-by-default thinking: reduced motion, colour contrast, keyboard support, and respecting how people actually work.</p>
-    </li>
-  </ul>
+<section class="flavors" aria-labelledby="flavors-heading">
+  <h2 id="flavors-heading" class="visually-hidden">What I do</h2>
+  <div class="flavors__grid">
+    <article class="flavor-card flavor-card--dev" id="dev-teaser" data-reveal>
+      <p class="flavor-card__kicker">Kelly &amp; Coffee</p>
+      <h3 class="flavor-card__title">Tech &amp; navigating the cloud</h3>
+      <p class="flavor-card__lede">You bring the coffee, I'll bring the automation. DevOps, cloud engineering, and low-code workflows that get your platform running.</p>
+      <ul class="flavor-card__list">
+        <li>CI/CD &amp; DevOps</li>
+        <li>GCP cloud engineering</li>
+        <li>n8n &amp; low-code automation</li>
+      </ul>
+      <a class="btn btn--primary" href="{{ "dev/" | relURL }}">See the tech</a>
+    </article>
+
+    <article class="flavor-card flavor-card--audhd" id="audhd-teaser" data-reveal>
+      <p class="flavor-card__kicker">Neurodiversity &amp; advocacy</p>
+      <h3 class="flavor-card__title">Being AuDHD &amp; queer in tech</h3>
+      <p class="flavor-card__lede">Writing and public speaking on neurodivergence, accessibility, and showing up as your whole self in technology.</p>
+      <ul class="flavor-card__list">
+        <li>Public speaking &amp; talks</li>
+        <li>AuDHD &amp; lived experience</li>
+        <li>Accessibility &amp; inclusion</li>
+      </ul>
+      <a class="btn btn--primary" href="{{ "audhd/" | relURL }}">See the advocacy</a>
+    </article>
+  </div>
 </section>
 
 <section class="latest" aria-labelledby="latest-heading">
   <div class="latest__head">
-    <h2 id="latest-heading" class="section-title" data-reveal>Latest posts</h2>
-    <a class="latest__all" href="{{ "posts" | relURL }}">All posts →</a>
+    <h2 id="latest-heading" class="section-title" data-reveal>From the blog</h2>
+    <a class="latest__all" href="{{ "posts/" | relURL }}">All posts →</a>
   </div>
   <div class="card-grid">
     {{ $posts := where (where .Site.RegularPages "Type" "posts") ".Params.hidden" "!=" "true" }}
