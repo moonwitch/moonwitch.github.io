@@ -22,7 +22,7 @@ I've been putting off writing this one, which is very on-brand for me. It's the 
 
 For most of my life I assumed everyone was running the same race I was, just complaining about it less. That everyone white-knuckled their way through open-plan offices, rehearsed small talk in the car, and crashed on the sofa at 6pm because being a person all day had used up the whole battery. That everyone's feelings arrived at the volume mine did.
 
-They don't. I found that out properly as an adult, when I finally went looking for answers and came back with a couple of words — ADHD, and later the autism piece — that suddenly explained a *lot*. The hyperfocus and the total inability to start a boring task. The way criticism doesn't bruise so much as detonate. The sensory stuff I'd spent decades calling "being difficult." The exhaustion that wasn't laziness; it was the cost of pretending all day.
+They don't. I found that out properly as an adult — in 2023, in my late thirties — when I finally went looking for answers and came back with two words that suddenly explained a *lot*: autistic, and ADHD. Both. The combination even has a nickname, **AuDHD**, and once I had it, the puzzle pieces stopped fighting each other. The hyperfocus and the total inability to start a boring task. The way criticism doesn't bruise so much as detonate. The sensory stuff I'd spent decades calling "being difficult." The exhaustion that wasn't laziness; it was the cost of pretending all day.
 
 A diagnosis doesn't fix anything overnight. What it gave me was a manual. I stopped reading my own behaviour as a series of character flaws and started reading it as a system with particular needs — predictable, once you know the wiring. That reframe alone was worth the whole process.
 
