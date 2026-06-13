@@ -1,1 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>articles on Kelly and Coffee</title><link>/categories/articles/</link><description>Recent content in articles on Kelly and Coffee</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Branching; the basics</title><link>/posts/2020-02-21-git-branching-made-easy/</link><pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate><guid>/posts/2020-02-21-git-branching-made-easy/</guid><description>Intro Git isn&amp;rsquo;t as complex as it seems; once you get the hang of it.</description></item><item><title>Icinga2 Notifications: 101</title><link>/posts/2019-11-14-icinga2-notifications-101/</link><pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate><guid>/posts/2019-11-14-icinga2-notifications-101/</guid><description>Problem Email notifications in Icinga2 for your hostgroup You can&amp;rsquo;t find a quick &amp;rsquo;n dirty method Pre-Reqs Installation of Icinga2 Configured some hosts, hostgroups and services So how do I do it?</description></item><item><title>HP Envy on Linux</title><link>/posts/2019-09-27-enable-scanning-hpaio/</link><pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate><guid>/posts/2019-09-27-enable-scanning-hpaio/</guid><description>In my previous iteration - this is in the days of RH7.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Articles on Kelly and Coffee</title><link>/categories/articles/</link><description>Recent content in Articles on Kelly and Coffee</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sat, 13 Jun 2026 14:31:05 +0000</lastBuildDate><atom:link href="/categories/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenRGB en Sapphire RX 7800XT Nitro+</title><link>/posts/2024-06-27-openrgb/</link><pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate><guid>/posts/2024-06-27-openrgb/</guid><description>&lt;h1 id="openrgb-en-de-sapphire-rx-7800xt-nitro-de-ultieme-rgb-gids"&gt;OpenRGB en de Sapphire RX 7800XT Nitro+: De Ultieme RGB-Gids&lt;/h1&gt;
+&lt;h2 id="inleiding"&gt;Inleiding&lt;/h2&gt;
+&lt;p&gt;Het beheren van RGB-verlichting op de Sapphire RX 7800XT Nitro+ via OpenRGB kan een uitdaging zijn. Na uitgebreid onderzoek is de oplossing verrassend eenvoudig, maar niet direct voor de hand liggend. Deze gids zal je door het proces leiden.&lt;/p&gt;</description></item><item><title>Git Branching; the basics</title><link>/posts/2020-02-21-git-branching-made-easy/</link><pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate><guid>/posts/2020-02-21-git-branching-made-easy/</guid><description>&lt;h3 id="intro"&gt;Intro&lt;/h3&gt;
+&lt;p&gt;Git isn&amp;rsquo;t as complex as it seems; once you get the hang of it. But it can be daunting, I admit to that. So let me explain the basics to you, so you too can jump in and use Git in a team.&lt;/p&gt;</description></item><item><title>Icinga2 Notifications: 101</title><link>/posts/2019-11-14-icinga2-notifications-101/</link><pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate><guid>/posts/2019-11-14-icinga2-notifications-101/</guid><description>&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email notifications in Icinga2 for your hostgroup&lt;/li&gt;
+&lt;li&gt;You can&amp;rsquo;t find a quick &amp;rsquo;n dirty method&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="pre-reqs"&gt;Pre-Reqs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Installation of Icinga2&lt;/li&gt;
+&lt;li&gt;Configured some hosts, hostgroups and services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="so-how-do-i-do-it"&gt;So how do I do it?&lt;/h2&gt;
+&lt;h3 id="making-sure-mail-works"&gt;Making sure mail works&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Install ssmtp&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;yum install ssmtp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;Disable postfix and stop the service&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl disable postfix
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl stop postfix
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Configure your &amp;lsquo;finger&amp;rsquo; information.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;chfn -f name-you-want-as-displayname loginname
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="4"&gt;
+&lt;li&gt;Configure ssmtp&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# /etc/ssmtp.conf -- a config file for sSMTP sendmail.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Recipient for all mail to userids &amp;lt; 100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;root&lt;span style="color:#f92672"&gt;=&lt;/span&gt;postmaster
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# The place where the mail goes.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mailhub&lt;span style="color:#f92672"&gt;=&lt;/span&gt;smtp.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Where will the mail seem to come from? This would be the part after the @&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;RewriteDomain&lt;span style="color:#f92672"&gt;=&lt;/span&gt;example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Set this to never rewrite the &amp;#34;From:&amp;#34; line (unless not given) and to&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# use that address in the &amp;#34;from line&amp;#34; of the envelope.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;FromLineOverride&lt;span style="color:#f92672"&gt;=&lt;/span&gt;YES
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="5"&gt;
+&lt;li&gt;Start and enable service&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl enable ssmtp
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl start ssmtp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="6"&gt;
+&lt;li&gt;Test this&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;echo &lt;span style="color:#e6db74"&gt;&amp;#34;Hello, this is a test&amp;#34;&lt;/span&gt; | mail -s &lt;span style="color:#e6db74"&gt;&amp;#34;Test&amp;#34;&lt;/span&gt; someone@example.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="configure-icinga2-user-and-usergroups"&gt;Configure icinga2 user (and usergroups)&lt;/h3&gt;
+&lt;p&gt;By default, icinga2 comes with a UserGroup called &amp;lsquo;icingaadmins&amp;rsquo;.
+Any user of this group will receive email notifications if the icinga2 host itself has issues.&lt;/p&gt;</description></item><item><title>HP Envy on Linux</title><link>/posts/2019-09-27-enable-scanning-hpaio/</link><pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate><guid>/posts/2019-09-27-enable-scanning-hpaio/</guid><description>&lt;p&gt;In my previous iteration - this is in the days of RH7.3 and thereabouts - printing and scanning under Linux was a big issue for me. There were no drivers, nothing. You looked for working setups and bought a printer based on that.&lt;/p&gt;</description></item></channel></rss>
