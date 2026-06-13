@@ -39,11 +39,16 @@ params:
   paginate: 6
   logo: images/header2.png
   home: Home
-  description: A personal blog in both English and Dutch.
+  description: >-
+    Notes from a neurodivergent, queer DevOps engineer on tech, accessibility, and living as your whole self.
+  subtitle: Neurodivergent · LGBTQIA+ · Tech advocate
   author: Kelly Crabbé
+  heroTitle: Building a kinder, more accessible corner of tech.
+  heroLede: >-
+    I'm Kelly — a DevOps engineer, advocate, and writer. I share what I'm learning about living and working as a neurodivergent, queer person in technology, and how we can build things that include everyone.
   avatar: true
   bio: >-
-    I am a geeky happily married woman, who works as a DevOps after having a 15yr affaire with System Administration. I am the proud mom of a 2 yo English Cocker Spaniel and a wonderfull 21 yo plusdaughter; together with my wife we occupy a small space in this crazy world.
+    I am a geeky, happily married, neurodivergent and queer woman who works in DevOps after a 15-year affair with system administration. I write about tech, accessibility, and showing up as my whole self — alongside my wife, our plus-daughter, and a very particular English Cocker Spaniel named Lou.
   googleAnalitycs: G-WYTPMHCV3B
   mobile: +32479695560
   email: kelly.crabbe@gmail.com
