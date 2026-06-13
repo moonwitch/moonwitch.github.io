@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL: /
 title: Kelly and Coffee
-languageCode: en-US
+locale: en-US
 defaultContentLanguage: en
 enableEmoji: true
 summaryLength: 10

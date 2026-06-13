@@ -12,7 +12,7 @@
         <span aria-hidden="true">·</span> {{ .ReadingTime }} min read
       {{ end }}
     </p>
-    <p class="post-card__summary">{{ .Summary | plainify | truncate 160 }}</p>
+    <p class="post-card__summary">{{ .Summary | plainify | htmlUnescape | truncate 160 | safeHTML }}</p>
     {{ with .Params.tags }}
       <ul class="tag-list">
         {{ range . }}<li><a class="tag" href="{{ "tags" | relLangURL }}/{{ . | urlize }}">#{{ . }}</a></li>{{ end }}
