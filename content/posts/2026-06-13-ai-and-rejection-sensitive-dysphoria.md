@@ -2,7 +2,6 @@
 title: "A Second Read: Using AI When Rejection-Sensitive Dysphoria Hits"
 date: "2026-06-13"
 lastmod: "2026-06-13"
-lang: en
 categories:
   - blog
 tags:

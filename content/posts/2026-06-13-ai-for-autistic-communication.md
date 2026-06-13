@@ -2,7 +2,6 @@
 title: "AI as Assistive Tech for Autistic Communication"
 date: "2026-06-13"
 lastmod: "2026-06-13"
-lang: en
 categories:
   - blog
 tags:

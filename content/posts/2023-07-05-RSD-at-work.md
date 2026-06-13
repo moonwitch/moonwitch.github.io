@@ -8,7 +8,6 @@ tags:
   - work
 date: "2023-07-05"
 lastmod: "2023-07-05"
-lang: en
 comments: true
 draft: true
 ---
