@@ -35,38 +35,19 @@ terraform plan      # review
 terraform apply
 ```
 
-### Adopting the existing email aliases (import, don't recreate)
+### Email aliases
 
 `email.tf` manages the `kelly@kellyand.coffee` and `kelly@audhd.cloud` forwarding
-rules (both → your inbox). Since they already exist, **import** them so Terraform
-adopts them instead of creating duplicates. For each domain:
+rules (both → your inbox). `terraform apply` creates them — no import needed.
+Email Routing must already be **enabled** on both zones (managed in the
+dashboard); we manage only the rules, and the verified destination address is
+left as-is.
 
-```sh
-TOKEN="$TF_VAR_cloudflare_api_token"
-for d in kellyand.coffee audhd.cloud; do
-  ZID=$(curl -s -H "Authorization: Bearer $TOKEN" \
-    "https://api.cloudflare.com/client/v4/zones?name=$d" | jq -r '.result[0].id')
+### The API token
 
-  # Email Routing settings (import id = zone id):
-  terraform import "cloudflare_email_routing_settings.this[\"$d\"]" "$ZID"
-
-  # Find the kelly@ rule id for this zone, then import it:
-  curl -s -H "Authorization: Bearer $TOKEN" \
-    "https://api.cloudflare.com/client/v4/zones/$ZID/email/routing/rules" \
-    | jq '.result[] | {id,name,matchers}'
-  terraform import "cloudflare_email_routing_rule.kelly[\"$d\"]" "$ZID/<rule id>"
-done
-```
-
-`terraform plan` should then show **no changes** for email (or just cosmetic
-ones). Simpler alternative: delete the existing rules in the dashboard and let
-`terraform apply` create them fresh — your verified destination stays verified.
-
-### Managing the token as code (optional)
-
-See [`bootstrap/`](bootstrap/) — a one-time module that mints the scoped
-`CF_API` token itself. Kept separate because the scoped token can't manage
-tokens.
+Create the scoped token in the Cloudflare dashboard (Zone Read + DNS Write +
+Dynamic Redirect Write on the three zones), or mint it with the small standalone
+Terraform config kept **outside** this repo.
 
 ## Order of operations (important)
 

@@ -13,22 +13,18 @@
 # It's read from a variable so it is NOT committed to this public repo:
 #   export TF_VAR_email_forward_to="you@example.com"
 #
-# These already exist in Cloudflare, so IMPORT them instead of recreating
-# (see ../README.md → "Adopting the existing email aliases").
+# Email Routing must already be ENABLED on both zones (it is). `apply` creates
+# the forwarding rules; nothing to import.
 # =============================================================================
 
 locals {
-  # domain => zone id, for each zone that has a kelly@ alias
+  # domain => zone id, for each zone that has a kelly@ alias.
+  # Email Routing is assumed already ENABLED on these zones (managed in the
+  # dashboard); we manage only the forwarding rules here.
   email_zones = {
     (var.canonical_domain) = data.cloudflare_zone.canonical.id
     "audhd.cloud"          = data.cloudflare_zone.redirect["audhd"].id
   }
-}
-
-resource "cloudflare_email_routing_settings" "this" {
-  for_each = local.email_zones
-  zone_id  = each.value
-  enabled  = true
 }
 
 resource "cloudflare_email_routing_rule" "kelly" {
