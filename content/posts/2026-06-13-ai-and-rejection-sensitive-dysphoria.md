@@ -11,7 +11,7 @@ tags:
   - ai
   - mental-health
 comments: true
-draft: true
+draft: false
 ---
 
 If you've read my post on [RSD at work](/posts/2023-07-05-rsd-at-work/), you already know the shape of this one. Rejection-sensitive dysphoria is the part of my ADHD that turns a neutral sentence into a knife. Someone writes "can we talk later?" and my body reacts as though I've already been fired, dumped, and exiled, all before lunch. The feeling is instant, physical, and completely out of proportion — and knowing that intellectually does almost nothing to stop it in the moment.
