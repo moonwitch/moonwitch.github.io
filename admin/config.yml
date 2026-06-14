@@ -1,42 +1,60 @@
+# Sveltia CMS configuration (compatible with the legacy Decap/Netlify CMS format).
+#
+# AUTH: editing the live site needs a GitHub OAuth client. GitHub Pages can't host
+# the secret, so deploy the free one-click "sveltia-cms-auth" Cloudflare Worker once
+# (https://github.com/sveltia/sveltia-cms-auth) and put its URL in backend.base_url
+# below. Until then, use local editing (see local_backend) with `hugo server`.
+
 backend:
   name: github
   repo: moonwitch/moonwitch.github.io
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
+  # base_url: https://<your-worker>.workers.dev   # uncomment after deploying the OAuth worker
+
+# Local editing without any OAuth: run `npx @sveltia/cms-proxy-server` alongside
+# `hugo server`, then open http://localhost:1313/admin/.
+local_backend: true
+
+site_url: https://kellyand.coffee
+display_url: https://kellyand.coffee
+
 media_folder: static/posts
 public_folder: /posts
+
 collections:
-- name: 'posts'
-  label: 'Posts'
-  folder: 'content/posts'
-  create: true
-  slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-  editor:
-    preview: false
-  # preview_path: {{slug}}
-  fields:
-    - label: 'Title'
-      name: 'title'
-      widget: 'string' 
-    - label: 'Publish Date'
-      name: 'date'
-      widget: 'datetime' 
-    - label: 'LastModified Date'
-      name: 'lastmod'
-      widget: 'date' 
-    - label: 'Categories'
-      name: 'categories'
-      widget: 'list'
-      default: ["blog"]
-    - label: 'Language'
-      name: 'language'
-      widget: "select"
-      options: ["en", "nl"]
-    - label: 'Tags'
-      name: 'tags'
-      widget: 'string'
-    - label: 'Description'
-      name: 'description'
-      widget: 'string' 
-    - label: 'Body'
-      name: 'body'
-      widget: 'markdown' 
+  - name: posts
+    label: Posts
+    label_singular: Post
+    description: Articles, notes and write-ups.
+    folder: content/posts
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text, required: false, hint: 'One or two lines — used for SEO and post cards.' }
+      - { label: Publish Date, name: date, widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - { label: Last Modified, name: lastmod, widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD', required: false }
+      - label: Category
+        name: categories
+        widget: select
+        multiple: true
+        min: 1
+        default: [random]
+        options:
+          - tech
+          - neurodivergence
+          - notes
+          - random
+          - photography
+      - { label: Tags, name: tags, widget: list, required: false }
+      - label: Language
+        name: language
+        widget: select
+        default: en
+        required: false
+        options: [en, nl]
+      - { label: Comments, name: comments, widget: boolean, default: true }
+      - { label: Draft, name: draft, widget: boolean, default: true }
+      - { label: Body, name: body, widget: markdown }
