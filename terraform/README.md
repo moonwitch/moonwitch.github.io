@@ -60,3 +60,7 @@ outage:
   permission. Without it Cloudflare returns `Authentication error (10000)`.
 - Provider is pinned to the **v4** line and uses `content`. On provider **v5**,
   rename `cloudflare_record` → `cloudflare_dns_record`.
+- **Email Routing** (the `kelly@kellyand.coffee` alias) lives on `MX` + `TXT`/DKIM
+  records that are **not** managed here. Terraform only touches the records it
+  declares (apex `A`/`AAAA`, `www`), so the email forwarding is left untouched —
+  manage it in the Cloudflare dashboard and keep Email permissions off the token.
