@@ -29,10 +29,38 @@ State lives in a local `terraform.tfstate` (gitignored). Nothing else to set up.
 cd terraform
 export TF_VAR_cloudflare_api_token="your-scoped-token"   # the CF_API value
 export TF_VAR_account_id="your-account-id"               # the CF_ACCOUNT value (optional today)
+export TF_VAR_email_forward_to="you@example.com"         # destination for the kelly@ alias
 terraform init
 terraform plan      # review
 terraform apply
 ```
+
+### Adopting the existing email alias (import, don't recreate)
+
+`email.tf` manages the `kelly@kellyand.coffee` forwarding rule. Since it already
+exists, **import** it so Terraform adopts it instead of creating a duplicate:
+
+```sh
+ZONE_ID=$(terraform output -raw canonical_zone_id 2>/dev/null || echo "<zone id>")
+
+# Email Routing is already enabled — import the settings (id = zone id):
+terraform import cloudflare_email_routing_settings.this "$ZONE_ID"
+
+# Find the existing rule id, then import it:
+curl -s -H "Authorization: Bearer $TF_VAR_cloudflare_api_token" \
+  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/email/routing/rules" | jq '.result[] | {id,name}'
+terraform import cloudflare_email_routing_rule.kelly "$ZONE_ID/<rule id>"
+```
+
+`terraform plan` should then show **no changes** for email (or just cosmetic
+ones). Simpler alternative: delete the existing rule in the dashboard and let
+`terraform apply` create it fresh — your verified destination stays verified.
+
+### Managing the token as code (optional)
+
+See [`bootstrap/`](bootstrap/) — a one-time module that mints the scoped
+`CF_API` token itself. Kept separate because the scoped token can't manage
+tokens.
 
 ## Order of operations (important)
 

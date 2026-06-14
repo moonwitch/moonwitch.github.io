@@ -4,6 +4,9 @@
 
 cloudflare_api_token = "REPLACE_ME"
 
+# Destination for the kelly@ email alias (kept out of the repo).
+email_forward_to = "you@example.com"
+
 # Defaults already match your setup; override only if something changes:
 # canonical_domain  = "kellyand.coffee"
 # github_pages_host = "moonwitch.github.io"
