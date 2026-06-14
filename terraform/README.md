@@ -21,7 +21,7 @@ rules inside those zones — it does not register domains or move nameservers.
 2. In the GitHub repo: **Settings → Pages → Custom domain = `kellyand.coffee`**
    (the repo's `static/CNAME` already pins this on deploy).
 
-## Option A — run locally (simplest; recommended for occasional DNS changes)
+## Usage (run locally)
 
 State lives in a local `terraform.tfstate` (gitignored). Nothing else to set up.
 
@@ -29,25 +29,38 @@ State lives in a local `terraform.tfstate` (gitignored). Nothing else to set up.
 cd terraform
 export TF_VAR_cloudflare_api_token="your-scoped-token"   # the CF_API value
 export TF_VAR_account_id="your-account-id"               # the CF_ACCOUNT value (optional today)
+export TF_VAR_email_forward_to="you@example.com"         # destination for the kelly@ alias
 terraform init
 terraform plan      # review
 terraform apply
 ```
 
-## Option B — GitHub Actions (`.github/workflows/terraform.yml`)
+### Adopting the existing email alias (import, don't recreate)
 
-Plan on PRs that touch `terraform/`, apply via the **Run workflow** button.
-CI needs **persistent remote state**, so it uses Terraform Cloud (free, no bucket):
+`email.tf` manages the `kelly@kellyand.coffee` forwarding rule. Since it already
+exists, **import** it so Terraform adopts it instead of creating a duplicate:
 
-1. Repo **secrets**: `CF_API` and `CF_ACCOUNT` (✓ already done), plus `TF_API_TOKEN`
-   (a Terraform Cloud user/team token).
-2. Repo **variable**: `TF_CLOUD_ORG` = your HCP/Terraform Cloud org name.
-3. Create a workspace named `moonwitch-cloudflare` in that org (Execution mode: Local
-   or Remote both work; CLI-driven).
+```sh
+ZONE_ID=$(terraform output -raw canonical_zone_id 2>/dev/null || echo "<zone id>")
 
-The workflow renders `backend.tf.example` → `backend.tf` with your org at runtime,
-so local runs (Option A) stay on local state. Prefer not to use Terraform Cloud?
-Stick with Option A and ignore this workflow.
+# Email Routing is already enabled — import the settings (id = zone id):
+terraform import cloudflare_email_routing_settings.this "$ZONE_ID"
+
+# Find the existing rule id, then import it:
+curl -s -H "Authorization: Bearer $TF_VAR_cloudflare_api_token" \
+  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/email/routing/rules" | jq '.result[] | {id,name}'
+terraform import cloudflare_email_routing_rule.kelly "$ZONE_ID/<rule id>"
+```
+
+`terraform plan` should then show **no changes** for email (or just cosmetic
+ones). Simpler alternative: delete the existing rule in the dashboard and let
+`terraform apply` create it fresh — your verified destination stays verified.
+
+### Managing the token as code (optional)
+
+See [`bootstrap/`](bootstrap/) — a one-time module that mints the scoped
+`CF_API` token itself. Kept separate because the scoped token can't manage
+tokens.
 
 ## Order of operations (important)
 
@@ -69,5 +82,13 @@ outage:
 - The `192.0.2.1` placeholder on the redirect domains is an RFC 5737
   documentation address; it is never actually contacted because the redirect
   fires at Cloudflare's edge first.
-- Provider is pinned to the **v4** line. On provider **v5**, rename
-  `cloudflare_record` → `cloudflare_dns_record` and its `value` → `content`.
+- `allow_overwrite = true` lets Terraform **adopt** the DNS records you already
+  created by hand (apex A/AAAA, `www`) instead of erroring that they exist.
+- The redirect rulesets need the token's **Zone → Dynamic Redirect → Edit**
+  permission. Without it Cloudflare returns `Authentication error (10000)`.
+- Provider is pinned to the **v4** line and uses `content`. On provider **v5**,
+  rename `cloudflare_record` → `cloudflare_dns_record`.
+- **Email Routing** (the `kelly@kellyand.coffee` alias) lives on `MX` + `TXT`/DKIM
+  records that are **not** managed here. Terraform only touches the records it
+  declares (apex `A`/`AAAA`, `www`), so the email forwarding is left untouched —
+  manage it in the Cloudflare dashboard and keep Email permissions off the token.

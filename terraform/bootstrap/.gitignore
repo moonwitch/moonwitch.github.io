@@ -1,4 +1,3 @@
-# Never commit state or secrets
 *.tfstate
 *.tfstate.*
 .terraform/

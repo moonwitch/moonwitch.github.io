@@ -15,6 +15,12 @@ variable "account_id" {
   description = "Cloudflare account ID (from the CF_ACCOUNT repo variable). Zones are looked up by name, so this is optional today; kept wired for account-scoped tokens and future zone creation."
 }
 
+variable "email_forward_to" {
+  type        = string
+  sensitive   = true
+  description = "Destination inbox for the kelly@ alias. Set via tfvars/env, never committed. Must already be a verified Email Routing destination in Cloudflare."
+}
+
 variable "canonical_domain" {
   type        = string
   default     = "kellyand.coffee"

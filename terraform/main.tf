@@ -43,35 +43,38 @@ data "cloudflare_zone" "redirect" {
 # DNS-only (grey cloud) so GitHub Pages can issue and renew its TLS cert.
 # =============================================================================
 resource "cloudflare_record" "apex_a" {
-  for_each = toset(local.gh_pages_ipv4)
-  zone_id  = data.cloudflare_zone.canonical.id
-  name     = "@"
-  type     = "A"
-  value    = each.value
-  proxied  = false
-  ttl      = 1
-  comment  = "GitHub Pages apex"
+  for_each        = toset(local.gh_pages_ipv4)
+  zone_id         = data.cloudflare_zone.canonical.id
+  name            = "@"
+  type            = "A"
+  content         = each.value
+  proxied         = false
+  ttl             = 1
+  comment         = "GitHub Pages apex"
+  allow_overwrite = true # adopt the records you already created by hand
 }
 
 resource "cloudflare_record" "apex_aaaa" {
-  for_each = toset(local.gh_pages_ipv6)
-  zone_id  = data.cloudflare_zone.canonical.id
-  name     = "@"
-  type     = "AAAA"
-  value    = each.value
-  proxied  = false
-  ttl      = 1
-  comment  = "GitHub Pages apex (IPv6)"
+  for_each        = toset(local.gh_pages_ipv6)
+  zone_id         = data.cloudflare_zone.canonical.id
+  name            = "@"
+  type            = "AAAA"
+  content         = each.value
+  proxied         = false
+  ttl             = 1
+  comment         = "GitHub Pages apex (IPv6)"
+  allow_overwrite = true
 }
 
 resource "cloudflare_record" "www" {
-  zone_id = data.cloudflare_zone.canonical.id
-  name    = "www"
-  type    = "CNAME"
-  value   = var.github_pages_host
-  proxied = false
-  ttl     = 1
-  comment = "www -> GitHub Pages"
+  zone_id         = data.cloudflare_zone.canonical.id
+  name            = "www"
+  type            = "CNAME"
+  content         = var.github_pages_host
+  proxied         = false
+  ttl             = 1
+  comment         = "www -> GitHub Pages"
+  allow_overwrite = true
 }
 
 # =============================================================================
@@ -80,25 +83,27 @@ resource "cloudflare_record" "www" {
 # request never reaches the placeholder IP because the redirect fires first.
 # =============================================================================
 resource "cloudflare_record" "redirect_apex" {
-  for_each = var.redirects
-  zone_id  = data.cloudflare_zone.redirect[each.key].id
-  name     = "@"
-  type     = "A"
-  value    = "192.0.2.1" # RFC 5737 TEST-NET-1 placeholder; never contacted
-  proxied  = true        # MUST be proxied (orange cloud) for the redirect to run
-  ttl      = 1
-  comment  = "Placeholder for redirect to ${var.canonical_domain}${each.value.dest_path}"
+  for_each        = var.redirects
+  zone_id         = data.cloudflare_zone.redirect[each.key].id
+  name            = "@"
+  type            = "A"
+  content         = "192.0.2.1" # RFC 5737 TEST-NET-1 placeholder; never contacted
+  proxied         = true        # MUST be proxied (orange cloud) for the redirect to run
+  ttl             = 1
+  comment         = "Placeholder for redirect to ${var.canonical_domain}${each.value.dest_path}"
+  allow_overwrite = true
 }
 
 resource "cloudflare_record" "redirect_www" {
-  for_each = var.redirects
-  zone_id  = data.cloudflare_zone.redirect[each.key].id
-  name     = "www"
-  type     = "CNAME"
-  value    = each.value.zone_name
-  proxied  = true
-  ttl      = 1
-  comment  = "www -> redirect"
+  for_each        = var.redirects
+  zone_id         = data.cloudflare_zone.redirect[each.key].id
+  name            = "www"
+  type            = "CNAME"
+  content         = each.value.zone_name
+  proxied         = true
+  ttl             = 1
+  comment         = "www -> redirect"
+  allow_overwrite = true
 }
 
 # Single Redirect (dynamic redirect ruleset): 301 the whole apex + www to the
