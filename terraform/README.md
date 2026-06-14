@@ -35,26 +35,32 @@ terraform plan      # review
 terraform apply
 ```
 
-### Adopting the existing email alias (import, don't recreate)
+### Adopting the existing email aliases (import, don't recreate)
 
-`email.tf` manages the `kelly@kellyand.coffee` forwarding rule. Since it already
-exists, **import** it so Terraform adopts it instead of creating a duplicate:
+`email.tf` manages the `kelly@kellyand.coffee` and `kelly@audhd.cloud` forwarding
+rules (both → your inbox). Since they already exist, **import** them so Terraform
+adopts them instead of creating duplicates. For each domain:
 
 ```sh
-ZONE_ID=$(terraform output -raw canonical_zone_id 2>/dev/null || echo "<zone id>")
+TOKEN="$TF_VAR_cloudflare_api_token"
+for d in kellyand.coffee audhd.cloud; do
+  ZID=$(curl -s -H "Authorization: Bearer $TOKEN" \
+    "https://api.cloudflare.com/client/v4/zones?name=$d" | jq -r '.result[0].id')
 
-# Email Routing is already enabled — import the settings (id = zone id):
-terraform import cloudflare_email_routing_settings.this "$ZONE_ID"
+  # Email Routing settings (import id = zone id):
+  terraform import "cloudflare_email_routing_settings.this[\"$d\"]" "$ZID"
 
-# Find the existing rule id, then import it:
-curl -s -H "Authorization: Bearer $TF_VAR_cloudflare_api_token" \
-  "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/email/routing/rules" | jq '.result[] | {id,name}'
-terraform import cloudflare_email_routing_rule.kelly "$ZONE_ID/<rule id>"
+  # Find the kelly@ rule id for this zone, then import it:
+  curl -s -H "Authorization: Bearer $TOKEN" \
+    "https://api.cloudflare.com/client/v4/zones/$ZID/email/routing/rules" \
+    | jq '.result[] | {id,name,matchers}'
+  terraform import "cloudflare_email_routing_rule.kelly[\"$d\"]" "$ZID/<rule id>"
+done
 ```
 
 `terraform plan` should then show **no changes** for email (or just cosmetic
-ones). Simpler alternative: delete the existing rule in the dashboard and let
-`terraform apply` create it fresh — your verified destination stays verified.
+ones). Simpler alternative: delete the existing rules in the dashboard and let
+`terraform apply` create them fresh — your verified destination stays verified.
 
 ### Managing the token as code (optional)
 
