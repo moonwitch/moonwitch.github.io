@@ -1,7 +1,7 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 <section class="page-wrap notfound">
   <h1 class="notfound__code" data-reveal>404</h1>
   <p class="notfound__msg" data-reveal>This page wandered off. Let's get you back.</p>
-  <a class="btn btn--primary" href="{{ .Site.BaseURL }}">Return home</a>
+  <a class="btn btn--primary" href="{{ site.Home.RelPermalink }}">Return home</a>
 </section>
-{{ partial "footer.html" . }}
+{{ end }}

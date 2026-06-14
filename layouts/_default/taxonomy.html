@@ -1,0 +1,28 @@
+{{- /* Handles both the taxonomy index (/categories/, /tags/) and a single term
+       (/categories/tech/, /tags/adhd/). In Hugo's current template system both
+       kinds resolve here, so branch on .Kind. */ -}}
+{{ define "main" }}
+{{ if eq .Kind "term" }}
+  <div class="page-wrap">
+    <header class="page-head">
+      <h1 class="page-head__title" data-reveal>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-head__desc" data-reveal>{{ . }}</p>{{ end }}
+    </header>
+    {{ $paginator := .Paginate .Pages }}
+    {{ partial "post-grid.html" $paginator }}
+  </div>
+{{ else }}
+  <section class="page-wrap">
+    <header class="page-head">
+      <h1 class="page-head__title" data-reveal>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-head__desc" data-reveal>{{ . }}</p>{{ end }}
+    </header>
+    <ul class="tag-list" data-reveal>
+      {{ $plural := .Data.Plural }}
+      {{ range .Data.Terms.ByCount }}
+        <li><a class="tag" href="{{ (printf "/%s/%s" $plural (.Name | urlize)) | relLangURL }}">#{{ .Name }} ({{ .Count }})</a></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
+{{ end }}

@@ -1,7 +1,7 @@
 ---
 title: Removing the 'Discover' button in Edge
 categories:
-  - blog
+  - notes
 tags:
   - powershell
   - howto

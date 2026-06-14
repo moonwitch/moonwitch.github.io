@@ -1,15 +1,23 @@
-{{ if site.Params.comments.giscus }}
-  <script src="https://giscus.app/client.js" 
-    data-repo="{{ .Site.Params.comments.giscus.repo }}" 
-    data-repo-id="{{ .Site.Params.comments.giscus.repo_id }}" 
-    data-category="{{ .Site.Params.comments.giscus.category }}" 
-    data-category-id="{{ .Site.Params.comments.giscus.category_id }}" 
-    data-mapping="{{ .Site.Params.comments.giscus.mapping }}" 
-    data-reactions-enabled="{{ .Site.Params.comments.giscus.reactions_enabled }}" 
-    data-emit-metadata="{{ .Site.Params.comments.giscus.metadata_enabled }}"
-    data-input-position="{{ .Site.Params.comments.giscus.input_position }}"
-    data-theme="{{ .Site.Params.comments.giscus.theme }}" 
+{{- /* Render giscus only when: the provider is configured, the page's type is
+       commentable per site config, and the page hasn't opted out via `comments: false`. */ -}}
+{{ $giscus := site.Params.comments.giscus }}
+{{ $type := .Type | singularize }}
+{{ $typeOK := index (site.Params.comments.commentable | default dict) $type | default false }}
+{{- /* `default` treats `false` as empty, so read the page flag with isset to honour `comments: false`. */ -}}
+{{ $pageOK := true }}
+{{ if isset .Params "comments" }}{{ $pageOK = .Params.comments }}{{ end }}
+{{ if and $giscus $typeOK $pageOK }}
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ $giscus.repo }}"
+    data-repo-id="{{ $giscus.repo_id }}"
+    data-category="{{ $giscus.category }}"
+    data-category-id="{{ $giscus.category_id }}"
+    data-mapping="{{ $giscus.mapping }}"
+    data-reactions-enabled="{{ $giscus.reactions_enabled }}"
+    data-emit-metadata="{{ $giscus.metadata_enabled }}"
+    data-input-position="{{ $giscus.input_position }}"
+    data-theme="preferred_color_scheme"
     crossorigin="anonymous" async>
-    </script>
+  </script>
   <noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
 {{ end }}

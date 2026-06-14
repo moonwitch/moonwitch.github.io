@@ -3,7 +3,7 @@ title: "Diagnosed, Let Go, and Finding the Volume Knob"
 date: "2026-06-13"
 lastmod: "2026-06-13"
 categories:
-  - blog
+  - neurodivergence
 tags:
   - neurodivergent
   - adhd

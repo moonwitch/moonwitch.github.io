@@ -7,7 +7,7 @@ tags:
   - devops
   - work
 categories:
-  - articles
+  - tech
 draft: false
 ---
 

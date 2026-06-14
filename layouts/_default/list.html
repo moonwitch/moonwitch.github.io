@@ -1,25 +1,11 @@
-{{ partial "header.html" . }}
-
+{{ define "main" }}
 <div class="page-wrap">
   <header class="page-head">
     <h1 class="page-head__title" data-reveal>{{ .Title }}</h1>
     {{ with .Description }}<p class="page-head__desc" data-reveal>{{ . }}</p>{{ end }}
   </header>
 
-  {{ $pages := .Pages }}
-  {{ if isset .Site.Taxonomies "tags" }}
-    {{ if .Data.Pages }}{{ $pages = where .Data.Pages "Type" "posts" }}{{ end }}
-  {{ end }}
-  {{ if not $pages }}{{ $pages = where .Site.RegularPages "Type" "posts" }}{{ end }}
-
-  {{ $paginator := .Paginate $pages }}
-  <div class="card-grid">
-    {{ range $paginator.Pages }}
-      {{ .Render "li" }}
-    {{ end }}
-  </div>
-
-  {{ partial "pagination.html" $paginator }}
+  {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+  {{ partial "post-grid.html" $paginator }}
 </div>
-
-{{ partial "footer.html" . }}
+{{ end }}

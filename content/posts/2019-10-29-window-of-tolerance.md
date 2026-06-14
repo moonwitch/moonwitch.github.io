@@ -5,7 +5,7 @@ comments: false
 tags: 
   - personal
 categories:
-  - blog
+  - neurodivergence
 draft: false
 ---
 

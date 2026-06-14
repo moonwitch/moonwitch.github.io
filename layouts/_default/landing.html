@@ -1,5 +1,4 @@
-{{ partial "header.html" . }}
-
+{{ define "main" }}
 <section class="landing landing--{{ .Params.flavor | default "default" }}">
   <div class="page-wrap">
     <header class="landing__head">
@@ -19,5 +18,4 @@
     </div>
   </div>
 </section>
-
-{{ partial "footer.html" . }}
+{{ end }}

@@ -1,5 +1,4 @@
-{{ partial "header.html" . }}
-
+{{ define "main" }}
 <article class="article page-wrap">
   <header class="article__head">
     <h1 class="article__title" data-reveal>{{ .Title }}</h1>
@@ -20,7 +19,7 @@
   </header>
 
   {{ with .Params.thumbnail }}
-    <img src="{{ . }}" alt="" class="article__thumbnail" />
+    <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="article__thumbnail" loading="lazy" decoding="async" />
   {{ end }}
 
   <div class="article__body prose">
@@ -37,5 +36,4 @@
     {{ end }}
   </footer>
 </article>
-
-{{ partial "footer.html" . }}
+{{ end }}

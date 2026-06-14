@@ -1,7 +1,7 @@
 ---
 title: "Wortelkanaal is niet sexy"
 categories:
-  - blog
+  - random
 tags:
   - personal
 date: "2022-02-08"

@@ -3,7 +3,7 @@ title: "Getting Named at Forty: My AuDHD Diagnosis"
 date: "2026-06-13"
 lastmod: "2026-06-13"
 categories:
-  - blog
+  - neurodivergence
 tags:
   - neurodivergent
   - autism

@@ -1,47 +1,49 @@
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        <p class="site-footer__title">
-          <span class="site-footer__coffee">{{ partial "coffee-cup.html" . }}</span>
-          {{ .Site.Title }}
-        </p>
-        {{ with .Site.Params.bio }}<p class="site-footer__bio">{{ . | truncate 160 }}</p>{{ end }}
-      </div>
-
-      {{ with .Site.Param "social" }}
-        <nav class="social" aria-label="Social links">
-          <ul class="social__list">
-            {{ range . }}
-              <li class="social__item">
-                <a class="social__link" href="{{ .link }}" rel="me noopener" target="_blank">
-                  {{ partial "social-icon.html" .title }}
-                  <span class="visually-hidden">{{ .title }}</span>
-                </a>
-              </li>
-            {{ end }}
-          </ul>
-        </nav>
-      {{ end }}
-
-      <p class="site-footer__copyright">
-        {{ with .Site.Copyright | markdownify }}{{ . }}{{ else }}
-          &copy; {{ now.Format "2006" }} {{ .Site.Params.author }}
-        {{ end }}
+{{- /* Site footer + deferred scripts. The closing </main>/</body>/</html> live in baseof.html. */ -}}
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="site-footer__title">
+        <span class="site-footer__coffee">{{ partial "coffee-cup.html" . }}</span>
+        {{ site.Title }}
       </p>
-      <p class="site-footer__brewed">Brewed with neurodivergent hyperfocus and an irresponsible amount of coffee.</p>
+      {{ with site.Params.bio }}<p class="site-footer__bio">{{ . | truncate 160 }}</p>{{ end }}
     </div>
-  </footer>
 
-  <!-- Animation libraries: deferred, order preserved. Only used when motion is enabled. -->
-  <script defer src="{{ "js/vendor/gsap.min.js" | relURL }}"></script>
-  <script defer src="{{ "js/vendor/ScrollTrigger.min.js" | relURL }}"></script>
-  <script defer src="{{ "js/vendor/three.min.js" | relURL }}"></script>
+    {{ with site.Param "social" }}
+      <nav class="social" aria-label="Social links">
+        <ul class="social__list">
+          {{ range . }}
+            <li class="social__item">
+              <a class="social__link" href="{{ .link }}" rel="me noopener noreferrer" target="_blank">
+                {{ partial "social-icon.html" .title }}
+                <span class="visually-hidden">{{ .title }}</span>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    {{ end }}
 
-  {{ $app := resources.Get "js/app.js" }}
-  {{ $opts := dict "minify" hugo.IsProduction "target" "es2017" }}
-  {{ $app = $app | js.Build $opts | fingerprint }}
-  <script defer src="{{ $app.RelPermalink }}" integrity="{{ $app.Data.Integrity }}"></script>
-</body>
-</html>
+    {{- /* Copyright is markdown (it contains a link), so render it in a <div> to avoid nested <p>. */}}
+    <div class="site-footer__copyright">
+      {{ with site.Copyright }}{{ . | markdownify }}{{ else }}&copy; {{ now.Format "2006" }} {{ site.Params.author }}{{ end }}
+    </div>
+    <p class="site-footer__brewed">Brewed with neurodivergent hyperfocus and an irresponsible amount of coffee.</p>
+  </div>
+</footer>
+
+{{- /* Animation libraries: deferred, fingerprinted, with Subresource Integrity.
+       gsap + ScrollTrigger drive the site-wide scroll reveals; three.js only powers
+       the home hero canvas, so it is loaded on the home page alone. app.js degrades
+       gracefully (no-ops) if any of these fail to load. */ -}}
+{{ $gsap := resources.Get "js/vendor/gsap.min.js" | fingerprint }}
+<script defer src="{{ $gsap.RelPermalink }}" integrity="{{ $gsap.Data.Integrity }}"></script>
+{{ $st := resources.Get "js/vendor/ScrollTrigger.min.js" | fingerprint }}
+<script defer src="{{ $st.RelPermalink }}" integrity="{{ $st.Data.Integrity }}"></script>
+{{ if .IsHome }}
+  {{ $three := resources.Get "js/vendor/three.min.js" | fingerprint }}
+  <script defer src="{{ $three.RelPermalink }}" integrity="{{ $three.Data.Integrity }}"></script>
+{{ end }}
+
+{{ $app := resources.Get "js/app.js" | js.Build (dict "minify" hugo.IsProduction "target" "es2017") | fingerprint }}
+<script defer src="{{ $app.RelPermalink }}" integrity="{{ $app.Data.Integrity }}"></script>

@@ -1,13 +1,17 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-layout: single
-date: "{{ now.Format "2006-01-02" }}"
-categories: 
+description: ""
+categories:
   - photography
-tags:
-    - nikon
-    - oneplus
+tags: []
+date: "{{ now.Format "2006-01-02" }}"
+lastmod: "{{ now.Format "2006-01-02" }}"
+comments: true
+draft: true
+# Page bundle: drop the images next to this index.md and list them here.
 resources:
-    - src: 
-      name: ""
+  - src: "*.jpg"
+    title: ""
 ---
+
+<!-- Photo set. The story behind the frames, if there is one. -->

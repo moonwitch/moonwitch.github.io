@@ -64,9 +64,8 @@
   </script>
 
   {{ if hugo.IsProduction }}
-    {{ if hasPrefix .Site.Params.GoogleAnalytics "G-" }}
-      {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
+    {{/* Reads services.googleAnalytics.ID from config; no-ops if unset. */}}
+    {{ template "_internal/google_analytics.html" . }}
   {{ end }}
 
   <!-- Fonts -->

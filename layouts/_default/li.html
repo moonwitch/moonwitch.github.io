@@ -1,7 +1,8 @@
+{{- /* Post card. Rendered as a fragment via {{ .Render "li" }} — not wrapped by baseof. */ -}}
 <article class="post-card" data-reveal>
   {{ with .Params.thumbnail }}
     <a class="post-card__media" href="{{ $.Permalink }}" tabindex="-1" aria-hidden="true">
-      <img src="{{ . }}" alt="" loading="lazy" />
+      <img src="{{ . | relURL }}" alt="" loading="lazy" decoding="async" />
     </a>
   {{ end }}
   <div class="post-card__body">
@@ -12,7 +13,7 @@
         <span aria-hidden="true">·</span> {{ .ReadingTime }} min read
       {{ end }}
     </p>
-    <p class="post-card__summary">{{ .Summary | plainify | htmlUnescape | truncate 160 | safeHTML }}</p>
+    <p class="post-card__summary">{{ .Summary | plainify | truncate 160 }}</p>
     {{ with .Params.tags }}
       <ul class="tag-list">
         {{ range . }}<li><a class="tag" href="{{ "tags" | relLangURL }}/{{ . | urlize }}">#{{ . }}</a></li>{{ end }}

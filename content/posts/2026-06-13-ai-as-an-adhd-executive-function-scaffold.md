@@ -3,7 +3,7 @@ title: "AI as an Executive-Function Scaffold for ADHD"
 date: "2026-06-13"
 lastmod: "2026-06-13"
 categories:
-  - blog
+  - neurodivergence
 tags:
   - neurodivergent
   - adhd

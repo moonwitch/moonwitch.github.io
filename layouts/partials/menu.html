@@ -1,10 +1,11 @@
-{{ if .Site.Menus.main }}
+{{- /* Primary navigation. Menu entries are returned sorted by weight by default. */ -}}
+{{ with site.Menus.main }}
   <ul class="menu" id="primary-menu">
-    {{ range .Site.Menus.main.ByWeight }}
+    {{ range . }}
       {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
       <li class="menu__item">
         <a class="menu__link{{ if $active }} is-active{{ end }}" href="{{ .URL | relLangURL }}"
-          {{ if $active }}aria-current="page"{{ end }}>{{ .Name }}</a>
+          {{- if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
       </li>
     {{ end }}
   </ul>

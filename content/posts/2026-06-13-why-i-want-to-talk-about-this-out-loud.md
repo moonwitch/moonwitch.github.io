@@ -3,7 +3,7 @@ title: "Why I Want to Talk About This Out Loud"
 date: "2026-06-13"
 lastmod: "2026-06-13"
 categories:
-  - blog
+  - neurodivergence
 tags:
   - neurodivergent
   - lgbtqia

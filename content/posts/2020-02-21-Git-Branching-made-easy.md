@@ -7,7 +7,7 @@ tags:
   - opensource
   - shell
 categories:
-  - articles
+  - tech
 draft: false
 ---
 

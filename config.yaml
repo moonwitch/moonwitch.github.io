@@ -5,9 +5,18 @@ locale: en-US
 defaultContentLanguage: en
 enableEmoji: true
 summaryLength: 10
-paginate: 6
 enableGitInfo: true # Change 'Lastmod' to latest git commit
 removePathAccents: true # Because I may type accents
+
+#################### Pagination ####################
+pagination:
+  pagerSize: 6
+
+#################### Analytics ####################
+# GA4 is wired through Hugo's internal template, which reads the ID from here.
+services:
+  googleAnalytics:
+    ID: G-WYTPMHCV3B
 
 # theme: hugo-theme-loumans
 
@@ -36,7 +45,6 @@ taxonomies:
 
 #################### default parameters ################################
 params:
-  paginate: 6
   logo: images/header2.png
   home: Home
   description: >-
@@ -49,7 +57,6 @@ params:
   avatar: true
   bio: >-
     I am a geeky, happily married, neurodivergent and queer woman who works in DevOps after a 15-year affair with system administration. I write about tech, accessibility, and showing up as my whole self — alongside my wife, our plus-daughter, and a very particular English Cocker Spaniel named Lou.
-  googleAnalitycs: G-WYTPMHCV3B
   mobile: +32479695560
   email: kelly@kellyand.coffee
   location: "Neerlinter,België"

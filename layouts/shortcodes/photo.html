@@ -1,0 +1,23 @@
+{{- /*
+  Responsive, optimised image from the page's own bundle resources.
+  Usage: {{< photo src="wedding.jpg" alt="Wedding kiss" caption="August 2021" >}}
+  Resizes to WebP at two widths, emits width/height (no layout shift) + lazy loading.
+*/ -}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $img := .Page.Resources.GetMatch $src }}
+{{ if $img }}
+  {{ $small := $img.Resize "800x q85 webp" }}
+  {{ $large := $img.Resize "1400x q85 webp" }}
+  <figure class="photo">
+    <img
+      src="{{ $small.RelPermalink }}"
+      srcset="{{ $small.RelPermalink }} 800w, {{ $large.RelPermalink }} 1400w"
+      sizes="(max-width: 820px) 100vw, 800px"
+      width="{{ $small.Width }}" height="{{ $small.Height }}"
+      alt="{{ $alt }}" loading="lazy" decoding="async" />
+    {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+{{ else }}
+  {{ errorf "photo shortcode: no resource matching %q in %s" $src .Page.File.Path }}
+{{ end }}

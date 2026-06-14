@@ -1,7 +1,7 @@
 ---
 title: RSD at Work
 categories:
-  - blog
+  - neurodivergence
 tags:
   - rejection-sensitive dysphoria
   - rsd

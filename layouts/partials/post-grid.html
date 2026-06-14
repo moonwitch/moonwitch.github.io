@@ -1,0 +1,7 @@
+{{- /* Renders a paginated grid of post cards. Receives a paginator (from .Paginate). */ -}}
+<div class="card-grid">
+  {{ range .Pages }}
+    {{ .Render "li" }}
+  {{ end }}
+</div>
+{{ partial "pagination.html" . }}

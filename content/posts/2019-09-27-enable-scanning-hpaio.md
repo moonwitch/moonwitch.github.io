@@ -6,7 +6,7 @@ tags:
   - linux
   - printing
 categories:
-  - articles
+  - tech
 draft: false
 ---
 
