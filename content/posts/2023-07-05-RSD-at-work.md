@@ -1,23 +1,25 @@
 ---
-title: RSD at Work
-categories:
-  - neurodivergence
-tags:
-  - rejection-sensitive dysphoria
-  - rsd
-  - work
+title: "RSD at Work"
+description: "A raw look at how Rejection-Sensitive Dysphoria (RSD) impacted my career transition and communication during a stressful management change."
 date: "2023-07-05"
-lastmod: "2023-07-05"
+lastmod: "2026-06-14"
 comments: true
-draft: true
+categories:
+  - "neurodivergence"
+tags:
+  - "adhd"
+  - "rsd"
+  - "work"
+  - "mental-health"
+draft: false
 ---
 
-Let's start with an open and honest admission; I didn't realize how bad my RSD was until I thought about writing this post. I can honestly say that my RSD screwed me over at my current job. 
+Let's start with an open and honest admission; I didn't realize how bad my RSD was until I thought about writing this post. I can honestly say that my RSD screwed me over at my current job.
 
 ## Here's the story:
 
 Some months ago, my then boss informed the entire team our current roles would cease to exist and would migrate towards a more managing of managed services partners and would no longer be technical. As I am always very hesitant to change, this was a hard nut to swallow.
-I stated I still wanted some technical challenges, since I loved those in my current role. As it was then explainedto me, there wouldn't be technical options, it would be an administrative role mainly. I freaked out, but a possible solution offered to me was to move sideways, to the software team. I would be able to still do technical things, more CI/CD oriented. I was very hesitant, but I agreed to give it a try. I was afraid I would not be able to do the job, that I would not be able to learn the new technologies, that I would not be able to keep up with the rest of the team. I was afraid I would fail, I felt more fear for the other role.
+I stated I still wanted some technical challenges, since I loved those in my current role. As it was then explained to me, there wouldn't be technical options, it would be an administrative role mainly. I freaked out, but a possible solution offered to me was to move sideways, to the software team. I would be able to still do technical things, more CI/CD oriented. I was very hesitant, but I agreed to give it a try. I was afraid I would not be able to do the job, that I would not be able to learn the new technologies, that I would not be able to keep up with the rest of the team. I was afraid I would fail, I felt more fear for the other role.
 
 The inbetween time meant I had two roles, two bosses, we had a management change, and the original new role changed a little as well. Our new manager started to ease all of us into the new management roles, and I felt it might become a good role for me even though I was so deadly afraid at first. But I now had two bosses, two roles and was in between everything at once. I was very stressed out, and I was not able to focus on my old role or my new one. I tried to please both bosses, but their expectations were different, and I was not able to meet them. I was not able to focus on my new role, and I was not able to focus on my old role. I started to feel worse and worse.
 

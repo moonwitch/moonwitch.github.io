@@ -1,13 +1,15 @@
 ---
-title: Git Branching; the basics
-date: 2020-02-21
+title: "Git Branching: The Basics"
+description: "A beginner-friendly guide to Git branching strategies, commit messages, and collaborative workflows."
+date: "2020-02-21"
+lastmod: "2026-06-14"
 comments: true
 tags:
-  - git
-  - opensource
-  - shell
+  - "git"
+  - "opensource"
+  - "devops"
 categories:
-  - tech
+  - "tech"
 draft: false
 ---
 
@@ -17,7 +19,7 @@ Git isn't as complex as it seems; once you get the hang of it. But it can be dau
 
 #### First rule of Git-club is:
 
-***Never work on `main`; always use a branch to work on features and issues.***
+**_Never work on `main`; always use a branch to work on features and issues._**
 Why this matters? Because `main` is your holy grail, your production.
 
 #### Second rule of Git-club is:
@@ -61,15 +63,15 @@ Because branching effectively creates a copy of your local version of `main`, it
    >
    > ```
    > git checkout -b descriptive_branchname
-   > ````
+   > ```
 
 4. Making your changes to your local new branch, adding them to the staging area - that's how we call it when you prepare your files to be committed.
 
    - Adding 2 files
 
-     ````
+     ```
      git add yourfile1 yourfile2
-     ````
+     ```
 
    - Add just one file
 
@@ -119,4 +121,4 @@ remote:   https://gitlab.com/projectname/merge_requests/new?merge_request%5Bsour
 
 Once you've completed working in your branch and you're ready to merge it into `main`, go on and raise a Merge Request. You can opt to do it via the provided link or using push options as I've said.
 
-There; that's all there is to it. Working with Git for version control has some immense benefits and I wouldn't want to work without having it in place. 
+There; that's all there is to it. Working with Git for version control has some immense benefits and I wouldn't want to work without having it in place.

@@ -1,19 +1,20 @@
 ---
 title: "AI as Assistive Tech for Autistic Communication"
+description: "How I use AI to reduce the cognitive load of 'masking' and translate my direct communication style into the neurotypical workplace."
 date: "2026-06-13"
-lastmod: "2026-06-13"
+lastmod: "2026-06-14"
 categories:
-  - neurodivergence
+  - "neurodivergence"
 tags:
-  - neurodivergent
-  - autism
-  - ai
-  - communication
+  - "neurodivergent"
+  - "autism"
+  - "ai"
+  - "communication"
 comments: true
-draft: true
+draft: false
 ---
 
-A lot of my energy at work doesn't go on the work. It goes on the *wrapping* — the constant, low-level translation between what I mean and what neurotypical communication expects me to perform. Reading tone I can't see. Softening a direct statement so it doesn't read as blunt. Decoding an email that says one thing and apparently means another. By mid-afternoon I'm not tired from my job; I'm tired from the interface to my job.
+A lot of my energy at work doesn't go on the work. It goes on the _wrapping_ — the constant, low-level translation between what I mean and what neurotypical communication expects me to perform. Reading tone I can't see. Softening a direct statement so it doesn't read as blunt. Decoding an email that says one thing and apparently means another. By mid-afternoon I'm not tired from my job; I'm tired from the interface to my job.
 
 That translation work has a name a lot of us know intimately: masking. And it's expensive. So I've been experimenting with AI assistants as a kind of assistive technology for the communication layer — not to make a better mask, but to spend less of myself maintaining one. There's an important difference, and I'll come back to it.
 
@@ -35,15 +36,15 @@ Before a meeting I'm nervous about, I'll talk through what I want to say and ask
 
 ## The line I won't cross: scaffold, not mask-maker
 
-Here's the difference I promised. There's a version of all this that's just *better masking* — using AI to more convincingly perform someone I'm not, so I can keep hiding how I actually work. That version leads to more burnout, not less, because the underlying cost — pretending — is still being paid, just more smoothly.
+Here's the difference I promised. There's a version of all this that's just _better masking_ — using AI to more convincingly perform someone I'm not, so I can keep hiding how I actually work. That version leads to more burnout, not less, because the underlying cost — pretending — is still being paid, just more smoothly.
 
-The version I'm interested in is scaffolding: a ramp that gets me access without demanding I become a different person. A ramp is assistive tech. A more comfortable mask is still a mask. I try to use these tools to *conserve* energy and *reduce* friction — and, slowly, alongside that, to ask the people around me to meet me partway, so I need the wrapping less in the first place.
+The version I'm interested in is scaffolding: a ramp that gets me access without demanding I become a different person. A ramp is assistive tech. A more comfortable mask is still a mask. I try to use these tools to _conserve_ energy and _reduce_ friction — and, slowly, alongside that, to ask the people around me to meet me partway, so I need the wrapping less in the first place.
 
 ## Where it falls short
 
 Its read of tone is a guess, and a confident one. It does not know your colleague; it's pattern-matching on text. I've been handed a "definitely sarcastic" verdict on a message that turned out to be perfectly sincere. Treat its interpretations as options to weigh, never as facts.
 
-Don't let it talk you out of your boundaries. A tool optimised to sound agreeable will happily smooth a "no" into a "yes, of course" if you let it. The point is to communicate *me* more easily — not to negotiate me away.
+Don't let it talk you out of your boundaries. A tool optimised to sound agreeable will happily smooth a "no" into a "yes, of course" if you let it. The point is to communicate _me_ more easily — not to negotiate me away.
 
 And mind the privacy line. Real names, medical details, anything sensitive about you or anyone else — assume it could be stored. I keep personal specifics out and work with the shape of a message rather than its private contents.
 

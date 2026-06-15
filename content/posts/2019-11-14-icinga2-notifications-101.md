@@ -1,13 +1,15 @@
 ---
 title: "Icinga2 Notifications: 101"
-date: 2019-11-14
+description: "A quick 'n dirty guide to setting up email notifications in Icinga2 using ssmtp."
+date: "2019-11-14"
+lastmod: "2026-06-14"
 comments: true
-tags: 
-  - icinga
-  - devops
-  - work
+tags:
+  - "icinga"
+  - "devops"
+  - "monitoring"
 categories:
-  - tech
+  - "tech"
 draft: false
 ---
 
@@ -25,20 +27,20 @@ draft: false
 
 ### Making sure mail works
 
-1. Install ssmtp 
+1. Install ssmtp
 
 ```bash
 yum install ssmtp
 ```
 
-2. Disable postfix and stop the service 
+2. Disable postfix and stop the service
 
 ```bash
 systemctl disable postfix
 systemctl stop postfix
 ```
 
-3. Configure your 'finger' information. 
+3. Configure your 'finger' information.
 
 ```bash
 chfn -f name-you-want-as-displayname loginname
@@ -80,7 +82,7 @@ echo "Hello, this is a test" | mail -s "Test" someone@example.com
 ### Configure icinga2 user (and usergroups)
 
 By default, icinga2 comes with a UserGroup called 'icingaadmins'.
-Any user of this group will receive email notifications if the icinga2 host itself has issues. 
+Any user of this group will receive email notifications if the icinga2 host itself has issues.
 
 _Please note that an icinga2 user is not necessarily an icingaweb2 login user. This is a whole different topic._
 
@@ -90,7 +92,7 @@ A simple user looks like this:
 object UserGroup "icingaadmins" {
 	display_name = "Icinga 2 Admin Group"
 }
- 
+
 object User "TestUser" {
   display_name = "A Name"
   groups = [ "icingaadmins" ]
@@ -100,19 +102,20 @@ object User "TestUser" {
   types = [ Problem, Recovery ]
 }
 ```
+
 If you need more information on the attributes just have a look at the [documentation](http://docs.icinga.org/icinga2/latest/doc/module/icinga2/toc#!/icinga2/latest/doc/module/icinga2/chapter/configuring-icinga2-first-steps#users-conf).
 
 ### Assign Notification to Service and User
 
-But if you want mails for hosts or services you have to use assign (see [documentation](http://docs.icinga.org/icinga2/latest/doc/module/icinga2/toc#!/icinga2/latest/doc/module/icinga2/chapter/monitoring-basics#using-apply)). 
+But if you want mails for hosts or services you have to use assign (see [documentation](http://docs.icinga.org/icinga2/latest/doc/module/icinga2/toc#!/icinga2/latest/doc/module/icinga2/chapter/monitoring-basics#using-apply)).
 
 In the following example I assign the command mail-service-notification (defined in "/etc/icinga2/scripts/") to every service, which runs on the host named "Host1". A notification will only be sent once a state change is detected. ("interval = 0")
 
-  ```
-  apply Notification "Notify-Test" to Service {
-    command = "mail-service-notification"
-    users = ["TestUser"]
-    interval = 0
-    assign where service.host_name == "Host1"
-  }
-  ```
+```
+apply Notification "Notify-Test" to Service {
+  command = "mail-service-notification"
+  users = ["TestUser"]
+  interval = 0
+  assign where service.host_name == "Host1"
+}
+```

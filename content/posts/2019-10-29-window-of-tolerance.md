@@ -1,11 +1,14 @@
 ---
-title: Window of tolerance
-date: 2019-10-29
-comments: false
-tags: 
-  - personal
+title: "The Window of Tolerance"
+description: "Understanding the emotional 'window of tolerance' and how it helps in managing hyperarousal and emotional spirals."
+date: "2019-10-29"
+lastmod: "2026-06-14"
+comments: true
+tags:
+  - "personal"
+  - "mental-health"
 categories:
-  - neurodivergence
+  - "neurodivergence"
 draft: false
 ---
 

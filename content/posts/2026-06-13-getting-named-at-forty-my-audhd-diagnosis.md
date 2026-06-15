@@ -1,17 +1,18 @@
 ---
 title: "Getting Named at Forty: My AuDHD Diagnosis"
+description: "Reflections on being diagnosed with Autism and ADHD as an adult, and the complex mix of relief and grief that follows."
 date: "2026-06-13"
-lastmod: "2026-06-13"
+lastmod: "2026-06-14"
 categories:
-  - neurodivergence
+  - "neurodivergence"
 tags:
-  - neurodivergent
-  - autism
-  - adhd
-  - audhd
-  - personal
+  - "neurodivergent"
+  - "autism"
+  - "adhd"
+  - "audhd"
+  - "personal"
 comments: true
-draft: true
+draft: false
 ---
 
 I was nearly forty when I finally got the words. Autistic. ADHD. Both — the combination some of us call AuDHD. The autism piece landed first, early in 2023; the ADHD assessment followed later that same year. By the time it was all written down, I'd spent decades quietly assuming I was just a slightly defective version of a normal person. Turns out I'm a perfectly good version of a different one.
@@ -22,7 +23,7 @@ I want to write about getting diagnosed as an adult, because the story you usual
 
 Late diagnosis isn't a mystery once you see the mechanics. I was bright enough to compensate, anxious enough to mask, and old enough that when I was a kid, the criteria barely imagined someone like me. Autistic? But I make eye contact and have a wife and tell jokes. ADHD? But I held down a demanding career for years. The stereotypes are narrow, and I didn't match the cartoon, so nobody — including me — went looking.
 
-What I *did* have was a lifetime of evidence I'd misfiled. Exhaustion I called laziness. Overwhelm I called drama. A head that never stopped, focus that ran either at zero or at a hundred with nothing in between, and a nervous system that treated a slightly-off email like a threat to my life. I'd built an elaborate scaffolding of lists and routines and coping tricks to hold it all up, and I genuinely thought everyone was doing the same and just complaining less.
+What I _did_ have was a lifetime of evidence I'd misfiled. Exhaustion I called laziness. Overwhelm I called drama. A head that never stopped, focus that ran either at zero or at a hundred with nothing in between, and a nervous system that treated a slightly-off email like a threat to my life. I'd built an elaborate scaffolding of lists and routines and coping tricks to hold it all up, and I genuinely thought everyone was doing the same and just complaining less.
 
 ## The assessment, and the strange relief
 
