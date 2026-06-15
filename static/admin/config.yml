@@ -28,14 +28,35 @@ collections:
     description: Articles, notes and write-ups.
     folder: content/posts
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: text, required: false, hint: 'One or two lines — used for SEO and post cards.' }
-      - { label: Publish Date, name: date, widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
-      - { label: Last Modified, name: lastmod, widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD', required: false }
+      - {
+          label: Description,
+          name: description,
+          widget: text,
+          required: false,
+          hint: "One or two lines — used for SEO and post cards.",
+        }
+      - {
+          label: Publish Date,
+          name: date,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          format: "YYYY-MM-DD",
+        }
+      - {
+          label: Last Modified,
+          name: lastmod,
+          widget: datetime,
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          format: "YYYY-MM-DD",
+          required: false,
+        }
       - label: Category
         name: categories
         widget: select
