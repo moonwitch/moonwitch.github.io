@@ -9,7 +9,7 @@ backend:
   name: github
   repo: moonwitch/moonwitch.github.io
   branch: main
-  # base_url: https://<your-worker>.workers.dev   # uncomment after deploying the OAuth worker
+  base_url: https://sveltia-cms-auth.kelly-crabbe.workers.dev/
 
 # Local editing without any OAuth: run `npx @sveltia/cms-proxy-server` alongside
 # `hugo server`, then open http://localhost:1313/admin/.
